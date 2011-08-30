@@ -1,0 +1,185 @@
+\documentclass[11pt]{amsbook}
+%\documentclass[pdflatex]{amsbook}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+%\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+
+\usepackage{a4}
+%\usepackage{fullpage}   % UM DEN REGENWALD ZU RETTEN...
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{color}
+\usepackage{graphicx}
+
+\usepackage{ifthen}
+\usepackage{ifpdf}
+
+
+\usepackage{color,soul} % to highlight text with the command \hl{...}
+\definecolor{myhighlightcolor}{gray}{0.92}
+\sethlcolor{myhighlightcolor}
+
+
+% Some general settings
+\renewcommand{\baselinestretch}{1.3}
+\parindent0mm
+\parskip1.2ex
+
+\topmargin-2cm 
+\textheight24cm 
+\textwidth15.5cm
+\oddsidemargin1.0cm
+
+
+
+% EINEN INDEX KOENNTE MAN AUCH NOCH EINBAUEN
+% dazu werden im Text einfach die entsprechenden Begriffe mit ``\index{BlaBla}'' gesammelt
+%\usepackage{showidx} 
+%\makeindex
+
+
+\usepackage[pdfauthor={Achill Schuermann},
+            pdftitle={Axiomatische Geometrie},
+            pdfsubject={Notizen zur gleichnamingen Vorlesung an der Universitaet Rostock, SS 2011}]{hyperref}
+
+%\ifpdf
+%\pdfinfo{
+%  /CreationDate (D:20080506170000)
+%}
+%\fi
+
+
+\input{GeometrieLatexMacros.tex}
+
+
+
+%% EIN EIGENER theoremstyle (instead of the nonboldface ones of amsbook)
+\newtheoremstyle{mythmstyle}% name
+     {8pt}%      Space above
+     {8pt}%      Space below
+     {\itshape}%         Body font
+     {\parindent}%         Indent amount (empty = no indent, \parindent = para indent)
+     {\bfseries}% Thm head font  (+ \scshape ??)
+     {.}%        Punctuation after thm head
+     {.5em}%     Space after thm head: " " = normal interword space;
+           %       \newline = linebreak
+     {}%         Thm head spec (can be left empty, meaning `normal')
+
+\theoremstyle{mythmstyle}
+\newtheorem{defi}{DEF}[section]
+%\newtheorem{proposition}[defi]{PROP}
+%\newtheorem{lemma}[defi]{Lemma}
+\newtheorem{thm}[defi]{THM}
+%\newtheorem{korollar}[def]{Korollar}
+\newtheorem{bem}[defi]{BEM}
+
+\newtheorem{konst}[defi]{KONSTRUKTION}
+
+%% Ohne Numerierung
+\theoremstyle{definition}
+\newtheorem*{bsp}{BSP}
+
+
+% Ein paar Parameter um mit der Numerierung und dem Inhaltsverzeichnis zu spielen:
+\setcounter{tocdepth}{1}   
+%\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesection}{\arabic{chapter}}
+
+
+
+
+
+
+
+% ==========================
+% = Authors / Affiliations =
+% ==========================
+
+\author{Prof. Dr. Achill Schürmann}
+%\address{Achill Sch\"urmann, Institute for Mathematics, University of Rostock, 18051 Rostock, Germany}
+%\email{Achill.Schuermann@uni-rostock.de}
+
+
+\title[Axiomatische Geometrie]{Axiomatische Geometrie}
+
+\begin{document}
+
+\selectlanguage{ngerman}
+
+\sloppy
+
+\input{AxiomatischeGeometrieFrontmatter.tex}
+
+%\maketitle
+
+%\tableofcontents
+
+%
+%
+%\chapter*{Was soll das alles?}
+%\input{WasSollDasAlles.tex}
+
+
+
+
+\chapter{Euklid}
+\input{Euklid.tex}
+
+
+
+
+
+
+
+\chapter{Hilbert}
+\input{Hilbert.tex}
+
+
+
+
+\chapter{Descartes}
+\input{Descartes.tex}
+
+
+
+\chapter{Desargues}
+\input{Desargues.tex}
+
+
+
+
+
+%
+% BIBLIOGRAPHY
+%  --> Erzeugung durch Aufruf von ``bibtex AxiomatischeGeometrie''
+%
+\cleardoublepage
+\phantomsection
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{AxiomatischeGeometrieBiblio.bib}
+
+\end{document}
+
+
+
+
+% INDEX ???
+
+%\newpage % to get page for index right in table of contents?
+%
+%\cleardoublepage
+%\phantomsection
+%\printindex
+
+
+
+\end{document}
+
+
