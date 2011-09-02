@@ -1,4 +1,7 @@
-AxiomatischeGeometrie.pdf: AxiomatischeGeometrie.tex Desargues.tex Descartes.tex Euklid.tex GeometrieLatexMacros.tex Hilbert.tex
+TEX		= $(shell ls *.tex)
+TIKZ	= $(shell ls tikz/*.tikz)
+
+AxiomatischeGeometrie.pdf: $(TEX) $(TIKZ)
 	pdflatex AxiomatischeGeometrie.tex
 
 clean:

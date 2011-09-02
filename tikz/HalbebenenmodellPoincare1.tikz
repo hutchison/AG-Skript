@@ -1,0 +1,30 @@
+% Konzipiert mit GeoGebra aus ./tikz/HalbebenenmodellPoincare.tikz
+% Der TikZ Output ist aber Mist, daher wurde hier selbst Hand angelegt.
+\begin{tikzpicture}[]
+	% beschränkt das gesamte Bild auf das angegebene Rechteck:
+	\clip (-2.5,-0.5) rectangle (5.5,3);
+	% Jetzt folgen die drei Halbkreise. Es sind eigenlich normale Kreise, die aber vorher geclippt,
+	% also beschnitten werden (anders geht's nicht).
+	\begin{scope}
+		% Eigentlich müsste man nur von (1.5,0) bis (3.5,1.0) beschränken, da sich der Halbkreis
+		% nur in diesem Bereich befindet, aber dann sieht's an den Grenzen doof aus (am besten
+		% selbst ausprobieren und anschauen):
+		\clip (1.4,0) rectangle (3.6,1.1);
+		% Der Kreis an sich ist straightforward:
+		\draw (2.5,0) circle (1cm);
+	\end{scope}
+	% Die restlichen beiden Halbkreise:
+	\begin{scope}
+		\clip (-1.1,0) rectangle (4.1,2.6);
+		\draw (1.5,0) circle (2.5cm);
+	\end{scope}
+	\begin{scope}
+		\clip (-2.1,0) rectangle (2.1,1.6);
+		\draw (-0.5,0) circle (1.5cm);
+	\end{scope}
+	% Die Gerade ganz rechts und die beiden Achsen. Die Gerade hat im Gegensatz zum Originalbild
+	% keinen Pfeil, weil sie meiner Meinung nach kein Strahl ist.
+	\draw (5,0) -- (5,3);
+	\draw [->] (0,0) -- (0,3);
+	\draw [->] (-2.5,0) -- (5.5,0);
+\end{tikzpicture}
