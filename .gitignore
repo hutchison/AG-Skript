@@ -1,5 +1,6 @@
 .DS_Store
 *.pdf
+!BILDER/*.pdf
 *.log
 *.out
 *.aux
