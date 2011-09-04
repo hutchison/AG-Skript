@@ -183,7 +183,7 @@ Geraden sind die Geraden aus Modell~3 geschnitten mit $\E$
 \bigskip
 
 
-{\bf Modell 5:} (\glqq Halbebenenmodell von Poincar\'e \grqq )\\
+{\bf Modell 5:} (\glqq Halbebenenmodell von Poincaré \grqq )\\
 $\E=\{ (x,y)\in\R^2 | y>0 \}$;
 Geraden sind entweder Halbkreise oberhalb der $x$-Achse
 oder Halbgeraden Senkrecht zur $x$-Achse. Das rechte Bild zeigt wie 
@@ -196,11 +196,14 @@ die Gerade zu zwei verschiedenen Punkten konstruiert wird.
 %}
 
 \begin{center}
-	\begin{tabular}{cc}
-		\input{tikz/HalbebenenmodellPoincare1.tikz}
-		&
-		\input{tikz/HalbebenenmodellPoincare2.tikz}
-	\end{tabular}
+	\begin{figure}[h]
+		\begin{tabular}{cc}
+			\input{tikz/HalbebenenmodellPoincare1.tikz}
+			&
+			\input{tikz/HalbebenenmodellPoincare2.tikz}
+		\end{tabular}
+		\caption{Halbebenenmodell von Poincaré}
+	\end{figure}
 \end{center}
 
 
@@ -212,32 +215,24 @@ die Gerade zu zwei verschiedenen Punkten konstruiert wird.
 % eindeutige Gerade (Großkreis) existiert => (I1) ist verletzt!
 
 {\bf Modell 6:} (\glqq Sphärisches Modell der projektiven Ebene\grqq )\\
-$\E=\{ (x,-x)\in\R^{3+3} | x_1^2+  x_2^2 + x_3^2= 1 \}$, d.h.,
+$\E=\{ (x,-x)\in\R^{3+3} \ | \ x_1^2+  x_2^2 + x_3^2= 1 \}$, d.h.,
 Punkte sind in diesem Modell Paare von diametral liegenden Vektoren auf der
 Einheitssphäre;
 Geraden sind Punktmengen die auf einem Großkreis (Schnitt der Sphäre
 mit einer $2$-dimensionalen Ebene durch den Ursprung) liegen.
 
-
-
-
-
-
 \bigskip
-
 
 In einer Inzidenzgeometrie kann man bereits Parallelen einführen.
 
-\begin{defi}[Parallelit\"{a}t]
+\begin{defi}[Parallelität]
 Zwei Geraden $g,\,h \subset \E$ heißen {\em parallel} (in Zeichen $g\|h$)
 wenn sie gleich sind oder einen leeren Schnitt haben.
 %($g\|h$) $:\Longleftrightarrow$ entweder $g\cap h=\emptyset$ oder $g=h$.}
 \end{defi}
 
-Die Existenz von Parallelen kann nicht aus den Inzidenzaxiomen
-hergeleitet werden! In Modell~1 gibt es keine Parallelen. In Modell~4
-gibt es zu jeder Geraden unendlich viele Parallelen!
-
+Die Existenz von Parallelen kann nicht aus den Inzidenzaxiomen hergeleitet werden! In Modell 1 gibt
+es keine Parallelen. In Modell 4 gibt es zu jeder Geraden unendlich viele Parallelen!
 
 % An dieser Stelle schon das Parallelenaxiom angeben??
 % Nach folgender Definition 
@@ -249,14 +244,9 @@ gibt es zu jeder Geraden unendlich viele Parallelen!
 %die $P$ enthält und parallel zu $g$ ist.
 %\end{enumerate}
 
-
-
-
-Eine Ebene $\E$ die die 3 Axiome der Inzidenzgeometrie erfüllt und
-zusätzlich das Parallelenaxiom heißt auch {\em affine Inzidenzgeometrie}.
-Modell~2 und Modell~4 sind Beispiele. Es ist ein schwieriges (und
-noch offenes) Problem die endlichen, affinen Inzidenzgeometrien zu
-klassifizieren.
+Eine Ebene $\E$ die die 3 Axiome der Inzidenzgeometrie erfüllt und zusätzlich das Parallelenaxiom
+heißt auch {\em affine Inzidenzgeometrie}.  Modell 2 und Modell 4 sind Beispiele. Es ist ein
+schwieriges (und noch offenes) Problem die endlichen, affinen Inzidenzgeometrien zu klassifizieren.
 
 %% UEBUNG: (??)
 %% Man kann zeigen, dass jede Gerade einer endlichen affinen
@@ -273,26 +263,15 @@ klassifizieren.
 %%
 %% Es ist offen, ob es eine affine / projektive Ebene der Ordnung
 %% $n=12$ gibt!?!?!
-%% 
+%%
 %% SEE ALSO: http://de.wikipedia.org/wiki/Affine_Ebene
-
-
-
-
-
-
-
 
 \section*{Vorlesung am 19.04.2011}
 
-
-
 \subsection*{Axiome der Anordnung}
-
 
 %% Historische Bemerkung zu einem Zitat von Gauß, der erkannt hatte,
 %% dass man die Relation "Zwischen" vernünftig erklären muss?
-
 
 %% INTERESSANTER HINTERGRUND:
 % In Hilbert's Buch (1 Ausgabe von 1899 / siehe auch die Englische
@@ -304,17 +283,12 @@ klassifizieren.
 % Unabhängigkeit der Axiome voneinander zu beweisen!!!! :-) 
 % (siehe Anfang von §10)
 
-Wir gehen im Folgenden davon aus, dass $\E$ eine Ebene ist, die die 3
-Axiome der Inzidenzgeometrie erfüllt. Wir wollen schrittweise Axiome
-hinzufügen, die uns näher an die Geometrie Euklids heranbringen.
-Wir werden dabei zunächst (so lange wie möglich) auf das Parallelenaxiom verzichten.
+Wir gehen im Folgenden davon aus, dass $\E$ eine Ebene ist, die die 3 Axiome der Inzidenzgeometrie
+erfüllt. Wir wollen schrittweise Axiome hinzufügen, die uns näher an die Geometrie Euklids
+heranbringen.  Wir werden dabei zunächst (so lange wie möglich) auf das Parallelenaxiom verzichten.
 
-
-
-
-In Euklids Elementen haben wir
-gesehen, dass häufig Begriffe der Anordnung benutzt werden. 
-Zum Beispiel: \glqq ein Punkt %$C$ 
+In Euklids Elementen haben wir gesehen, dass häufig Begriffe der Anordnung benutzt werden. Zum
+Beispiel: \glqq ein Punkt %$C$
 liegt {\em zwischen} zwei anderen Punkten %$A$ und $B$ 
 %% Vergleiche auch den Beweis von "Alle Dreiecke sind gleichschenklig"
 auf einer Geraden\grqq . 
@@ -325,10 +299,8 @@ oder \glqq Größenvergleiche\grqq\ von Strecken und Winkeln
 hängen damit zusammen.
 Die folgenden Axiome der Anordnung dienen der Präzisierung dieser Begriffe.
 
-
-Die Punkte einer jeden Geraden $g$ von $\E$ stehen in einer
-Beziehung zueinander, die \glqq{}Zwischen\grqq{} hei{\ss}t
-und folgenden Bedingungen gen\"{u}gt:
+Die Punkte einer jeden Geraden $g$ von $\E$ stehen in einer Beziehung zueinander, die
+\glqq{}Zwischen\grqq{} hei{\ss}t und folgenden Bedingungen gen\"{u}gt:
 
 \begin{enumerate}
     \item[{\bf (A1)}] Wenn $A,\,B,\,C$ auf einer Geraden $g$ liegen und $B$ zwischen $A$ und $C$
@@ -395,10 +367,6 @@ ben\"{o}tigt man ein weiteres Axiom:
 % AN DIESER STELLE FEHLT UNS ALLERDINGS DER BEGRIFF "Inneres eines Dreiecks"!!!?
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-1-04-Pasch.png}}
-
-
-
-
 
 %In den folgenden S\"{a}tzen seien die Axiome der Inzidenz und der
 %Anordnung f\"{u}r die betrachtete Ebene~$\E$ erf\"{u}llt.
