@@ -23,7 +23,7 @@ Im $\R^2$ lassen sich {\em Kurven} beschreiben durch
 \item[1)] Gleichungen
 
 \begin{itemize}
-\item lineare Gleichungen $a x + b y + c = 0$ mit $(a,b) \not = 0$ beschreiben Geraden
+\item lineare Gleichungen der Form $a x + b y + c = 0$ mit $(a,b) \not = 0$ beschreiben Geraden
 \item Kreise werden durch spezielle quadratischen Gleichungen $(x-a)^2 + (y-b)^2 - c^2 = 0$
 beschrieben
 
@@ -36,13 +36,21 @@ beschrieben
 \item[2)] Parametrisierungen / Parameterdarstellungen
 
 \begin{itemize}
-\item Geraden werden parametrisiert mit Hilfe von Vektoren %einen Ortsvektor und einen Richtungsvektor
-$$\left\{ \ve(xyz)\right\}$$
-\item Kreise lassen sich mit Hilfe trigonometrischer Funktionen
-  parametrisieren
+\item Geraden werden parametrisiert mit Hilfe von Vektoren
+%einen Ortsvektor und einen Richtungsvektor
 $$
-\left\{  \right\}
+	\left\{
+		(x,y) \in \R^2 \ | \ \ve{x}{y} = \ve{p_1}{p_2} + \lambda \ve{v_1}{v_2}, \lambda \in \R
+	\right\}
 $$
+
+\item Kreise lassen sich mit Hilfe trigonometrischer Funktionen parametrisieren
+$$
+	\left\{
+		(x,y) \in \R^2 \ | \ \ve{x}{y} = \ve{m_1}{m_2} + r \cdot \ve{\cos t}{\sin t}, t \in \R
+	\right\}
+$$
+\hfill (Kreis mit Mittelpunkt $M = \ve{m_1}{m_2}$ und Radius $r$.)
 \end{itemize}
 
 \end{enumerate}
@@ -50,85 +58,147 @@ $$
 % ACHTUNG:
 % Wir fassen hier den $\R^2$ als Vektorraum von Spaltenvektoren auf...
 
+Die {\em algebraische Geometrie} befasst sich mit Darstellungen geometrischer Objekte ({\em
+algebraischen Varietäten}) die als Nullstellengebilde von Polynomgleichungen auftreten.
 
-Die {\em algebraische Geometrie} befasst sich mit Darstellungen
-geometrischer Objekte ({\em algebraischen Varietäten}) die als
-Nullstellengebilde von Polynomgleichungen auftreten.
-
-
-Die {\em Differentialgeometrie} befasst sich mit Parametrisierungen
-geometrischer Objekte ({\em Mannigfaltigkeiten}) und daraus
-abgeleiteten Eigenschaften.%, wie Krümmung
-
+Die {\em Differentialgeometrie} befasst sich mit Parametrisierungen geometrischer Objekte ({\em
+Mannigfaltigkeiten}) und daraus abgeleiteten Eigenschaften.%, wie Krümmung
 
 \medskip
 
-{\bf To be filled: Ungleichungen bzw. zusätzliche Parameter 
-ermöglichen die Beschreibung von Punkten im Inneren eines Kreises oder
-auf einer Seite einer Geraden, etc...}
+{\bf To be filled: Ungleichungen bzw. zusätzliche Parameter ermöglichen die Beschreibung von Punkten
+im Inneren eines Kreises oder auf einer Seite einer Geraden, etc...}
 
+\subsection*{Lineare Algebra revisited}
 
-
-
-
-\subsection*{Lineare Algebra revisted}
-
-Die Linearen Algebra befasst sich mit linearen Gleichungssystemen und
-Parameterdarstellungen Ihrer Lösungen.
+Die Linearen Algebra befasst sich mit linearen Gleichungssystemen und Parameterdarstellungen Ihrer
+Lösungen.
 
 {\bf to be filled!}
 
-
-
-
 \subsection*{Affine Geometrie}
 
+\begin{bem}
+	$\K^n, \R^n$: $\left\{ (x,y,z) \in \R^3 \ | \ ax + by + cz = d \right\}$ beschreibt eine 2-dim.
+	Ebene im $\R^3$ (wenn $(a,b,c) \neq 0$)
+\end{bem}
 
 \begin{defi}
-Seien $x_1,\dots,x_m\in\R^n$ und
-$\lambda_1,\dots,\lambda_m\in\R$. Dann heißt die Linearkombination
-$x=\sum_{i=1}^m\lambda_i\,x_i $ genau dann 
-{\em Affinkombination}, wenn $\sum_{i=1}^m\lambda_i = 1$.
+	Seien $x_1, \dots, x_m \in \R^n$ und $\lambda_1, \dots, \lambda_m \in \R$. Dann heißt die
+	Linearkombination $x = \sum\limits_{i=1}^m \lambda_i \, x_i $ genau dann {\em Affinkombination},
+	wenn $\sum\limits_{i=1}^m \lambda_i = 1$.
 \end{defi}
-
-
 
 \begin{defi}
-$x_1,\dots,x_m\in\R^n$ heißen
-{\em affin (un)anhängig}, falls es
-$(\lambda_1,\dots,\lambda_m)\in\R^m\setminus\{0\}$ gibt mit
-$\sum_{i=1}^m\lambda_i = 0$ und $x=\sum_{i=1}^m\lambda_i\,x_i = 0$.
+	$x_1, \dots, x_m \in \R^n$ heißen {\em affin (un)anhängig}, falls es $(\lambda_1, \dots
+	,\lambda_m) \in \R^m \setminus \{ 0 \}$ gibt mit $\sum\limits_{i=1}^m \lambda_i = 0$ und $x =
+	\sum\limits_{i=1}^m \lambda_i \, x_i = 0$.
 \end{defi}
 
-
-\begin{thm}
-$x_1,\dots,x_m\in\R^n$ sind genau dann affin unabhängig,
-\begin{itemize}
-\item
-wenn sich keines der $x_i$ als Affinkombination der anderen $x_j$,
-$j\not= i$, schreiben lässt.
-
-\item
-wenn $\begin{pmatrix}x_1\\1\end{pmatrix},\dots,\begin{pmatrix}x_m\\1\end{pmatrix}\in\R^{n+1}$ linear unabhängig sind
-\end{itemize}
+\begin{thm}\label{def:affinabhaengig}
+	$x_1, \dots, x_m \in \R^n$ sind genau dann affin unabhängig,
+	\begin{itemize}
+		\item wenn sich keines der $x_i$ als Affinkombination der anderen $x_j$, $j \neq i$, schreiben
+		lässt.
+		\item wenn $\ve{x_1}{1}, \dots, \ve{x_m}{1} \in \R^{n+1}$ linear unabhängig sind
+	\end{itemize}
 \end{thm}
-
 
 %% ACHTUNG: Hier könnte man auch gut eine "affine Basis" einführen,
 %% als maximal affin unabhängige Menge...
 
-
-
-
 \section*{Vorlesung am 31.05.2011}
 
+Wir betrachten folgendes Problem: wann liegen die Punkte
+$$
+	A = \ve{x_1}{y_1}, B = \ve{x_2}{y_2}, C = \ve{x_3}{y_3}
+$$
+auf einer Geraden (sind also {\em affin abhängig})?
 
+Nach \ref{def:affinabhaengig} genau dann, wenn
+$$
+	\ved{x_1}{y_1}{1}, \ved{x_2}{y_2}{1}, \ved{x_3}{y_3}{1}
+$$
+linear abhängig sind. Dies ist genau dann der Fall, wenn
+$$
+	\Rang
+	\underbrace{
+	\begin{pmatrix}
+		x_1 & x_2 & x_3\\
+		y_1 & y_2 & y_3\\
+		1 & 1 & 1
+	\end{pmatrix}
+	}_{=:M}
+	\leq 2.
+$$
+Also genau dann, wenn ein Vektor $v = \ved{a}{b}{c} \in \R^3 \setminus \{ 0 \}$ mit $M^t \cdot v =
+0$ existiert (also im Kern von $M^t$).
 
+Betrachten wir das ausführlich, so ergibt sich:
+$$
+	\begin{pmatrix}
+		x_1 & y_1 & 1\\
+		x_2 & y_2 & 1\\
+		x_3 & y_3 & 1
+	\end{pmatrix}
+	\cdot v = 0
+	\quad \Leftrightarrow \quad
+	\begin{matrix}
+		ax_1 + by_1 + c = 0\\
+		ax_2 + by_2 + c = 0\\
+		ax_3 + by_3 + c = 0\\
+	\end{matrix}
+$$
+Wir wissen: zwei Geraden mit den Gleichungen
+\begin{align*}
+	ax_1 + by_1 + c = 0 \quad \text{und} \quad ax_2 + by_2 + c = 0 & & \text{mit } (a_i,b_i) \neq
+	(0,0)
+\end{align*}
+schneiden sich in einem Punkt $\ve{x}{y}$, wenn $\ved{x}{y}{1}$ die Lösung des homogenen
+Gleichungssystems
+\begin{equation}\label{eq:SchnittpunktzweierGeraden}
+	\begin{pmatrix}
+		a_1 & b_1 & c_1\\
+		a_2 & b_2 & c_2
+	\end{pmatrix}
+	\ved{x}{y}{z}
+	=
+	\ve{0}{0}
+\end{equation}
+ist. Die beiden Geraden sind genau dann parallel, wenn $\ve{a_1}{b_1} = \lambda \ve{a_2}{b_2}$ für
+ein $\lambda \in \R$ ist, d.h. wenn $\left\{ \mu \ved{-b_1}{a_1}{0} \ | \ \mu \in \R \right\}$
+Lösungen von (\ref{eq:SchnittpunktzweierGeraden}) sind.
 
+\subsection*{Strahlensatz revisited} % (fold)
+\label{sub:Strahlensatz revisited}
 
+\begin{thm}
+	Sind $g(P,Q) \parallel g(B,C)$ und $Q = \mu C, P = \gamma B$ und $ABC$ ein Dreieck, so gilt $\mu
+	= \gamma$.
+	\begin{proof}
+		\begin{align*}
+			 & g(P,Q) \parallel g(B,C)\\
+			\Leftrightarrow \ & P-Q = \lambda(B-C) & \text{für ein } \lambda \in \R\\
+			\Rightarrow \ & P-Q = \gamma B - \mu C = \lambda B - \lambda C\\
+			\Leftrightarrow \ & (\gamma - \lambda) B = (\mu - \lambda) C\\
+			\Rightarrow \ & \gamma = \lambda = \mu, \text{weil $B,C$ linear abhängig sind}
+		\end{align*}
+	\end{proof}
+\end{thm}
 
+% subsection Strahlensatz revisited (end)
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "AxiomatischeGeometrie"
-%%% End: 
+\subsection*{Konvexkombinationen} % (fold)
+\label{sub:Konvexkombinationen}
+
+\begin{defi}
+	Seien $x_1, \dots, x_m \in \R^n$, dann heißt eine Affinkombination $x = \sum\limits_{i=1}^m
+	\lambda_i \, x_i$ $\left( \text{mit } \sum\limits_{i=1}^m \lambda_i = 1 \right)$ {\em
+	Konvexkombination} genau dann, wenn $\lambda_i \geq 0$ für $i = 1, \dots, m$.
+\end{defi}
+
+Im 2-dimensionalen müsste damit für die Konvexkombination $\lambda_1 x_1 + \lambda_2 x_2$ folgendes
+gelten: $\lambda_1 +\lambda_2 = 1$ und $\lambda_1, \lambda_2 \geq 0$. Es gilt damit $\lambda_2 =
+1-\lambda_1$ und der Mittelpunkt zwischen $x_1$ und $x_2$ ist $\frac{1}{2} x_1 + \frac{1}{2} x_2$.
+
+% subsection Konvexkombinationen (end)
