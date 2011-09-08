@@ -201,4 +201,65 @@ Im 2-dimensionalen müsste damit für die Konvexkombination $\lambda_1 x_1 + \la
 gelten: $\lambda_1 +\lambda_2 = 1$ und $\lambda_1, \lambda_2 \geq 0$. Es gilt damit $\lambda_2 =
 1-\lambda_1$ und der Mittelpunkt zwischen $x_1$ und $x_2$ ist $\frac{1}{2} x_1 + \frac{1}{2} x_2$.
 
+\begin{thm}
+	Seitenhalbierende schneiden sich in einem Punkt (dem Schwerpunkt $s = \frac{1}{3} x_1 +
+	\frac{1}{3} x_2 + \frac{1}{3} x_3$).
+	\begin{proof}
+		Betrachte die Strecken $\lambda_1 (\frac{1}{2} x_1 + \frac{1}{2} x_2) + (1 - \lambda_1) x_3$
+		und $\lambda_1 (\frac{1}{2} x_1 + \frac{1}{2} x_3) + (1 - \lambda_1) x_2$ mit $\lambda_1 \in
+		[0,1]$. Wir erhalten den Schnittpunkt $s$ für $\lambda_1 = \frac{2}{3}$, was gezeigt werden
+		musste.
+	\end{proof}
+\end{thm}
+
 % subsection Konvexkombinationen (end)
+
+\subsection*{$\R^n$ mit Standardskalarprodukt} % (fold)
+%\label{sub:\R^n mit Standardskalarprodukt}
+
+Das Standardskalarprodukt $\left\langle \cdot, \cdot \right\rangle: \R^n \times \R^n \to \R$ ist im
+Euklidischen $n$-dimensionalen Vektorraum definiert durch
+$$
+	\left\langle x,y \right\rangle = x_1 y_1 + \dots + x_n y_n
+$$
+
+\begin{bem}
+	Das Skalarprodukt bestimmt (bzw. ermöglicht) Längen- bzw. Winkelmessung durch
+	\begin{align*}
+		| x | & := \sqrt{\left\langle x,x \right\rangle}\\
+		\alpha (x,y) & := \arccos \underbrace{\frac{\left\langle x,y \right\rangle}{| x | | y
+		|}}_{\left\langle \frac{x}{| x |}, \frac{y}{|y|} \right\rangle}
+	\end{align*}
+\end{bem}
+
+% subsection $\R^n$ mit Standardskalarprodukt (end)
+
+\subsection*{Satz des \textsc{Pythagoras} revisited} % (fold)
+\label{sub:Satz des Pythagoras revisited}
+
+\begin{align*}
+	| A - B |^2 & = \left\langle (A-B), (A-B) \right\rangle\\
+	& = \underbrace{\left\langle A,A \right\rangle}_{|A|^2} + \underbrace{\left\langle B,B
+	\right\rangle}_{|B|^2} - \underbrace{2 \left\langle A,B \right\rangle}_{2 |A| |B| \cdot \cos
+	\theta}
+\end{align*}
+Nach dem Kosinussatz gilt dann $|A - B|^2 = |A|^2 + |B|^2 \Leftrightarrow A,B$ orthognal zueinander
+sind ($\left\langle A,B \right\rangle = 0$).
+
+% subsection Satz des Pythagoras revisited (end)
+
+\subsection*{Satz des \textsc{Thales} revisited} % (fold)
+\label{sub:Satz des Thales revisited}
+
+Im Bild gilt:
+\begin{align*}
+	& \left\langle B-(-A), B-A \right\rangle = 0 & B \neq A\\
+	\Leftrightarrow & \left\langle B,B \right\rangle - \left\langle A,A \right\rangle = 0\\
+	\Leftrightarrow & |B|^2 = |A|^2
+\end{align*}
+
+\begin{center}
+	\input{tikz/SatzdesThalesrevisited.tikz}
+\end{center}
+
+% subsection Satz des Thales revisited (end)

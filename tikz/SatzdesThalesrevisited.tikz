@@ -1,0 +1,20 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\coordinate [label=-45:$A$] (A) at (2,0);
+	\fill (A) circle (2pt);
+	\coordinate [label=-135:$-A$] (-A) at (-2,0);
+	\fill (-A) circle (2pt);
+	\coordinate [label=below:$O$] (O) at (0,0);
+	\fill (O) circle (2pt);
+	\draw (A) -- (-A);
+	\begin{scope}
+		\clip (-2.1,0) rectangle (2.1,2.1);
+		\node [draw, circle, minimum size=4cm] (c) at (0,0) {};
+	\end{scope}
+	\coordinate [label=45:$B$] (B) at (intersection of (0,0) -- (2,3) and c);
+	\fill (B) circle (2pt);
+	\draw (-A) -- (B) -- (A);
+	\draw ($ (B)!0.3!(A) $) let
+			\p1 = ($ (B) - (A) $)
+		in
+			arc (-60:-151:{0.3*veclen(\x1,\y1)});
+\end{tikzpicture}
