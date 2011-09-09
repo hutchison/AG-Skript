@@ -13,8 +13,13 @@
 	\coordinate [label=45:$B$] (B) at (intersection of (0,0) -- (2,3) and c);
 	\fill (B) circle (2pt);
 	\draw (-A) -- (B) -- (A);
+	% Das muss gefixt werden. Geil ist das nicht.
 	\draw ($ (B)!0.3!(A) $) let
 			\p1 = ($ (B) - (A) $)
 		in
 			arc (-60:-151:{0.3*veclen(\x1,\y1)});
+	\fill let
+			\p1 = ($ (B)!0.03!(-A) $), \p2 = ($ (B)!0.17!(A) $)
+		in
+			(\x1,\y2) circle (1pt);
 \end{tikzpicture}

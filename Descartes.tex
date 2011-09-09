@@ -50,7 +50,7 @@ $$
 		(x,y) \in \R^2 \ | \ \ve{x}{y} = \ve{m_1}{m_2} + r \cdot \ve{\cos t}{\sin t}, t \in \R
 	\right\}
 $$
-\hfill (Kreis mit Mittelpunkt $M = \ve{m_1}{m_2}$ und Radius $r$.)
+\hfill (Kreis mit Mittelpunkt $M = (m_1, m_2)$ und Radius $r$.)
 \end{itemize}
 
 \end{enumerate}
@@ -263,3 +263,119 @@ Im Bild gilt:
 \end{center}
 
 % subsection Satz des Thales revisited (end)
+
+\subsection*{Bewegungen/Isometrien} % (fold)
+\label{sub:Bewegungen/Isometrien}
+
+\begin{thm}
+	Isometrien $\R^n \to \R^n$ (Abb. mit $|x-y| = |f(x)-f(y)|$) sind von der Form
+	$$
+		f(x) = A \cdot x + t
+	$$
+	mit $A \in O_n(\R) := \left\{ M \in \R^{n \times n} : M^t M = E_n \right\}$.
+	\begin{proof}
+		Setze $t := f(0) \in \R^n$ und $g(x) := f(x) - t$. D.h. $g: \R^n \to \R^n$ ist Isometrie mit
+		Fixpunkt $0$ ($g(0) = 0$). Aus der linearen Algebra folgt $g(x) = Ax$ mit $A \in O_n(\R)$.
+	\end{proof}
+\end{thm}
+
+\begin{bem}
+	Für $t \neq 0$ ist $f(x) = Ax + t$ keine lineare Abbildung. Aber $\tilde{f}: \R^{n+1} \to
+	\R^{n+1}$ mit
+	$$
+		\tilde{f}(x) =
+		\begin{pmatrix}
+			A & t\\
+			0 \dots 0 & 1
+		\end{pmatrix}
+		\underbrace{\ve{x}{1}}_{=:\tilde{x}}
+		=
+		\ve{Ax+t}{1}
+	$$
+	ist eine lineare Abbildung.
+\end{bem}
+
+\begin{bem}
+	\begin{align*}
+		O_2(\R) & = \left\{ \Rot_\theta : \theta \in [0,2\pi) \right\} \cup
+			\left\{ \Ref_v : v \in \R^2 \setminus \left\{ 0 \right\} \right\}\\
+		\Rot_\theta (x) & =
+		\begin{pmatrix}
+			\cos \theta & - \sin \theta\\
+			\sin \theta & \cos \theta
+		\end{pmatrix}
+		\cdot x\\
+		\Ref_v (x) & = Ax\\
+		& = \left( E - \frac{2}{\left\langle v, v \right\rangle} v \cdot v^t \right) x
+	\end{align*}
+\end{bem}
+
+% subsection Bewegungen/Isometrien (end)
+
+\section*{Vorlesung am 7.6.2011} % (fold)
+\label{sec:Vorlesung am 7.6.2011}
+
+\subsection*{Bewegungen im $\R^2 \cong \C$} % (fold)
+
+\begin{itemize}
+	\item Translationen um $t \in \C$
+	$$
+		z \mapsto z+t
+	$$
+	\item Spiegelungen an $\Real(z)$
+	$$
+		z \mapsto \overline{z}
+	$$
+	\item Drehung um Ursprung mit Winkel $\alpha$
+	\begin{align*}
+		z & \mapsto e^{i \cdot \alpha} \cdot z\\
+		& =: r \in \C \text{ mit } |r| = 1\\
+		& = \cos \alpha + i \sin \alpha
+	\end{align*}
+	\item[$\to$] beliebige Bewegungen durch Kombination! z.B.
+	$$
+		z \mapsto \left( \overline{e^{i \alpha} (z-t)} \right) e^{-i \alpha} + t
+	$$
+	entspricht einer Spiegelung an einer Geraden durch $t$ mit Winkel $\alpha$ zur Achse $\Real(z)$
+\end{itemize}
+
+% subsection Bewegungen im $\R^2 \equiv \C$ (end)
+
+\subsection*{Drehungen im $\R^3$} % (fold)
+
+$$
+	SO_n(\R) = O_n^+(\R) = \left\{ M \in O_n(\R) : \det M = \pm 1 \right\}
+$$
+
+\textbf{Bsp:} Drehungen um $x-, y-, z-$ Achse im $\R^3$
+$$
+	\underbrace{
+		\begin{pmatrix}
+			1 & 0 & 0\\
+			0 & \cos \alpha & - \sin \alpha\\
+			0 & \sin \alpha & \cos \alpha
+		\end{pmatrix}
+	}_{\Rot_{x,\alpha}}
+	\quad
+	\underbrace{
+		\begin{pmatrix}
+			\cos \alpha & 0 & \sin \alpha\\
+			0 & 1 & 0\\
+			- \sin \alpha & 0 & \cos \alpha
+		\end{pmatrix}
+	}_{\Rot_{y,\alpha}}
+	\quad
+	\underbrace{
+		\begin{pmatrix}
+			\cos \alpha & - \sin \alpha & 0\\
+			\sin \alpha & \cos \alpha & 0\\
+			0 & 0 & 1
+		\end{pmatrix}
+	}_{\Rot_{z,\alpha}}
+$$
+Drehung um $\left\{ \lambda v : \lambda \in \R \right\}$ mit Richtung $v \in \R^3 \setminus \left\{
+0 \right\}$?
+
+% subsection Drehungen im $\R^3$ (end)
+
+% section Vorlesung am 7.6.2011 (end)
