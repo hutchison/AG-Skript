@@ -1,0 +1,24 @@
+% Konstruktion gleichseitiges Dreieck
+% (genau diese Konstruktion wird im PGF/TikZ Manual beschrieben - warum nicht die eingebauten
+% Features nutzen?)
+% Änderungen sind eigentlich nur an den Koordinaten der Punkte oder am 'scale'-Faktor nötig. Den
+% Rest erledigt TikZ selbst.
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm,scale=1.0]
+    % Punkt A mit Beschriftung
+    \coordinate (A) at (0,0);
+    \fill [color=colPkt] (A) circle (1.5pt);
+    \draw [color=colPkt, anchor=north east] (A) node {$A$};
+    % Punkt B mit Beschriftung
+    \coordinate (B) at (2,0);
+    \fill [color=colPkt] (B) circle (1.5pt);
+    \draw [color=colPkt, anchor=north west] (B) node {$B$};
+    % Kreise "um A durch B" und "um B durch A"
+    \node (KA) [draw, circle through=(B)] at (A) {};
+    \node (KB) [draw, circle through=(A)] at (B) {};
+    % Schnittpunkt der Kreise
+    \coordinate (C) at (intersection 2 of KA and KB);
+    \fill [color=colPktKon] (C) circle (1.5pt);
+    \draw [color=colPktKon, anchor=south] (C) node {$C$};
+    % das gleichseitige Dreieck
+    \draw (A)--(B)--(C)--(A);
+\end{tikzpicture}
