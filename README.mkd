@@ -1,1 +1,10 @@
-Vorlesungsskript für Axiomatische Geometrie
+# Vorlesungsskript für Axiomatische Geometrie
+
+## Styleguide
+  + Textbreite: 100 Zeichen.
+  + Tabs sind keine Tabs sondern 4 Leerzeichen.
+  + Innerhalb von Environments (`\begin{...} ... \end{...}`) wird eingerückt.
+  + Falls z.B. ein `\item` breiter als 100 Zeichen ist, wird eine neue Zeile aufgemacht, die einmal
+    weiter eingerückt ist als die Zeile davor.
+  + Ausnahmen bei Einrückungen sind erlaubt, wenn's dadurch schöner aussieht (siehe
+    `\usepackage[pdfauthor=...]` in `AxiomatischeGeometrie.tex``)
