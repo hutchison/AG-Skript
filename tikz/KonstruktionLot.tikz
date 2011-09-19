@@ -1,0 +1,20 @@
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm,scale=0.5]
+    \clip(-4,-3) rectangle (5,6);
+    \draw [color=colPktKon] (-0.44,0.29) coordinate (A) node[anchor = north east] {$A$};
+    \draw [color=colPktKon] (1.48,-0.10) coordinate (B) node[anchor = north west] {$B$};
+    \draw [color=colPktKon] (0.85,1.75) coordinate (C) node[anchor = north west] {$C$};
+    \draw [color=colPktKon] (0.19,-1.56) coordinate (D) node[anchor = east] {$D$};
+    \draw [color=colPkt] (1,2.5) coordinate (E) node[anchor = south west] {$E$};
+    \draw [dash pattern=on 2pt off 2pt](E) circle (2.64cm);
+    \draw [dash pattern=on 1pt off 1pt] (A) circle (1.95cm);
+    \draw [dash pattern=on 1pt off 1pt] (B) circle (1.95cm);
+    \draw [color=colPkt] (4.24,-0.56) node[anchor = south] {$g$};
+    \draw (1.64,5.68) node[anchor = west] {$h$};
+    \draw [line width = 1pt,domain=-4:6] plot(\x,{(--2-2*\x)/10});
+    \draw [line width = 1pt,domain=-4:6] plot(\x,{(-1.66--3.32*\x)/0.66});
+    \fill [color=colPkt] (E) circle (1.5pt);
+    \fill [color=colPktKon] (A) circle (1.5pt);
+    \fill [color=colPktKon] (B) circle (1.5pt);
+    \fill [color=colPktKon] (C) circle (1.5pt);
+    \fill [color=colPktKon] (D) circle (1.5pt);
+\end{tikzpicture}
