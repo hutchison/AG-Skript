@@ -1,0 +1,15 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-2,-1) rectangle (6,4);
+    \draw [shift={(0.2,0)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (0:0.6)
+        arc (0:78.69:0.6) -- cycle;
+    \draw [shift={(0.69,2.47)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-101.31:0.6)
+        arc (-101.31:-8.13:0.6) -- cycle;
+    \draw [domain=-2:6] plot(\x,{(-0-0*\x)/7});
+    \draw [domain=-2:6] plot(\x,{(--18-1*\x)/7});
+    \draw [domain=-2:6] plot(\x,{(-1--5*\x)/1});
+    \draw[color=colWin] (0.45,0.2) node {$\alpha$};
+    \draw[color=colWin] (0.85,2.2) node {$\beta$};
+    \draw[color=black] (3.78,0) node[anchor = north] {$g$};
+    \draw[color=black] (3.78,2) node[anchor = north] {$g'$};
+    \draw[color=black] (0.09,-0.53) node[anchor = west] {$h$};
+\end{tikzpicture}
