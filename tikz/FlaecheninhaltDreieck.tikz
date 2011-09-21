@@ -1,0 +1,13 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-0.5,-0.5) rectangle (4.5,2);
+    \draw (0,0) coordinate (A);
+    \draw (3,0) coordinate (B);
+    \draw (4,1) coordinate (C);
+    \draw (1,1) coordinate (D);
+    \draw (D)--(A)--(C)--(D);
+    \filldraw [fill=colPktKon](A)--(B)--(C)--(A);
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[anchor=north east] {$A$};
+    \filldraw [color=colPkt] (B) circle (1.5pt) node[anchor=north west] {$B$};
+    \filldraw [color=colPkt] (C) circle (1.5pt) node[anchor=south west] {$C$};
+    \filldraw [color=colPkt] (D) circle (1.5pt) node[anchor=south east] {$D$};
+\end{tikzpicture}
