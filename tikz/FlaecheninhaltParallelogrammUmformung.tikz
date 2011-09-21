@@ -1,0 +1,36 @@
+\begin{tabular}{ccccc}
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \clip(0,0) rectangle (3.5,1.5);
+            \draw (0,0) coordinate (A);
+            \draw (2.5,0) coordinate (B);
+            \draw (3.5,1) coordinate (C);
+            \draw (1,1) coordinate (D);
+            \filldraw [fill=colPktKon] (A)--(B)--(C)--(D)--(A);
+            \draw [dash pattern=on 5pt off 2.7pt] (B)--(2.5,1);
+        \end{tikzpicture}
+    &
+        $=$
+    &
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \clip(0,0) rectangle (4,1.5);
+            \draw (0,0) coordinate (A);
+            \draw (2.5,0) coordinate (B);
+            \draw (2.5,1) coordinate (C);
+            \draw (1,1) coordinate (D);
+            \filldraw [fill=colPktKon] (A)--(B)--(C)--(D)--(A);
+            \filldraw [fill=colPktKon] (2.6,0)--(3.6,1)--(2.6,1)--(2.6,0);
+        \end{tikzpicture}
+    &
+        $=$
+    &
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \clip(0,0) rectangle (3.5,1.5);
+            \draw (0,0) coordinate (A);
+            \draw (2.5,0) coordinate (B);
+            \draw (2.5,1) coordinate (C);
+            \draw (0,1) coordinate (D);
+            \filldraw [fill=colPktKon] (A)--(B)--(C)--(D)--(A);
+            \draw [dash pattern=on 5pt off 2.7pt] (A)--(1,1);
+        \end{tikzpicture}
+\end{tabular}
+
