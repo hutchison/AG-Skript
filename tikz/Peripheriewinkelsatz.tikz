@@ -1,0 +1,36 @@
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
+    \clip(-6,-5) rectangle (6,5.2);
+    \draw (-4.4721,-2.2361) coordinate (A);
+    \draw (+4.5367,-2.1019) coordinate (B);
+    \draw (+1.8562,+4.6427) coordinate (C);
+    \draw (0,0) coordinate (O);
+    \draw (O)--(C)--(A)--(O)--(B)--(C);
+    \draw(0,0) circle (5cm);	
+    \draw [shift={(A)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (26.5651:1.5)
+        arc (26.5651:47.3863:1.5) -- cycle;
+    \draw [shift={(B)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (111.6746:1.5)
+        arc (111.6746:155.1416:1.5) -- cycle;
+    \draw [shift={(O)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-153.4349:1.0627)
+        arc (-153.4349:-24.8584:1.0627) -- cycle;
+    \draw [shift={(O)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (68.2076:1.0627)
+        arc (68.2076:206.5651:1.0627) -- cycle;
+    \draw [shift={(O)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-24.8584:1.0627)
+        arc (-24.8584:68.2076:1.0627) -- cycle;
+    \draw [shift={(C)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-132.6137:1.5)
+        arc (-132.6137:-111.7924:1.5) -- cycle;
+    \draw [shift={(C)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-111.7924:1.5)
+        arc (-111.7924:-68.3254:1.5) -- cycle;
+    \draw(0,0) circle (5cm);
+    \filldraw [color=colPkt] (O) circle (1.5pt) node[below] {$O$};
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[left]  {$A$};
+    \filldraw [color=colPkt] (B) circle (1.5pt) node[right] {$B$};
+    \filldraw [color=colPkt] (C) circle (1.5pt) node[above] {$C$};
+    \draw[color=colWin] (-3.5,-1.5) node {$\alpha$}; % Winkel alpha im Punkt A
+    \draw[color=colWin] (1.20,3.55) node {$\alpha$}; % Winkel alpha im Punkt C
+    \draw[color=colWin] (1.90,3.50) node {$\beta$}; % Winkel beta im Punkt C
+    \draw[color=colWin] (3.9,-1.45) node {$\beta$}; % Winkel beta im Punkt B
+    \draw[color=colWin] (0.0,-0.65) node {$2(\alpha+\beta)$};
+    \draw[color=colWin] (-0.3,0.4) node[rotate=40] {$\pi-2\beta$};
+    \draw[color=colWin] (0.7,0.27) node[rotate=-60] {$\pi-2\alpha$};
+\end{tikzpicture}
+
