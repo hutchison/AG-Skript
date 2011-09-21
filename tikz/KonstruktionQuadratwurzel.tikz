@@ -9,6 +9,11 @@
     \filldraw [color=colPkt] (A) circle (1.5pt) node[anchor = north east] {$A$};
     \filldraw [color=colPkt] (B) circle (1.5pt) node[anchor = north west] {$B$};
     \filldraw [color=colPktKon] (C) circle (1.5pt) node[anchor = south] {$C$};
+    \coordinate (E) at (4,0);
+    \begin{scope}
+        \clip (-0.1,0) rectangle (8.1,4.1);
+        \node (KE) [draw, circle through=(A)] at (E) {};
+    \end{scope}
     \draw (2.5,0) node[below] {$l$};
     \draw (6.5,0) node[below] {$1$};
     \draw (5,1.93) node[left] {$h$};
