@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm,>=triangle 45,scale=0.7]
+    \clip(-1,-1) rectangle (7.2,7.2);
+    \draw (0,0) coordinate (A);
+    \draw (5,0) coordinate (B);
+    \draw (7,0) coordinate (C);
+    \draw (0,5) coordinate (D);
+    \draw (5,5) coordinate (E);
+    \draw (7,5) coordinate (F);
+    \draw (0,7) coordinate (G);
+    \draw (5,7) coordinate (H);
+    \draw (7,7) coordinate (I);
+    \draw (A)--(C)--(I)--(G)--(A);
+    \draw (B)--(E)--(H);
+    \draw (D)--(E)--(F);
+    \draw [<->](0,-0.5)--(5,-0.5);
+    \draw (2.5,-0.25) node[anchor=north,fill=white] {$a$};
+    \draw [<->](5,-0.5)--(7,-0.5);
+    \draw (6,-0.25) node[anchor=north,fill=white] {$b$};
+    \draw [<->](-0.5,0)--(-0.5,5);
+    \draw (-0.25,2.5) node[anchor=east,fill=white] {$a$};
+    \draw [<->](-0.5,5)--(-0.5,7);
+    \draw (-0.25,6) node[anchor=east,fill=white] {$b$};
+    \draw (2.5,2.5) node {$a^2$};
+    \draw (6,2.5) node{$ab$};
+    \draw (2.5,6) node{$ab$};
+    \draw (6,6) node{$b^2$};
+\end{tikzpicture}
