@@ -1,0 +1,16 @@
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
+    \clip(-0.5,-0.5) rectangle (3.5,4);
+    \draw (2,3) coordinate (A);
+    \draw (0,0) coordinate (B);
+    \draw (3,0) coordinate (C);
+    \draw (1.08,1.62) coordinate (P);
+    \draw (2.46,1.62) coordinate (Q);
+    \draw (A)--(B)--(C)--(A);
+    \draw [domain=0:3.5] plot(\x,{(--4.86-0*\x)/3});
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[anchor = south] {$A$};
+    \filldraw [color=colPkt] (B) circle (1.5pt) node[anchor = north east] {$B$};
+    \filldraw [color=colPkt] (C) circle (1.5pt) node[anchor = north west] {$C$};
+    \filldraw [color=colPktKon] (P) circle (1.5pt) node[anchor = south east] {$P$};
+    \filldraw [color=colPktKon] (Q) circle (1.5pt) node[anchor = south west] {$Q$};
+    \draw (3.3,1.62) node[anchor = north] {$g$};
+\end{tikzpicture}
