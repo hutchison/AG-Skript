@@ -1,0 +1,22 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip (0,0.5) rectangle (7,4.5);
+    \draw [shift={(1,1)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (0:0.6)
+        arc (0:42.27:0.6) -- cycle;
+    \draw [shift={(6,1)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (119.54:0.6)
+        arc (119.54:180:0.6) -- cycle;
+    \draw [shift={(4.3,4)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-137.73:0.6)
+        arc (-137.73:-60.46:0.6) -- cycle;
+    \draw [shift={(4.3,4)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-180.00:0.6)
+        arc (-180.0:-137.73:0.6) -- cycle;
+    \draw [shift={(4.3,4)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-60.46:0.6)
+        arc (-60.46:0:0.6) -- cycle;
+    \draw (1,1)-- (6,1);
+    \draw (6,1)-- (4.3,4);
+    \draw (4.3,4)-- (1,1);
+    \draw [dash pattern=on 2pt off 2pt,domain=0:7] plot(\x,{(--20-0*\x)/5});
+    \draw [color=colWin] (1.4,1.15) node {\footnotesize $\alpha$};
+    \draw [color=colWin] (3.87,3.83) node {\footnotesize $\alpha$};
+    \draw [color=colWin] (5.67,1.2) node {\footnotesize $\beta$};
+    \draw [color=colWin] (4.65,3.75) node {\footnotesize $\beta$};
+    \draw [color=colWin] (4.25,3.6) node {\footnotesize $\gamma$};
+\end{tikzpicture}

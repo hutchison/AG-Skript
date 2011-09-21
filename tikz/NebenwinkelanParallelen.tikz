@@ -1,0 +1,21 @@
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
+    \clip (-2,-1) rectangle (5,3);
+    \draw [shift={(0.86,0)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (0:0.6)
+        arc (0:74.05:0.6) -- cycle;
+    \draw [shift={(0.86,0)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (180:0.6)
+        arc (180:74.05:0.6) -- cycle;
+    \draw [shift={(1.43,2)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-105.95:0.6)
+        arc (-105.95:0:0.6) -- cycle;
+    \draw [shift={(1.43,2)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-180:0.6)
+        arc (-180:-105.95:0.6) -- cycle;
+    \draw [domain=-2:5] plot(\x,{(-0-0*\x)/7});
+    \draw [domain=-2:5] plot(\x,{(--14-0*\x)/7});
+    \draw [domain=-2:5] plot(\x,{(-6--7*\x)/2});
+    \draw [color=colWin] (1.15,0.15) node {\footnotesize $\alpha$};
+    \draw [color=colWin] (0.6,0.15) node {\footnotesize $\pi$-$\alpha$};
+    \draw [color=colWin] (1.08,1.8) node {\footnotesize $\alpha$};
+    \draw [color=colWin] (1.7,1.8) node {\footnotesize $\pi$-$\alpha$};
+    \draw [color=black] (3.6,0) node[anchor = north] {$g$};
+    \draw [color=black] (4.2,2) node[anchor = north] {$g'$};
+    \draw [color=black] (0.65,-.72) node[anchor = west] {$h$};
+\end{tikzpicture}
