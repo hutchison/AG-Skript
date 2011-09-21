@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-1,-1) rectangle (9,5);
+    \draw (0,0) coordinate (0);
+    \draw (3,0) coordinate (A);
+    \draw (8,0) coordinate (C);
+    \draw (2.2,1.5) coordinate (E);
+    \draw (5.87,4)  coordinate (B);
+    \draw (0)--(A)--(C)--(B)--(E)--(0);
+    \draw (A)--(E);
+    \draw [domain=-1:10.9] plot(\x,{(-0--1.5*\x)/2.2}); % Gerade g  durch 0 und E
+    \draw (7.0,4.5) node {$g$};
+    \draw [domain=-4.3:10.9] plot(\x,{(-0-0*\x)/-8}); % Gerade g' durch 0 und C
+    \draw (8.8,0.1) node[below] {$g'$};
+    \draw [domain=1.75:3.3] plot(\x,{(-4.5--1.5*\x)/-0.8}); % Gerade h  durch A und E
+    \draw (1.8,2.5) node {$h$};
+    \draw [domain=-4.3:8.3] plot(\x,{(-12--1.5*\x)/-0.8}); % Gerade h' durch B und C
+    \draw (5.2,4.7) node{$h'$};
+    \filldraw [color=colPkt] (0) circle (1.5pt) node[anchor = north] {$0$};
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[anchor = north] {$A$};
+    \filldraw [color=colPktKon] (B) circle (1.5pt) node[anchor = south] {$B$};
+    \filldraw [color=colPktKon] (C) circle (1.5pt) node[anchor = north] {$C$};
+    \filldraw [color=colPkt] (E) circle (1.5pt) node[anchor = south] {$E$};
+    \draw (1.1,0.75)   node[anchor=south, rotate=34.286] {$1$};
+    \draw (1.5,0) node[anchor=north] {$a$};
+    \draw (4.035,2.75) node[anchor=south, rotate=34.286] {$b$};
+    \draw (5.5,0) node[anchor=north] {$a\cdot b$};
+\end{tikzpicture}
