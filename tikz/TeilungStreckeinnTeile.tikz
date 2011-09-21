@@ -1,0 +1,37 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-1,-0.6) rectangle (8,4);
+    \draw (0,0) coordinate (A) circle (1.5pt);
+    \draw (7,0) coordinate (B);
+    \draw (0.78,0.62) coordinate (A1);
+    \draw (1.56,1.25) coordinate (A2);
+    \draw (2.34,1.87) coordinate (A3);
+    \draw (3.12,2.50) coordinate (A4);
+    \draw (3.90,3.12) coordinate (A5);
+    \draw (1.4,0) coordinate (C1);
+    \draw (2.8,0) coordinate (C2);
+    \draw (4.2,0) coordinate (C3);
+    \draw (5.6,0) coordinate (C4);
+    \draw [line width = 1pt] (A)--(B);
+    \draw (A1)--(C1);
+    \draw (A2)--(C2);
+    \draw (A3)--(C3);
+    \draw (A4)--(C4);
+    \draw (A5)--(B);
+    \draw [domain=-1:8] plot(\x,{(-0--4*\x)/5});
+    \draw [shift={(A)}]  (26:1) arc (26:50:1);
+    \draw [shift={(A1)}] (26:1) arc (26:50:1);
+    \draw [shift={(A2)}] (26:1) arc (26:50:1);
+    \draw [shift={(A3)}] (26:1) arc (26:50:1);
+    \draw [shift={(A4)}] (26:1) arc (26:50:1);
+    \filldraw [color=colPkt, fill=colPkt] (A) circle (1.5pt) node[above=2pt] {$A$};
+    \filldraw [color=colPkt, fill=colPkt] (B) circle (1.5pt) node[above=2pt] {$B$};
+    \filldraw [color=colPktKon, fill=colPktKon] (A1) circle (1.5pt) node[above=2pt] {$A_1$};
+    \filldraw [color=colPktKon, fill=colPktKon] (A2) circle (1.5pt) node[above=2pt] {$A_2$};
+    \filldraw [color=colPktKon, fill=colPktKon] (A3) circle (1.5pt) node[above=2pt] {$A_3$};
+    \filldraw [color=colPktKon, fill=colPktKon] (A4) circle (1.5pt) node[above=2pt] {$A_4$};
+    \filldraw [color=colPktKon, fill=colPktKon] (A5) circle (1.5pt) node[above=2pt] {$A_5$};
+    \filldraw [color=colPktKon, fill=colPktKon] (C1) circle (1.5pt) node[below=2pt] {$C_1$};
+    \filldraw [color=colPktKon, fill=colPktKon] (C2) circle (1.5pt) node[below=2pt] {$C_2$};
+    \filldraw [color=colPktKon, fill=colPktKon] (C3) circle (1.5pt) node[below=2pt] {$C_3$};
+    \filldraw [color=colPktKon, fill=colPktKon] (C4) circle (1.5pt) node[below=2pt] {$C_4$};
+\end{tikzpicture}
