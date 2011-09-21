@@ -1,0 +1,55 @@
+\begin{tabular}{cccc}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(-1.5,0) rectangle (2,3);
+        \draw (0,0) coordinate (A);
+        \draw (2,0) coordinate (B);
+        \draw (2,2) coordinate (C);
+        \draw (0,2) coordinate (D);
+        \draw (-0.90,1.43) coordinate (E);
+        \draw (-1.48,2.33) coordinate (F);
+        \draw (-0.57,2.90) coordinate (G);
+        \filldraw [fill=colPktKon] (E)--(G)--(D)--(E);
+        \draw (A)--(B)--(C)--(D)--(A)--(E)--(D)--(G)--(F)--(E);
+    \end{tikzpicture}
+&
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(-1.5,0) rectangle (2,3);
+        \draw (0,0) coordinate (A);
+        \draw (2,0) coordinate (B);
+        \draw (2,2) coordinate (C);
+        \draw (0,2) coordinate (D);
+        \draw (-0.90,1.43) coordinate (E);
+        \draw (-1.48,2.33) coordinate (F);
+        \draw (-0.57,2.90) coordinate (G);
+        \filldraw [fill=colPktKon] (A)--(G)--(D)--(A);
+        \draw (A)--(B)--(C)--(D)--(A)--(E)--(D)--(G)--(F)--(E);
+    \end{tikzpicture}
+&
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(-1.5,0) rectangle (2,3);
+        \draw (0,0) coordinate (A);
+        \draw (2,0) coordinate (B);
+        \draw (2,2) coordinate (C);
+        \draw (0,2) coordinate (D);
+        \draw (-0.90,1.43) coordinate (E);
+        \draw (-1.48,2.33) coordinate (F);
+        \draw (-0.57,2.90) coordinate (G);
+        \draw [dash pattern=on 4pt off 4pt] (E)--(2,1.43);
+        \filldraw [fill=colPktKon] (E)--(D)--(C)--(E);
+        \draw (A)--(B)--(C)--(D)--(A)--(E)--(D)--(G)--(F)--(E);
+    \end{tikzpicture}
+&
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(-1.5,0) rectangle (2,3);
+        \draw (0,0) coordinate (A);
+        \draw (2,0) coordinate (B);
+        \draw (2,2) coordinate (C);
+        \draw (0,2) coordinate (D);
+        \draw (-0.90,1.43) coordinate (E);
+        \draw (-1.48,2.33) coordinate (F);
+        \draw (-0.57,2.90) coordinate (G);
+        \draw [dash pattern=on 4pt off 4pt] (E)--(2,1.43);
+        \filldraw [fill=colPktKon] (0,1.43)--(D)--(C)--(0,1.43);
+        \draw (A)--(B)--(C)--(D)--(A)--(E)--(D)--(G)--(F)--(E);
+    \end{tikzpicture}
+\end{tabular}
