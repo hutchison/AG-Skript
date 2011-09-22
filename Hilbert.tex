@@ -1,48 +1,38 @@
 \section*{Vorlesung am 14.04.2011}
 
 \begin{quote}
-It is quite natural that, after a lapse of about 2250 years, some
-details are now seen to be capable of improvement.
-(Coxeter, \cite[Section 1.2]{coxeter-1969})
+    It is quite natural that, after a lapse of about 2250 years, some details are now seen to be
+    capable of improvement. (Coxeter, \cite[Section 1.2]{coxeter-1969})
 \end{quote}
 
 \subsection*{Hilbert}
 
 \begin{itemize}
-\item In seinem Buch \cite{hilbert} hat David Hilbert (1862--1943) 
-das Axiomensystem von Euklid gründlich überarbeitet.
+    \item In seinem Buch \cite{hilbert} hat David Hilbert (1862--1943) das Axiomensystem von Euklid
+        gründlich überarbeitet.
 
-\item Hilbert verfolgt damit das Ziel, die Axiomatische Geometrie frei
-  von unserer (oft in die Irre führenden) geometrischen Anschauung zu machen.
+    \item Hilbert verfolgt damit das Ziel, die Axiomatische Geometrie frei von unserer (oft in die
+        Irre führenden) geometrischen Anschauung zu machen.
 
-\item Wir folgen im Wesentlichen der Aufarbeitung~\cite{hartshorne-2000} durch Robin
-  Hartshorne
-
+    \item Wir folgen im Wesentlichen der Aufarbeitung~\cite{hartshorne-2000} durch Robin Hartshorne
 \end{itemize}
 
-% BEM (taken from Wikipedia, http://en.wikipedia.org/wiki/Hilbert%27s_axioms):
-%Other well-known modern axiomatizations of Euclidean geometry are
-%those of Alfred Tarski and of George Birkhoff.
-
-
+% BEM (taken from Wikipedia, http://en.wikipedia.org/wiki/Hilbert%27s_axioms): Other well-known
+% modern axiomatizations of Euclidean geometry are those of Alfred Tarski and of George Birkhoff.
 
 % ETWAS FORMALER:
-% Formal "richtig" waere es eine Menge von Punkten $\P$ einzuführen
-% und eine Menge von Geraden $\MG$ von Teilmengen von $\P$ (also
-% \MG\subseteq 2^{\P}$. Eine Ebene~$\E$ ist dann ein Tripel $(\P,\MG,
+% Formal "richtig" wäre es eine Menge von Punkten $\P$ einzuführen und eine Menge von Geraden $\MG$
+% von Teilmengen von $\P$ (also \MG\subseteq 2^{\P}$. Eine Ebene~$\E$ ist dann ein Tripel $(\P,\MG,
 % \MI)$ mit einer Inzidenzrelation $\MI$, die die Axiome I1,I2,I3 erfüllt.
 
+Wir gehen aus von einer nichtleeren Menge~$\E$, deren Elementen wir {\em Punkte} nennen.
+(Bezeichnung: $A,\,B,\,C,\ldots$).
 
-Wir gehen aus von einer nichtleeren Menge~$\E$, deren Elementen wir 
-{\em Punkte} nennen. (Bezeichnung: $A,\,B,\,C,\ldots$).
+{\em Geraden} sind gewisse Teilmengen von $\E$ (Bezeichnung: $g,\,h,\ldots$);
 
-{\em Geraden} sind gewisse Teilmengen von $\E$
-(Bezeichnung: $g,\,h,\ldots$);
-
-Man beachte, dass wir nicht erklären (können!) \glqq was Punkte und Geraden
-sind\grqq . Wir können aber durch 
-Axiome angeben welche Eigenschaften 
-Punkte und Geraden haben oder wie sie zueinander in Beziehung stehen.
+Man beachte, dass wir nicht erklären (können!) "`was Punkte und Geraden sind"'. Wir können aber
+durch Axiome angeben welche Eigenschaften Punkte und Geraden haben oder wie sie zueinander in
+Beziehung stehen.
 
 % Wir betrachten 5 Gruppen von Axiomen:
 % \begin{enumerate}
@@ -53,182 +43,143 @@ Punkte und Geraden haben oder wie sie zueinander in Beziehung stehen.
 %     \item[V.] Parallelenaxiom
 % \end{enumerate}
 % Die Axiome der Axiomengruppen I-IV sind die Axiome der
-% \glqq{}absoluten
-% Geometrie\grqq{}.\\
-
-
-
+% "`{}absoluten
+% Geometrie"'{}.\\
 
 \subsection*{Inzidenzaxiome}
 
-Wir sagen ein Punkt~$A$ {\em inzidiert} mit einer Geraden~$g$ genau dann 
-wenn~$A$ \glqq auf $g$ liegt\grqq\ (bzw. $A\in g$).
+Wir sagen ein Punkt $A$ {\em inzidiert} mit einer Geraden $g$ genau dann wenn $A$ "`auf $g$ liegt"'
+(bzw. $A\in g$).
 
-\begin{enumerate}
-    \item[{\bf(I1)}] Zu je zwei verschiedenen Punkten $A,\,B\in\E$ gibt es
-    genau eine Gerade $g\subset\E$ mit $A,\,B\in g$
-    \item[{\bf(I2)}] Auf jeder Geraden gibt es mindestens 2 Punkte.
-    \item[{\bf (I3)}] Es gibt 3 Punkte $A,\,B,\,C\in\E$, die
-    nicht auf einer Geraden liegen
+\begin{itemize}
+    \item[{\bf (I1)}] Zu je zwei verschiedenen Punkten $A,\,B\in\E$ gibt es genau eine Gerade
+        $g\subset\E$ mit $A,\,B\in g$
 
-\end{enumerate}
+    \item[{\bf (I2)}] Auf jeder Geraden gibt es mindestens 2 Punkte.
 
+    \item[{\bf (I3)}] Es gibt 3 Punkte $A,\,B,\,C\in\E$, die nicht auf einer Geraden liegen
+\end{itemize}
 
-Die Gerade durch $A$ und $B$ in {\bf(I1)} bezeichnen wir auch
-mit $g(A,B)$.
-Drei Punkte $A,\,B,\,C$ heißen \emph{kollinear} 
-wenn sie auf einer gemeinsamen Gerade liegen.
-Das Axiom {\bf(I3)} sagt also aus, dass es 3 nicht kollineare Punkte
-in $\E$ gibt.
+Die Gerade durch $A$ und $B$ in {\bf(I1)} bezeichnen wir auch mit $g(A,B)$. Drei Punkte $A,\,B,\,C$
+heißen \emph{kollinear} wenn sie auf einer gemeinsamen Gerade liegen.  Das Axiom {\bf(I3)} sagt also
+aus, dass es 3 nicht kollineare Punkte in $\E$ gibt.
 
-Die Axiome sind {\em unabhängig voneinander}, d.h. eines kann nicht
-aus den anderen hergeleitet werden. Für den Beweis der Unabhängigkeit
-betrachtet man Modelle (Beispiele), in denen alle Axiome bis
-auf eins erfüllt sind.
+Die Axiome sind {\em unabhängig voneinander}, d.h. eines kann nicht aus den anderen hergeleitet
+werden. Für den Beweis der Unabhängigkeit betrachtet man Modelle (Beispiele), in denen alle Axiome
+bis auf eins erfüllt sind.
 
 \begin{center}
-	% Vorlage:
-	%\includegraphics[width=12cm]{BILDER/BildUnabhaengigkeitInzidenzaxiome.pdf}
+    % Vorlage:
+    %\includegraphics[width=12cm]{BILDER/BildUnabhaengigkeitInzidenzaxiome.pdf}
 
-	% In den .tikz Dateien sind die Zeichnungen für die Bilder. Durch die Tabelle sieht der Abstand
-	% zwischen den Bildern schöner aus.
-	\begin{figure}[h]
-		\begin{tabular}{ccc}
-		\input{tikz/UnabhaengigkeitInzidenzaxiome1.tikz}
-		&
-		\input{tikz/UnabhaengigkeitInzidenzaxiome2.tikz}
-		&
-		\input{tikz/UnabhaengigkeitInzidenzaxiome3.tikz}
-		\end{tabular}
-		\caption{Unabhängigkeit der Inzidenzaxiome}
-	\end{figure}
+    % In den .tikz Dateien sind die Zeichnungen für die Bilder. Durch die Tabelle sieht der Abstand
+    % zwischen den Bildern schöner aus.
+    \begin{figure}[h]
+        \begin{tabular}{ccc}
+        \input{tikz/UnabhaengigkeitInzidenzaxiome1.tikz}
+        &
+        \input{tikz/UnabhaengigkeitInzidenzaxiome2.tikz}
+        &
+        \input{tikz/UnabhaengigkeitInzidenzaxiome3.tikz}
+        \end{tabular}
+        \caption{Unabhängigkeit der Inzidenzaxiome}
+    \end{figure}
 \end{center}
 
-Eine Menge~$\E$ von Punkten, mit einer Menge %$\MG$ 
-von Geraden, die zusammen die
-Axiome  {\bf(I1)},  {\bf(I2)} und {\bf(I3)} erfüllen, heißt auch {\em
-  Inzidenzgeometrie}. Wir bezeichnen $\E$ in diesem Fall auch als 
-{\em Ebene}.
+Eine Menge $\E$ von Punkten, mit einer Menge %$\MG$
+von Geraden, die zusammen die Axiome {\bf(I1)}, {\bf(I2)} und {\bf(I3)} erfüllen, heißt auch {\em
+Inzidenzgeometrie}. Wir bezeichnen $\E$ in diesem Fall auch als {\em Ebene}.
 %Formal ist dies ein Tripel (\E,\MG,\MI) mit
 %einer Inzidenzrelation $\MI\subseteq \E |times \MG$.
-Auch wenn wir noch nicht viel gefordert haben, lassen sich schon
-erste einfache Schlußfolgerungen ziehen, die für alle Inzidenzgeometrien gelten:
-
+Auch wenn wir noch nicht viel gefordert haben, lassen sich schon erste einfache Schlußfolgerungen
+ziehen, die für alle Inzidenzgeometrien gelten:
 
 \begin{thm}
-Für eine Ebene~$\E$, in der die Axiome {\bf(I1)},  {\bf(I2)} und
-{\bf(I3)} erfüllt sind, gilt:
-\begin{enumerate}
-\item  Es gibt mindestens 3 paarweise verschiedene Geraden.
+    Für eine Ebene $\E$, in der die Axiome {\bf(I1)}, {\bf(I2)} und {\bf(I3)} erfüllt sind, gilt:
+    \begin{enumerate}
+        \item Es gibt mindestens 3 paarweise verschiedene Geraden.
 
-\item
-Zwei verschiedene Geraden können höchsten einen gemeinsamen
-  Punkte enthalten.
-
-\end{enumerate}
+        \item Zwei verschiedene Geraden können höchsten einen gemeinsamen Punkte enthalten.
+    \end{enumerate}
 \end{thm}
 
 \begin{proof}
-\begin{enumerate}
-\item[(2)]
-Enthalten zwei unterschiedliche Geraden~$g$ und~$h$ 
-zwei unterschiedliche Schnittpunkte $A$ und $B$, so widerspricht das
-Axiom {\bf(I1)}, in der die Eindeutigkeit der Geraden durch $A$ und
-$B$ gefordert wird.
+    \begin{enumerate}
+    \item[(2)] Enthalten zwei unterschiedliche Geraden $g$ und $h$ zwei unterschiedliche
+        Schnittpunkte $A$ und $B$, so widerspricht das Axiom {\bf(I1)}, in der die Eindeutigkeit der
+        Geraden durch $A$ und $B$ gefordert wird.
 
-\item[(1)] Nach Axiom {\bf(I3)} gibt es drei Punkte die nicht kollinear
-  sind. Die Geraden $g(A,B), g(A,C)$ und $g(B,C)$ 
-sind wiederum paarweise verschieden nach {\bf(I1)}.
-
-\end{enumerate}
+    \item[(1)] Nach Axiom {\bf(I3)} gibt es drei Punkte die nicht kollinear sind. Die Geraden
+        $g(A,B), g(A,C)$ und $g(B,C)$ sind wiederum paarweise verschieden nach {\bf(I1)}.
+    \end{enumerate}
 \end{proof}
 
+Man beachte, dass die Argumentation im Beweis unabhängig von unserer "`geometrischen Anschauung"'
+ist. Wir können sogar {\em Modelle} angeben, die weit entfernt sind von unserer geometrischen
+Anschauung einer Ebene, die aber trotzdem die Inzidenzaxiome erfüllen. Wir betrachten ein paar
+Beispiele:
 
-Man beachte, dass die Argumentation im Beweis unabhängig von unserer \glqq
-geometrischen Anschauung\grqq\ ist. Wir können sogar {\em Modelle} angeben,
-die weit entfernt sind von unserer geometrischen Anschauung einer Ebene,
-die aber trotzdem die Inzidenzaxiome erfüllen. Wir betrachten ein paar Beispiele:
+\begin{description}
+    \item[Modell 1] $\E=\{A,\,B,\,C\}$ - 3 paarweise verschiedene Punkte;\\
+        Geraden: mögliche Tupel $\{A,\,B\},\;\{A,\,C\},\;\{B,\,C\}$
+        % Das kleinstmögliche Modell
 
+    \item[Modell 2] \label{Modell2} $\E=\{A,\,B,\,C,\,D\}$ - 4 paarweise verschiedene Punkte;\\
+        Geraden: mögliche Tupel $\{A,\,B\},\; \{A,\,C\},\; \{A,\,D\},\; \{B,\,C\},\; \{B,\,D\},\;
+        \{C,\,D\}$
+        % Das kleinst mögliche Modell einer affinen Inzidenzgeometrie
+\end{description}
 
-{\bf Modell 1:}\\ $\E=\{A,\,B,\,C\}$ - 3 paarweise
-verschiedene Punkte;\\
-Geraden: mögliche Tupel $\{A,\,B\},\;\{A,\,C\},\;\{B,\,C\}$
-% Das kleinst mögliche Modell
+Ist $\E$ endlich so spricht man auch von einer {\em endlichen Geometrie}.  Solche Geometrien werden
+in der {\em Kombinatorik} untersucht.
 
-{\bf Modell 2:}\\
-$\E=\{A,\,B,\,C,\,D\}$ - 4 paarweise verschiedene Punkte;\\
-Geraden: mögliche Tupel $\{A,\,B\},\;\{A,\,C\},\;\{A,\,D\},\;\{B,\,C\},\;\{B,\,D\},\;\{C,\,D\}$
-% Das kleinst mögliche Modell einer affinen Inzidenzgeometrie
+\begin{description}
+    \item[Modell 3] $\E=\R^2$ und Geraden "`wie üblich"' als Lösungen linearer Gleichungen
+        $a x + b y = c$ mit $a,b,c\in \R$ ($a,b$ nicht beide $0$).
+        % Hier als Beispiel auch über anderen Körpern?!
+        % Dann ist Modell 2 Spezialfall für $K=F_2$!
 
-Ist $\E$ endlich so spricht man auch von einer {\em endlichen Geometrie}.
-Solche Geometrien werden in der {\em Kombinatorik} untersucht.
+    \item[Modell 4] ("`Bierdeckelgeometrie"')\\ % nach Felix Klein
+        $\E=\{ (x,y)\in\R^2 | x^2+y^2<1 \}$; Geraden sind die Geraden aus Modell 3 geschnitten mit
+        $\E$
 
+    \item[Modell 5] ("`Halbebenenmodell von Poincaré"')\\
+        $\E=\{ (x,y)\in\R^2 | y>0 \}$; Geraden sind entweder Halbkreise oberhalb der $x$-Achse oder
+        Halbgeraden Senkrecht zur $x$-Achse. Das rechte Bild zeigt wie die Gerade zu zwei
+        verschiedenen Punkten konstruiert wird.
 
-{\bf Modell 3:}\\$\E=\R^2$ und Geraden \glqq wie üblich\grqq\ als
-Lösungen linearer Gleichungen $a x + b y = c$ mit $a,b,c\in \R$ ($a,b$
-nicht beide $0$).
-% Hier als Beispiel auch über anderen Körpern?!
-%Dann ist Modell 2 Spezialfall für $K=F_2$!
+    \item[Modell 6] ("`Sphärisches Modell der projektiven Ebene"')\\
+        $\E=\{ (x,-x)\in\R^{3+3} \ | \ x_1^2+  x_2^2 + x_3^2= 1 \}$, d.h., Punkte sind in diesem
+        Modell Paare von diametral liegenden Vektoren auf der Einheitssphäre; Geraden sind
+        Punktmengen die auf einem Großkreis (Schnitt der Sphäre mit einer $2$-dimensionalen Ebene
+        durch den Ursprung) liegen.
+\end{description}
 
-{\bf Modell 4:} ( \glqq Bierdeckelgeometrie\grqq )\\ % nach Felix Klein
-$\E=\{ (x,y)\in\R^2 | x^2+y^2<1 \}$;
-Geraden sind die Geraden aus Modell~3 geschnitten mit $\E$
+\begin{figure}[h]
+    \input{tikz/Bierdeckelgeometrie.tikz}
+    \caption{"`Bierdeckelgeometrie"'}
+\end{figure}
 
-%\centerline{\includegraphics[width=5cm]{BILDER/BildBierdeckelgeometrie.pdf}}
-\begin{center}
-	\input{tikz/Bierdeckelgeometrie.tikz}
-\end{center}
-
-
-\bigskip
-
-
-{\bf Modell 5:} (\glqq Halbebenenmodell von Poincaré \grqq )\\
-$\E=\{ (x,y)\in\R^2 | y>0 \}$;
-Geraden sind entweder Halbkreise oberhalb der $x$-Achse
-oder Halbgeraden Senkrecht zur $x$-Achse. Das rechte Bild zeigt wie 
-die Gerade zu zwei verschiedenen Punkten konstruiert wird. 
-
-%\centerline{
-%\includegraphics[width=6cm]{BILDER/BildPoincareHalbebene1.pdf}
-%\hspace*{1cm}
-%\includegraphics[width=5cm]{BILDER/BildPoincareHalbebene2.pdf}
-%}
-
-\begin{center}
-	\begin{figure}[h]
-		\begin{tabular}{cc}
-			\input{tikz/HalbebenenmodellPoincare1.tikz}
-			&
-			\input{tikz/HalbebenenmodellPoincare2.tikz}
-		\end{tabular}
-		\caption{Halbebenenmodell von Poincaré}
-	\end{figure}
-\end{center}
-
-
-\medskip
+\begin{figure}[h]
+    \begin{tabular}{cc}
+        \input{tikz/HalbebenenmodellPoincare1.tikz}
+        &
+        \input{tikz/HalbebenenmodellPoincare2.tikz}
+    \end{tabular}
+    \caption{Halbebenenmodell von Poincaré}
+\end{figure}
 
 % Folgendes kann man vielleicht mit sphärischer Geometrie, d.h. mit
 % Geometrie auf der Oberfläche einer Kugel motivieren... Man beachte
 % allerdings, dass für diametral liegende Punkte auf der Sphäre keine
 % eindeutige Gerade (Großkreis) existiert => (I1) ist verletzt!
 
-{\bf Modell 6:} (\glqq Sphärisches Modell der projektiven Ebene\grqq )\\
-$\E=\{ (x,-x)\in\R^{3+3} \ | \ x_1^2+  x_2^2 + x_3^2= 1 \}$, d.h.,
-Punkte sind in diesem Modell Paare von diametral liegenden Vektoren auf der
-Einheitssphäre;
-Geraden sind Punktmengen die auf einem Großkreis (Schnitt der Sphäre
-mit einer $2$-dimensionalen Ebene durch den Ursprung) liegen.
-
-\bigskip
-
 In einer Inzidenzgeometrie kann man bereits Parallelen einführen.
 
 \begin{defi}[Parallelität]
-Zwei Geraden $g,\,h \subset \E$ heißen {\em parallel} (in Zeichen $g\|h$)
-wenn sie gleich sind oder einen leeren Schnitt haben.
-%($g\|h$) $:\Longleftrightarrow$ entweder $g\cap h=\emptyset$ oder $g=h$.}
+    Zwei Geraden $g,\,h \subset \E$ heißen {\em parallel} (in Zeichen $g\|h$) wenn sie gleich sind
+    oder einen leeren Schnitt haben.
+    %($g\|h$) $:\Longleftrightarrow$ entweder $g\cap h=\emptyset$ oder $g=h$.}
 \end{defi}
 
 Die Existenz von Parallelen kann nicht aus den Inzidenzaxiomen hergeleitet werden! In Modell 1 gibt
@@ -245,1739 +196,1336 @@ es keine Parallelen. In Modell 4 gibt es zu jeder Geraden unendlich viele Parall
 %\end{enumerate}
 
 Eine Ebene $\E$ die die 3 Axiome der Inzidenzgeometrie erfüllt und zusätzlich das Parallelenaxiom
-heißt auch {\em affine Inzidenzgeometrie}.  Modell 2 und Modell 4 sind Beispiele. Es ist ein
+heißt auch {\em affine Inzidenzgeometrie}. Modell 2 und Modell 4 sind Beispiele. Es ist ein
 schwieriges (und noch offenes) Problem die endlichen, affinen Inzidenzgeometrien zu klassifizieren.
 
-%% UEBUNG: (??)
-%% Man kann zeigen, dass jede Gerade einer endlichen affinen
-%% Inzidenzgeometrie die gleiche Anzahl von Punkten hat (wie?).
-%% Diese Anzahl q wird ueblicherweise die Ordnung der Ebene genannt.
-%% Man kann ferner zeigen, dass die Ebene der Ordnung q, q+1 Geraden
-%% durch jeden Punkt, und insgesamt q^2 Punkte und q^2+q Geraden besitzt.
+% UEBUNG: (??)
+% Man kann zeigen, dass jede Gerade einer endlichen affinen Inzidenzgeometrie die gleiche Anzahl von
+% Punkten hat (wie?).  Diese Anzahl q wird ueblicherweise die Ordnung der Ebene genannt.  Man kann
+% ferner zeigen, dass die Ebene der Ordnung q, q+1 Geraden durch jeden Punkt, und insgesamt q^2
+% Punkte und q^2+q Geraden besitzt.
+
+% Affine Ebenen der Ordnung $n$ gibt es immer, wenn n eine Primzahlpotenz ist.
+% Für $n=10$ wurde die Nichtexistenz mittels Computer-assisted-proof bewiesen:
+% Lam, C. W. H. (1991), "The Search for a Finite Projective Plane of Order 10", American
+% Mathematical Monthly 98 (4): 305318
 %
-%% Affine Ebenen der Ordnung $n$ gibt es immer, wenn n eine
-%% Primzahlpotenz ist.
-%% Für $n=10$ wurde die Nichtexistenz mittels Computer-assisted-proof
-%% bewiesen:
-%% Lam, C. W. H. (1991), "The Search for a Finite Projective Plane of Order 10", American Mathematical Monthly 98 (4): 305318
-%%
-%% Es ist offen, ob es eine affine / projektive Ebene der Ordnung
-%% $n=12$ gibt!?!?!
-%%
-%% SEE ALSO: http://de.wikipedia.org/wiki/Affine_Ebene
+% Es ist offen, ob es eine affine / projektive Ebene der Ordnung
+% $n = 12$ gibt!?
+%
+% SEE ALSO: http://de.wikipedia.org/wiki/Affine_Ebene
 
 \section*{Vorlesung am 19.04.2011}
 
 \subsection*{Axiome der Anordnung}
 
-%% Historische Bemerkung zu einem Zitat von Gauß, der erkannt hatte,
-%% dass man die Relation "Zwischen" vernünftig erklären muss?
+% Historische Bemerkung zu einem Zitat von Gauß, der erkannt hatte, dass man die Relation "Zwischen"
+% vernünftig erklären muss?
 
 %% INTERESSANTER HINTERGRUND:
-% In Hilbert's Buch (1 Ausgabe von 1899 / siehe auch die Englische
-% Übersetzung) gibt es noch ein weiteres Axiom der Anordnung, von dem
-% aber "R. L. Moore proved that this axiom is redundant, in 1902".
-% see http://en.wikipedia.org/wiki/Hilbert%27s_axioms
-% In der 2. Auflage von 1903 ist dieses Axiom nicht mehr angeführt.
-% In beiden Ausgaben ist aber die Rede davon, dass es einfach sei die
-% Unabhängigkeit der Axiome voneinander zu beweisen!!!! :-) 
-% (siehe Anfang von §10)
+% In Hilbert's Buch (1 Ausgabe von 1899 / siehe auch die Englische Übersetzung) gibt es noch ein
+% weiteres Axiom der Anordnung, von dem aber "R. L. Moore proved that this axiom is redundant, in
+% 1902". see http://en.wikipedia.org/wiki/Hilbert%27s_axioms In der 2. Auflage von 1903 ist dieses
+% Axiom nicht mehr angeführt.  In beiden Ausgaben ist aber die Rede davon, dass es einfach sei die
+% Unabhängigkeit der Axiome voneinander zu beweisen!!!! :-) (siehe Anfang von §10)
 
 Wir gehen im Folgenden davon aus, dass $\E$ eine Ebene ist, die die 3 Axiome der Inzidenzgeometrie
 erfüllt. Wir wollen schrittweise Axiome hinzufügen, die uns näher an die Geometrie Euklids
 heranbringen.  Wir werden dabei zunächst (so lange wie möglich) auf das Parallelenaxiom verzichten.
 
 In Euklids Elementen haben wir gesehen, dass häufig Begriffe der Anordnung benutzt werden. Zum
-Beispiel: \glqq ein Punkt %$C$
+Beispiel: "`ein Punkt %$C$
 liegt {\em zwischen} zwei anderen Punkten %$A$ und $B$ 
 %% Vergleiche auch den Beweis von "Alle Dreiecke sind gleichschenklig"
-auf einer Geraden\grqq . 
-Oder: \glqq Ein Punkt %$A$ 
-liegt {\em auf der anderen Seite} einer Geraden\grqq .
-Konzepte wie \glqq {\em Innen}\grqq\  und \glqq {\em Außen}\grqq\
-oder \glqq Größenvergleiche\grqq\ von Strecken und Winkeln 
-hängen damit zusammen.
-Die folgenden Axiome der Anordnung dienen der Präzisierung dieser Begriffe.
+auf einer Geraden"' .
+Oder: "`Ein Punkt %$A$
+liegt {\em auf der anderen Seite} einer Geraden"'. Konzepte wie "`{\em Innen}"' und "`{\em
+Außen}"' oder "`Größenvergleiche"' von Strecken und Winkeln hängen damit zusammen. Die folgenden
+Axiome der Anordnung dienen der Präzisierung dieser Begriffe.
 
-Die Punkte einer jeden Geraden $g$ von $\E$ stehen in einer Beziehung zueinander, die
-\glqq{}Zwischen\grqq{} hei{\ss}t und folgenden Bedingungen gen\"{u}gt:
+Die Punkte einer jeden Geraden $g$ von $\E$ stehen in einer Beziehung zueinander, die "`Zwischen"'
+heißt und folgenden Bedingungen genügt:
 
 \begin{enumerate}
     \item[{\bf (A1)}] Wenn $A,\,B,\,C$ auf einer Geraden $g$ liegen und $B$ zwischen $A$ und $C$
-    liegt (in Zeichen: $\Zw(ABC)$), dann sind $A,\,B,\,C$ paarweise
-    verschieden und $B$ liegt auch zwischen $C$ und $A$ ($\Zw(CBA)$).
-    \item[{\bf (A2)}] Zu je zwei verschiedenen Punkten $A,\,B$ gibt es
-    einen Punkt $C$, so dass $\Zw(ABC)$.
-    \item[{\bf (A3)}] Zu je 3 verschiedenen Punkten auf einer Geraden
-    $g$ gibt es genau einen, der zwischen den anderen beiden
-    liegt.
+        liegt (in Zeichen: $\Zw(ABC)$), dann sind $A,\,B,\,C$ paarweise verschieden und $B$ liegt
+        auch zwischen $C$ und $A$ ($\Zw(CBA)$).
+
+    \item[{\bf (A2)}] Zu je zwei verschiedenen Punkten $A,\,B$ gibt es einen Punkt $C$, so dass
+        $\Zw(ABC)$.
+
+    \item[{\bf (A3)}] Zu je 3 verschiedenen Punkten auf einer Geraden $g$ gibt es genau einen, der
+        zwischen den anderen beiden liegt.
 \end{enumerate}
 
-%BEM:   (Es ist ausreichend: \glqq{}h\"{o}chstens\grqq{} einen zu fordern!)
+% BEM: (Es ist ausreichend: "`höchstens"' einen zu fordern!)
 % Beweis?!?!?
 
-
-Auf Basis der Beziehung \glqq Zwischen\grqq\ können wir präzisieren was eine
-Strecke ist:
+Auf Basis der Beziehung "`Zwischen"' können wir präzisieren was eine Strecke ist:
 
 \begin{defi}[Strecke]
-Seien $A,\,B\in \E$ zwei verschiedene
-Punkte. Dann hei{\ss}t die Menge
-\[
-\str{AB}:=\{A,\,B\}\cup\{X\in\E \; | \;\Zw(AXB)\}
-\] 
-die {\em Strecke} $\str{AB}$ oder auch $\str{BA}$. 
-$A$ und $B$ sind {\em Randpunkte},
-$\{X\in\varepsilon:\;\Zw(AXB)\}$ sind {\em innere Punkte} der Strecke.
-\end{defi}
+    Seien $A,\,B\in \E$ zwei verschiedene Punkte. Dann heißt die Menge
 
+    $$
+    \str{AB}:=\{A,\,B\}\cup\{X\in\E \; | \;\Zw(AXB)\}
+    $$
+
+    die {\em Strecke} $\str{AB}$ oder auch $\str{BA}$. $A$ und $B$ sind {\em Randpunkte}, $\{X \in
+    \varepsilon:\; \Zw(AXB)\}$ sind {\em innere Punkte} der Strecke.
+\end{defi}
 
 Eine Gerade $g$ \emph{schneidet} eine Strecke $\str{AB}$, wenn $g\cap\str{AB}\neq \emptyset$.
 
+Um etwa die Teilung einer Ebene durch eine Gerade in zwei disjunkte Teilmengen
+%und das Prinzip "`{}Ebene"'{}   %% WAS IST DAMIT GEMEINT?!?
+zu erklären, benötigt man ein weiteres Axiom:
 
-Um etwa die Teilung einer Ebene durch eine Gerade in zwei
-disjunkte Teilmengen 
-%und das Prinzip \glqq{}Ebene\grqq{}   %% WAS IST DAMIT GEMEINT?!?
-zu erkl\"{a}ren, 
-ben\"{o}tigt man ein weiteres Axiom:
-
-%%
-%% ACHTUNG: Die Teilung der Ebene in zwei Hälften ist als Axiom
-%% irgendwie einfacher (??), und das Axiom von Pasch ist dazu äquivalent. 
-%% Beim nächsten Mal sollte man daher vielleicht ehr das "Theorem über
-%% die Teilung der Ebene" siehe
-%%
-
+%% ACHTUNG: Die Teilung der Ebene in zwei Hälften ist als Axiom irgendwie einfacher (??), und das
+%% Axiom von Pasch ist dazu äquivalent.  Beim nächsten Mal sollte man daher vielleicht eher das
+%% "Theorem über die Teilung der Ebene" siehe
 
 \begin{enumerate}
-%%Pasch hat dieses Axiom 1882 formuliert
-    \item[{\bf (A4)}] {\bf (Axiom von Pasch)} Seien $A,\,B,\,C\in\E$
-    nicht kollinear und $g\subset\E$ eine Gerade mit
-    $A,\,B,\,C\notin g$. Wenn $g$ die Strecke $\str{AB}$ schneidet, so schneidet
-    $g$ auch die Strecke $\str{AC}$ oder $\str{BC}$, aber nicht
-    beide. 
-    %(Letzteres ist auch beweisbar!)
+    % Pasch hat dieses Axiom 1882 formuliert
+    \item[{\bf (A4)}] {\bf (Axiom von Pasch)} Seien $A,\,B,\,C\in\E$ nicht kollinear und
+        $g\subset\E$ eine Gerade mit $A,\,B,\,C\notin g$. Wenn $g$ die Strecke $\str{AB}$ schneidet,
+        so schneidet $g$ auch die Strecke $\str{AC}$ oder $\str{BC}$, aber nicht beide.
+    % (Letzteres ist auch beweisbar!)
     % WIE ?!?!
 \end{enumerate}
 
-%AUS WIKIPEDIA:
-%Anschaulich gesprochen: "Wenn eine Gerade durch eine Seite ins Innere
-%eines Dreiecks eintritt, so tritt sie gewiss auch wieder durch eine
-%Seite des Dreiecks heraus.
+% AUS WIKIPEDIA:
+% Anschaulich gesprochen: "Wenn eine Gerade durch eine Seite ins Innere eines Dreiecks eintritt, so
+% tritt sie gewiss auch wieder durch eine Seite des Dreiecks heraus.
 % AN DIESER STELLE FEHLT UNS ALLERDINGS DER BEGRIFF "Inneres eines Dreiecks"!!!?
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-1-04-Pasch.png}}
 
-%In den folgenden S\"{a}tzen seien die Axiome der Inzidenz und der
-%Anordnung f\"{u}r die betrachtete Ebene~$\E$ erf\"{u}llt.
+% In den folgenden Sätzen seien die Axiome der Inzidenz und der Anordnung für die betrachtete Ebene
+% $\E$ erfüllt.
 
 \begin{thm}
-Erfüllt eine Ebene $\E$ die Axiome der Inzidenz und der
-Anordnung, so hat
-jede Strecke mindestens einen inneren Punkt und damit unendlich
-viele.
+    Erfüllt eine Ebene $\E$ die Axiome der Inzidenz und der Anordnung, so hat jede Strecke
+    mindestens einen inneren Punkt und damit unendlich viele.
 \end{thm}
 
 \begin{proof}
-Sei $\str{AB}$ gegeben.\\
-$\stackrel{(I3)}{\Longrightarrow}\;\exists\,E\notin g(A,B)\\
-\stackrel{(A2)}{\Longrightarrow}\;\exists\,F\in g(A,E):\;\Zw(AEF)\\
-\stackrel{(A2)}{\Longrightarrow}\;\exists\,D\in g(F,B):\;\Zw(FBD).$\\
-Wegen $E\neq F$ und $g(E,D)\neq g(F,D)$ schneidet $g(E,D)$ nicht
-$\str{FB}$\\
-$\stackrel{(A4)}{\Longrightarrow}\; g(E,D)$ schneidet $\str{AB}$ (im
-Innern, da $A,B$ nach Konstruktion nicht auf der Geraden liegen).
+    Sei $\str{AB}$ gegeben.
+    \begin{align*}
+        \stackrel{(I3)}{\Longrightarrow}\ & \exists\,E\notin g(A,B)\\
+        \stackrel{(A2)}{\Longrightarrow}\ & \exists\,F\in g(A,E):\;\Zw(AEF)\\
+        \stackrel{(A2)}{\Longrightarrow}\ & \exists\,D\in g(F,B):\;\Zw(FBD).\\
+        \intertext{Wegen $E\neq F$ und $g(E,D)\neq g(F,D)$ schneidet $g(E,D)$ nicht $\str{FB}$}
+        \stackrel{(A4)}{\Longrightarrow}\ & g(E,D) \text{ schneidet } \str{AB} \text{ (im Innern, da
+        $A,B$ nach Konstruktion nicht auf der Geraden liegen). }
+    \end{align*}
 
-\medskip
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-1-05-Satz.png}}
-
+    \centerline{\includegraphics[width=5cm]{BILDER/1-1-05-Satz.png}}
 \end{proof}
 
-
-
-
 %% ACHTUNG:
-% Oft (?) wird die folgende Teilung der Ebene als Axiom vorausgesetzt
-% und dann erhält man das Axiom von Pasch als Satz!!!
+% Oft (?) wird die folgende Teilung der Ebene als Axiom vorausgesetzt und dann erhält man das Axiom
+% von Pasch als Satz!!!
 %% siehe "Leitfaden Geometrie", S.82 für einen Beweis
 % Übung, Blatt 3!!
 
 \begin{thm}[Teilung der Ebene]\label{thm:satz.s1a}
-Sei $\E$ eine Ebene, die die Axiome der Inzidenz und der
-Anordnung erfüllt, und
-sei $g\subset \E$ eine Gerade. 
-Dann gibt es eine disjunkte Aufteilung der Ebene in nichtleere Teilmengen $g,
-S_1$, und $S_2$ für die gilt:
-\begin{enumerate}
-    \item[a)] $A,\,B\notin g$ geh\"{o}ren derselben Menge ($S_1$ oder
-    $S_2$) an $\Longleftrightarrow\;\str{AB}\cap g=\emptyset$;
-    \item[b)] $A,\,C\notin g$ geh\"{o}ren zu verschiedenen Mengen
-    $\Longleftrightarrow\;\str{AC}\cap g\neq\emptyset$.
-\end{enumerate}
+    Sei $\E$ eine Ebene, die die Axiome der Inzidenz und der Anordnung erfüllt, und sei $g \subset
+    \E$ eine Gerade. Dann gibt es eine disjunkte Aufteilung der Ebene in nichtleere Teilmengen $g,
+    S_1$, und $S_2$ für die gilt:
+
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item $A,\, B \notin g$ gehören derselben Menge ($S_1$ oder $S_2$) an
+            $\Longleftrightarrow\; \str{AB} \cap g = \emptyset$;
+
+        \item $A,\, C \notin g$ gehören zu verschiedenen Mengen $\Longleftrightarrow\;
+            \str{AC} \cap g \neq \emptyset$.
+    \end{enumerate}
 \end{thm}
 
-
-$S_1$ und $S_2$ hei{\ss}en die beiden \emph{(verschiedenen) Seiten}
-von~$g$. D.h., $A$ und $B$ liegen auf derselben Seite und $A$ und $C$ auf
-    verschiedenen Seiten von $g$.
-
+$S_1$ und $S_2$ heißen die beiden \emph{(verschiedenen) Seiten} von $g$. D.h., $A$ und $B$
+liegen auf derselben Seite und $A$ und $C$ auf verschiedenen Seiten von $g$.
 
 \centerline{\includegraphics[width=6cm]{BILDER/1-1-06a-Seiten.png}}
 
+Formal definiert jede Gerade $g$ eine Relation auf $\E\setminus g$ durch
 
-Formal definiert jede Gerade $g$ eine Relation auf
-$\E\setminus g$ durch
-\[
-\mbox{Für } A,\,B\in\E\setminus g
-\mbox{ gilt } A\stackrel{g}{\sim} B
-:\Longleftrightarrow\;A=B\;\mbox{oder}\;A\neq B\;\mbox{und}\;
-    \str{AB}\cap g=\emptyset.
-\]
+$$
+    \mbox{Für } A,\, B \in \E \setminus g \mbox{ gilt } A \stackrel{g}{\sim} B :
+    \Longleftrightarrow\; A=B\; \mbox{oder}\; A \neq B\; \mbox{und}\; \str{AB} \cap g = \emptyset.
+$$
 
+\begin{proof}[Beweis von Theorem \ref{thm:satz.s1a}]
+    Zum Beweis des Theorems genügt es zu zeigen, dass $\stackrel{g}{\sim}$ eine Äquivalenzrelation
+    mit genau 2 Äquivalenzklassen ist.
 
-\begin{proof}[Beweis von Theorem~\ref{thm:satz.s1a}]
-Zum Beweis des Theorems genügt es zu zeigen, dass $\stackrel{g}{\sim}$
-eine \"{A}quivalenzrelation mit genau 2 \"{A}quivalenzklassen ist.
+    Offenbar ist die Relation reflexiv und symmetrisch: $\forall\, A,\, B \in \E \setminus g : \; A
+    \stackrel{g}{\sim} A$ und $\{A \stackrel{g}{\sim} B\; \Rightarrow\; B \stackrel{g}{\sim} A\}$.
 
+    \begin{itemize}
+        \item Aufwändiger ist die {\bf Transitivität}:\\
+        Sei $A,\, B,\, C \in \E \setminus g$, dann müssen wir zeigen:
 
-Offenbar ist die Relation reflexiv und symmetrisch:
-$\forall\,A,\,B\in\E\setminus g:\;A\stackrel{g}{\sim} A$
-und $\{A\stackrel{g}{\sim} B\;\Rightarrow\;B\stackrel{g}{\sim}
-A\}$.
+        $$
+            A \stackrel{g}{\sim} B\; \mbox{ und } B \stackrel{g}{\sim} C\; \Rightarrow\; A
+            \stackrel{g}{\sim} C
+        $$
 
-\begin{itemize}
-\item
-Aufw\"{a}ndiger ist die {\bf Transitivit\"{a}t}:\\
-Sei
-$A,\,B,\,C\in\E\setminus g$, dann m\"{u}ssen wir zeigen:
-\[
-A\stackrel{g}{\sim} B\;\mbox{ und } B\stackrel{g}{\sim}
-C\;\Rightarrow\;A\stackrel{g}{\sim} C
-\] 
-Sei also $\str{AB}\cap
-g=\emptyset,\;\str{BC}\cap g=\emptyset$.
+        Sei also $\str{AB} \cap g = \emptyset,\; \str{BC} \cap g = \emptyset$.
 
+        \begin{description}
+            \item[Fall 1] $A,\, B,\, C$ nicht kollinear
 
-    {\bf Fall 1:} $A,\,B,\,C$ nicht kollinear
+                Falls $\str{AC} \cap g \neq \emptyset\; \stackrel{(A4)}{\Longrightarrow}\; g$
+                schneidet weitere Seite $\str{AB}$ oder $\str{BC}$ (im Widerspruch zur
+                Voraussetzung).
 
-    Falls $\str{AC}\cap g\neq\emptyset\;\stackrel{(A4)}{\Longrightarrow}\;g$ schneidet
-    weitere Seite $\str{AB}$ oder $\str{BC}$ (im Widerspruch zur Voraussetzung). 
+            \item[Fall 2] $A,\, B,\, C$ kollinear, $C \in h = g(A,B)$.
 
-% Wenig hilfreiches Bild: (?!?)
-%\includegraphics[width=3.5cm]{1-1-06b-Seiten}
+                Sei $D \in g,\; D \notin h\; \stackrel{(A2)}{\Longrightarrow}\; \exists\, E \in
+                g(A,D)$ mit $\Zw(DAE)\; \Rightarrow\; \str{AE} \cap g = \emptyset\; \Rightarrow\; A
+                \stackrel{g}{\sim} E.$
 
+                % Wenig hilfreiches Bild: (?!?)
+                %\includegraphics[width=3.5cm]{1-1-06b-Seiten}
 
-    {\bf Fall 2:} $A,\,B,\,C$ kollinear, $C\in h=g(A,B)$.
+                % ACHTUNG:
+                % Geht dieser Fall nicht viel einfacher zu klären unter Anwendung des folgenden
+                % Zusammenhangs:  (den man dann vielleicht auch noch beweisen sollte!!!??? Übung!):
+                % Sind $A,B,C$ drei Punkte auf einer Geraden mit $\Zw(ACB)$, so gilt
+                % $$
+                %   AC \cup CB = AB \quad \mbox{und} \quad AC \cap CB = \{C\}
+                % $$
 
-% ACHTUNG:
-% Geht dieser Fall nicht viel einfacher zu klären unter Anwendung des
-% folgenden Zusammenhangs:  (den man dann vielleicht auch noch
-% beweisen sollte!!!??? Übung!):
-%Sind $A,B,C$ drei Punkte auf einer Geraden mit $\Zw(ACB)$, so gilt
-%$$
-%AC \cup CB = AB \quad \mbox{und} \quad AC \cap CB = \{C\}
-%$$
+                Nun wenden wir mehrfach Fall 1 an, da  $E,\,A,\,B$ und  $E,\,A,\,C$ nicht kollinear:
 
+                \centerline{\includegraphics[width=6cm]{BILDER/1-1-06c-Seiten.png}}
 
-    Sei $D\in g,\;D\notin h\;\stackrel{(A2)}{\Longrightarrow}\;
-    \exists\,E\in g(A,D)$ mit $\Zw(DAE)\;\Rightarrow\;
-    \str{AE}\cap g=\emptyset\;\Rightarrow\;A\stackrel{g}{\sim} E.$
+                $\str{AE} \cap g = \emptyset,\; \str{AB} \cap g=\emptyset\;
+                \stackrel{(A4)}{\Longrightarrow}\; \str{EB} \cap g = \emptyset;\; \str{BC}\cap g =
+                \emptyset\; \stackrel{(A4)}{\Longrightarrow}\; \str{EC} \cap g = \emptyset;\;
+                \stackrel{(A4)}{\Longrightarrow}\; \str{AC} \cap g = \emptyset$, d.h.
+                $A\stackrel{g}{\sim} C$.
+        \end{description}
 
-    Nun wenden wir mehrfach Fall 1 an, da  $E,\,A,\,B$ und  $E,\,A,\,C$ nicht
-    kollinear:
+        \item Wir müssen nun noch zeigen, dass es {\bf genau 2 Äquivalenzklassen} gibt.
+        \begin{description}
+            \item[1. Klasse $S_1$] Wegen \textbf{(I3)} gibt es ein $A \in \E \setminus g$. $S_1$
+                können wir daher wählen als
 
+                $$
+                    [A] := \{ A \} \cup \{ X \in \E:\, \str{AX} \cap g = \emptyset \}
+                $$
 
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-06c-Seiten.png}}
+            \item[2. Klasse $S_2$] Sei $D\in g$ wie oben
 
+                $$
+                    \stackrel{(A4)}{\Longrightarrow} \exists\, C \in \E:\; \Zw(ADC)\; \Rightarrow\;
+                    C \notin S_1\; \Rightarrow\; S_2 := [C]
+                $$
 
-$\str{AE}\cap g=\emptyset,\;\str{AB}\cap g=\emptyset\;
-\stackrel{(A4)}{\Longrightarrow}\;\str{EB}\cap g=\emptyset;\;
-\str{BC}\cap g=\emptyset\; \stackrel{(A4)}{\Longrightarrow}\;
-\str{EC}\cap g=\emptyset;\;\stackrel{(A4)}{\Longrightarrow}\;
-\str{AC}\cap g=\emptyset$, d.h. $A\stackrel{g}{\sim} C$.
+                \centerline{\includegraphics[width=6cm]{BILDER/1-1-06d-Seiten.png}}
+        \end{description}
 
-\bigskip
+        \item Bleibt zu zeigen, dass es keine weiteren Klassen gibt.\\
+            D.h., für $B$ mit $B \stackrel{g}{\nsim} C$ ($B \notin S_2$) sollte $B
+            \stackrel{g}{\sim} A$ ($B \in S_1$) folgen.
 
+            % SATZ VON NESSELMANN: (finde ich unverständlich)
+            % Sei etwa $B$ derart, dass $B\stackrel{g}{\nsim} C$, d.h. $B\notin S_2$,
+            % $\stackrel{Beh.}{\Longrightarrow}\;B\stackrel{g}{\sim} A$, d.h. $B\in S_1$.
 
-\item
-Wir m\"{u}ssen nun noch zeigen, dass es {\bf genau 2 \"{A}quivalenzklassen} gibt.\\
+        \begin{description}
+            \item[Fall 1] $A,\,B,\,C$ nicht kollinear\\
+                $\str{AC} \cap g \neq \emptyset,\; \str{BC} \cap g \neq \emptyset\;
+                \stackrel{(A4)}{\Longrightarrow}\; \str{AB} \cap g = \emptyset$ d.h. $A
+                \stackrel{g}{\sim} B$.
 
-1. Klasse $S_1$: Wegen (I3) gibt es ein $A\in\E\setminus g$. 
- $S_1$ können wir daher wählen als
-\[[A]:=\{A\}\cup\{X\in\E:\,\str{AX}\cap g=\emptyset\}\]
+                \centerline{\includegraphics[width=6cm]{BILDER/1-1-06e-Seiten.png}}
 
-2. Klasse $S_2$: Sei $D\in g$ wie oben\\
-$\stackrel{(A4)}{\Longrightarrow}$
- $\exists\,C\in\E:\;\Zw(ADC)\;\Rightarrow\;C\notin
-S_1\;\Rightarrow\;S_2:=[C]$
+            \item[Fall 2] $A,\, B,\, C$ kollinear, $C \in h = g(A,B)$; wie oben $\exists\; D \in
+                g,\; D \notin h$ und $E \in g(D,A)$ mit $\Zw(DAE)\; \Rightarrow\; \str{AE} \cap g =
+                \emptyset\; (A \stackrel{g}{\sim} E)$\\ $\Longrightarrow\; ({\scriptstyle (A4)\;
+                \mbox{\footnotesize für}\; EAC}) \quad \str{EC} \cap g \neq \emptyset.$
 
+                \centerline{\includegraphics[width=6cm]{BILDER/1-1-06f-Seiten.png}}
 
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-06d-Seiten.png}}
-
-
-\noindent
-Bleibt zu zeigen, dass es keine weiteren Klassen gibt.\\
-D.h., für $B$ mit $B\stackrel{g}{\nsim} C$ ($B\notin S_2$) sollte
-$B\stackrel{g}{\sim} A$ ($B \in S_1$) folgen.
-
-% SATZ VON NESSELMANN: (finde ich unverständlich)
-%Sei etwa $B$ derart, dass $B\stackrel{g}{\nsim} C$, d.h. $B\notin
-%S_2$, $\stackrel{Beh.}{\Longrightarrow}\;B\stackrel{g}{\sim} A$,
-%d.h. $B\in S_1$.
-
-
-    {\bf Fall 1:} $A,\,B,\,C$ nicht kollinear\\
-$\str{AC}\cap g\neq\emptyset,\;\str{BC}\cap g\neq\emptyset\;
-\stackrel{(A4)}{\Longrightarrow}\;\str{AB}\cap g=\emptyset$ d.h.
-$A\stackrel{g}{\sim} B$.
-
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-06e-Seiten.png}}
-
-
-    {\bf Fall 2:} $A,\,B,\,C$ kollinear, $C\in h=g(A,B)$;
-
-    wie oben $\exists\;D\in g,\;D\notin h$ und $E\in g(D,A)$ mit $\Zw(DAE)\;\Rightarrow\;
-    \str{AE}\cap g=\emptyset\;(A\stackrel{g}{\sim} E)$\\
-    $\Longrightarrow\;({\scriptstyle (A4)\;\mbox{\footnotesize
-        f\"{u}r}\; EAC})
-    \quad\str{EC}\cap g\neq\emptyset.$
-
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-06f-Seiten.png}}
-
-
-Für die Punkte $E,B,C$ gilt nach Voraussetzung $\str{BC}\cap g\neq\emptyset$.
-Daher ist ebenfalls nach (A4) für Punkte $E,A,B$: $\str{BE}\cap g=\emptyset
-\;\stackrel{(A4)}{\Longrightarrow}\;\str{AB}\cap g=\emptyset$,
-also $B\stackrel{g}{\sim} A$
-
-\end{itemize}
-
+                Für die Punkte $E, B, C$ gilt nach Voraussetzung $\str{BC} \cap g \neq \emptyset$.
+                Daher ist ebenfalls nach \textbf{(A4)} für Punkte $E, A, B$: $\str{BE} \cap g =
+                \emptyset \; \stackrel{(A4)}{\Longrightarrow}\; \str{AB} \cap g = \emptyset$, also
+                $B \stackrel{g}{\sim} A$
+        \end{description}
+    \end{itemize}
 \end{proof}
 
-
-
-
-
-%%% ACHTUNG: 
-%% Es fehlt eine Diskussion über die Unabhängigkeit der Anordnungsaxiom!!
-%% (angeblich einfach nach Hilbert, aber selber hat er in der
-%% 1. Auflage auch einen Fehler gemacht!!!)
-
-
-
-
-
-
+%% ACHTUNG:
+% Es fehlt eine Diskussion über die Unabhängigkeit der Anordnungsaxiom!! (angeblich einfach nach
+% Hilbert, aber selbst hat er in der 1. Auflage auch einen Fehler gemacht!!!)
 
 \subsection*{Winkel, Strahlen, Dreiecke}
 
-
-Mit der Aufteilung der Ebene in zwei disjunkte Seiten kann man auch zeigen, 
-dass ein Punkt eine Gerade in zwei disjunkte Teile zerlegt.
-
+Mit der Aufteilung der Ebene in zwei disjunkte Seiten kann man auch zeigen, dass ein Punkt eine
+Gerade in zwei disjunkte Teile zerlegt.
 
 \begin{thm}[Teilung von Geraden]\label{thm:satz.s1b}
-Sei $\E$ eine Ebene, die die Axiome der Inzidenz und der
-Anordnung erfüllt.
-Sei $A$ ein Punkt auf einer Geraden $g\subset\E$.
-Dann gibt es eine disjunkte Aufteilung der Geraden~$g$ in nichtleere Teilmengen $\{A\}, S_1, S_2$
-(in {\em Seiten} $S_1$ und $S_2$ bezüglich $A$ mit $g\setminus \{A\}=S_1\cup S_2,\;S_1\cap S_2=\emptyset$)
-für die gilt:
-\begin{enumerate}
-    \item[a)] $B,\,C\in g$ auf \glqq{}derselben Seite\grqq{} $\Longleftrightarrow\;
-        B=C$ oder $A\notin\str{BC}$;
-    \item[b)] $B,\,C\in g$ auf \glqq{}verschiedenen Seiten\grqq{}
-    $\Longleftrightarrow\;A\in\str{BC}$;
-\end{enumerate}
+    Sei $\E$ eine Ebene, die die Axiome der Inzidenz und der Anordnung erfüllt. Sei $A$ ein Punkt
+    auf einer Geraden $g \subset \E$. Dann gibt es eine disjunkte Aufteilung der Geraden $g$ in
+    nichtleere Teilmengen $\{A\}, S_1, S_2$ (in {\em Seiten} $S_1$ und $S_2$ bezüglich $A$ mit $g
+    \setminus \{A\} = S_1 \cup S_2,\; S_1 \cap S_2 = \emptyset$) für die gilt:
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item $B,\, C \in g$ auf "`derselben Seite"' $\Longleftrightarrow\; B = C$ oder $A \notin
+            \str{BC}$;
+
+        \item $B,\, C \in g$ auf "`verschiedenen Seiten"' $\Longleftrightarrow\; A \in \str{BC}$;
+    \end{enumerate}
 \end{thm}
 %\ref{satz.s1b}
 
 \begin{proof}
-Sei $E\notin g$ und $h=g(A,E)$. Dann teilt $h$ gem\"{a}{\ss}
-Theorem \ref{thm:satz.s1a} die Ebene in 2 disjunkte Teilmengen $S_1'$ und
-$S_2'$. Die Mengen $S_1=S_1'\cap g$ und $S_2=S_2'\cap g$ erf\"{u}llen
-die Bedingungen des Theorems.
+    Sei $E \notin g$ und $h = g(A,E)$. Dann teilt $h$ gemäß Theorem \ref{thm:satz.s1a} die Ebene in
+    2 disjunkte Teilmengen $S_1'$ und $S_2'$. Die Mengen $S_1 = S_1'\cap g$ und $S_2 = S_2' \cap g$
+    erfüllen die Bedingungen des Theorems.
 
-\medskip
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-1-07-Satz.png}}
-
+    \centerline{\includegraphics[width=5cm]{BILDER/1-1-07-Satz.png}}
 \end{proof}
-
-
-
-
-
-
 
 \section*{Vorlesung am 21.04.2011}
 
-
-
-Mit der Aufteilung einer Ebene bzw. einer Geraden in 2 disjunkte
-Teilmengen (zuz\"{u}glich einer Geraden bzw. eines Punktes) haben wir
-die Begriffe \glqq{}Strahl\grqq{}, \glqq{}Winkel\grqq{} und \glqq{}Dreieck\grqq{} zur
-Verf\"{u}gung.
-
+Mit der Aufteilung einer Ebene bzw. einer Geraden in 2 disjunkte Teilmengen (zuzüglich einer Geraden
+bzw. eines Punktes) haben wir die Begriffe "`Strahl"', "`Winkel"' und "`Dreieck"' zur Verfügung.
 
 \begin{defi}
-Sei $\E$ eine Ebene, die die Axiome der Inzidenz und der
-Anordnung erfüllt.
-Seien $A,\,B,\,C\in\E$, paarweise verschieden und nicht kollinear.
-\emph{\begin{enumerate}
-    \item[\textbf{a)}] \emph{Strahl}
-    $\pf{AB}:=\{P\in g(A,B):\;P=A$ oder $P\neq A$ und auf derselben Seite von $A$ wie $B$\}
-    \item[\textbf{b)}] \emph{Winkel} $\wi(BAC):=\pf{AB}\cup\pf{AC}$
-    \item[\textbf{c)}] \emph{Inneres} von $\wi(BAC):=\{D\in\E: D\stackrel{g(A,B)}{\sim} C$
-     und $D\stackrel{g(A,C)}{\sim} B\}$\\
-     (Winkel, die kein Inneres besitzen, hei{\ss}en \emph{entartet}.)
-     \item[\textbf{d)}] \emph{Dreieck} $ABC$ :=
-       $\str{AB}\cup\str{AC}\cup\str{BC}$;\\  $A,B,C$ heißen Ecken,
-       $\str{AB},\str{AC},\str{BC}$ heißen Kanten (Seiten) des Dreiecks
-    \item[\textbf{e)}] \emph{Inneres} des Dreiecks 
-    $ABC :=\\
-     \{ D\in\E : D$ geh\"{o}rt zum Inneren von
-     $\wi(BAC),\;\wi(ABC),\;\wi(ACB)\}$
-%% BEMERUNG: Bei der letzten Definition genügen auch zwei Winkel; 
-%% Alternativ kann man auch analog zum Inneren eines Winkels
-%% definieren über die drei Beziehungen $\{D\in\E:
-%% D\stackrel{g(A,B)}{\sim} C, D\stackrel{g(A,C)}{\sim} B,
-%% D\stackrel{g(B,C)}{\sim} A \}$
-\end{enumerate}}
+    Sei $\E$ eine Ebene, die die Axiome der Inzidenz und der Anordnung erfüllt. Seien $A,\, B,\, C
+    \in \E$, paarweise verschieden und nicht kollinear.
+    \begin{description}
+        \item[Strahl] $\pf{AB} := \{P \in g(A,B):\; P = A$ oder $P \neq A$ und auf derselben Seite
+            von $A$ wie $B$\}
+
+        \item[Winkel] $\wi(BAC) := \pf{AB} \cup \pf{AC}$
+
+        \item[Inneres von $\wi(BAC)$] $= \{D\in\E: D\stackrel{g(A,B)}{\sim} C$ und $D
+            \stackrel{g(A,C)}{\sim} B\}$\\
+            (Winkel, die kein Inneres besitzen, heißen \emph{entartet}.)
+
+         \item[Dreieck $ABC$] $= \str{AB} \cup \str{AC} \cup \str{BC}$;\\
+             $A, B, C$ heißen Ecken, $\str{AB}, \str{AC}, \str{BC}$ heißen Kanten (Seiten) des
+             Dreiecks
+
+        \item[Inneres eines Dreiecks $ABC$] $= \{ D \in \E : D$ gehört zum Inneren von $\wi(BAC),\;
+            \wi(ABC),\; \wi(ACB)\}$
+
+        % BEMERUNG: Bei der letzten Definition genügen auch zwei Winkel; Alternativ kann man auch
+        % analog zum Inneren eines Winkels definieren über die drei Beziehungen $\{D \in \E: D
+        % \stackrel{g(A,B)}{\sim} C, D \stackrel{g(A,C)}{\sim} B, D \stackrel{g(B,C)}{\sim} A \}$
+    \end{description}
 \end{defi}
 
-
 % WIRD DAS FOLGENDE WIRKLICH BEÖTIGT?!?!?
-%Wenn kein Missverst\"{a}ndnis m\"{o}glich ist, schreiben wir auch $\wi
-%A,\;\wi B,\;\wi C$.
-
-
+% Wenn kein Missverständnis möglich ist, schreiben wir auch $\wi A,\;\wi B,\;\wi C$.
 
 \begin{thm}\label{thm:satz.s1c}
-Sei $\wi(BAC)$ ein Winkel und $D$ im Innern von $\wi(BAC)$. Dann schneidet
-$\pf{AD}$ auch $\str{BC}$.
+    Sei $\wi(BAC)$ ein Winkel und $D$ im Innern von $\wi(BAC)$. Dann schneidet $\pf{AD}$ auch
+    $\str{BC}$.
 \end{thm}
 %\ref{satz.s1c}
 
+Die Aussage ist ähnlich wie das Axiom von Pasch, nur dass die betrachtete Gerade durch eine Ecke des
+Dreiecks geht.
 
-Die Aussage ist \"{a}hnlich wie das Axiom von Pasch, nur dass die
-betrachtete Gerade durch eine Ecke des Dreiecks geht.\\
+\begin{proof}
+    Sei $l = g(A,B),\; m = g(A,C)$ und $n = g(A,D)$. Sei $E \in m$ ein Punkt mit $\Zw(CAE)$ (A2).
+    Nach Wahl von $E$ schneidet $n$ die Strecke $\str{EC}$ und daher nach (A4) für das Dreieck $EBC$
+    auch $\str{BE}$ oder $\str{BC}$.
 
+    {\bf Wir zeigen:} $n$ schneidet nicht $\str{BE}$
 
-\begin {proof}
-Sei $l=g(A,B),\;m=g(A,C)$ und $n=g(A,D)$. Sei $E\in m$
-ein Punkt mit $\Zw(CAE)$ (A2). Nach Wahl von $E$ schneidet $n$ die
-Strecke $\str{EC}$ und daher nach (A4) f\"{u}r das Dreieck $EBC$
-auch $\str{BE}$ oder $\str{BC}$.
+    \centerline{\includegraphics[width=8cm]{BILDER/1-1-09-Satz.png}}
 
-{\bf Wir zeigen:} $n$ schneidet nicht $\str{BE}$
+    Die Strecke $\str{BE}$ liegt ganz auf einer Seite von $l$ und schneidet $l$ nur in $B$. Da $E$
+    und $C$ auf verschiedenen Seiten von $l$ liegen, liegen alle Punkte von $\str{BE}$ auf der
+    anderen Seite von $l$ wie $C$.
+    \renewcommand{\labelenumi}{\arabic{enumi}.} % ändert die Nummerierung von (1) auf 1.
+    \begin{enumerate}
+        \item Der Strahl $\pf{AD}$ liegt im Innern des Winkels und damit ganz auf derselben Seite
+            von $l$ wie $C$ (und auf derselben Seite von $m$ wie $B$) $\Rightarrow\;
+            \pf{AD} \cap \str{EB} = \emptyset$.
 
+        \item Entsprechend liegt der zu $\pf{AD}$ entgegengesetzte Strahl $\pf{AD}^* := \{X \, | \,
+            \Zw(DAX)\}$ auf der anderen Seite von $m$ wie $\str{EB}$.
+    \end{enumerate}
+    Aus $1.$ und $2.$ folgt: $n \cap \str{EB} = \emptyset$ und daher $n \cap \str{BC} \neq
+    \emptyset$, etwa $= \{F\}$.
 
-\centerline{\includegraphics[width=8cm]{BILDER/1-1-09-Satz.png}}
-
-
-Die Strecke $\str{BE}$ liegt ganz auf einer Seite von $l$ und
-schneidet $l$ nur in $B$. Da $E$ und $C$ auf verschiedenen Seiten
-von $l$ liegen, liegen alle Punkte von $\str{BE}$ auf der anderen
-Seite von $l$ wie $C$.
-\begin{enumerate}
-    \item[1.] Der Strahl $\pf{AD}$ liegt im Innern des Winkels und
-    damit ganz auf derselben Seite von $l$ wie $C$ (und auf
-    derselben Seite von $m$ wie $B$) $\Rightarrow\;
-    \pf{AD}\cap\str{EB}=\emptyset$.
-    \item[2.] Entsprechend liegt der zu $\pf{AD}$ entgegengesetzte
-    Strahl $\pf{AD}^*:=\{X\,|\,\Zw(DAX)\}$ auf der anderen Seite von $m$ wie $\str{EB}$.
-\end{enumerate}
-Aus $1.$ und $2.$ folgt: $n\cap\str{EB}=\emptyset$ und daher
-$n\cap\str{BC}\neq\emptyset$, etwa $=\{F\}$.
-
-$F$ liegt auf $\pf{AD}$, denn $B$ und $F$ sowie $B$ und $D$ liegen
-auf derselben Seite von $m$, also auch $D$ und~$F$.
+    $F$ liegt auf $\pf{AD}$, denn $B$ und $F$ sowie $B$ und $D$ liegen auf derselben Seite von $m$,
+    also auch $D$ und~$F$.
 \end{proof}
-
-
-
-
 
 \subsection{Kartesische Modelle mit Ordnung}
 
+Ein Modell einer Ebene, die die Inzidenzaxiome erfüllt, ist die {\em kartesische Ebene} $\E_{_\K} =
+\K^2$ über einem Körper $\K$.  Geraden werden, wie aus der Linearen Algebra bekannt, als Lösungen
+linearer Gleichungen $a x + b y = c$ mit $a, b, c \in \R$ ($a, b$ nicht beide $0$) definiert.
 
-Ein Modell einer Ebene, die die Inzidenzaxiome erfüllt, ist
-die {\em kartesische Ebene}
-$\E_{_\K}=\K^2$ über einem Körper $\K$.
-Geraden werden, wie aus der Linearen Algebra bekannt, als
-Lösungen linearer Gleichungen $a x + b y = c$ mit $a,b,c\in \R$ ($a,b$
-nicht beide $0$) definiert.
-
-
-Für endliche Körper erhalten wir endliche affine Geometrien,
-die aber nicht den Anordnungsaxiomen genügen.
-Man betrachte beispielsweise \glqq Modell 2\grqq\ (weiter oben), % LINK?
-dass der kartesischen Ebene über dem Körper $\K=\{0,1\}$ mit zwei Elementen
-entspricht: $\E_{\K}=\{A=(0,0),\,B=(0,1),\,C=(1,0),\,D=(1,1)\}$.
-
+Für endliche Körper erhalten wir endliche affine Geometrien, die aber nicht den Anordnungsaxiomen
+genügen. Man betrachte beispielsweise "`Modell ~\ref{Modell2}"' auf Seite ~\pageref{Modell2}, dass
+der kartesischen Ebene über dem Körper $\K = \{0, 1\}$ mit zwei Elementen entspricht: $\E_{\K} = \{A
+= (0,0),\, B = (0,1),\, C = (1,0),\, D = (1,1)\}$.
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-1-10-Modell2.png}}
 
-
-\bigskip
-
-
-Es gibt allerdings eine Reihe von kartesischen Ebenen, die die Axiome
-der Anordnung ebenfalls erfüllen.
-
-
+Es gibt allerdings eine Reihe von kartesischen Ebenen, die die Axiome der Anordnung ebenfalls
+erfüllen.
 
 \begin{defi}
-Ein K\"{o}rper $K$ heißt {\em geordnet},
-wenn er eine Teilmenge $K_+\subset K$
-(von {\em positiven Elementen}) besitzt, so dass gilt:
-\emph{\begin{enumerate}
-    \item[(i)] $\forall\,a,\,b\in K_+$ ist $a+b\in K_+$ und $a\cdot
-        b\in K_+$;
-    \item[(ii)] $\forall\,a\in K$ gilt genau eine der
-        Beziehungen $a\in K_+$, $a=0$ oder  $-a\in K_+$.
-\end{enumerate}}
+    Ein Körper $K$ heißt {\em geordnet}, wenn er eine Teilmenge $K_+\subset K$ (von {\em positiven
+    Elementen}) besitzt, so dass gilt:
+    \renewcommand{\labelenumi}{(\roman{enumi})} % ändert die Nummerierung von (1) auf (i)
+    \begin{enumerate}
+        \item $\forall\, a,\, b \in K_+$ ist $a + b \in K_+$ und $a \cdot b \in K_+$;
+
+        \item $\forall\, a \in K$ gilt genau eine der Beziehungen $a \in K_+$, $a = 0$ oder $-a \in
+        K_+$.
+    \end{enumerate}
 \end{defi}
 
+$\Q$ und $\R$ sind geordnet, $\C$ ist nicht geordnet.
 
-$\Q$ und $\R$ sind geordnet, $C$ ist nicht geordnet.
-
-
-Wenn $\K$ geordnet ist, können wir eine Ordnungsrelaton \glqq
-$<$\grqq\ definieren.
+Wenn $\K$ geordnet ist, können wir eine Ordnungsrelaton "`$<$"' definieren.
 % Die Umkehrung gilt übrigens auch!! (Übung?!?)
 
-
 \begin{defi}
-Sei $K$ geordnet und $a,\,b\in K$. Dann definieren wir:
-\begin{enumerate}
-    \item[] $a>b\;:\Longleftrightarrow\;a-b\in K_+$;
-    \item[] $a<b\;:\Longleftrightarrow\;b-a\in K_+$.
-\end{enumerate}
+    Sei $K$ geordnet und $a,\, b \in K$. Dann definieren wir:
+    \begin{enumerate}
+        \item $a > b\;: \Longleftrightarrow\; a - b \in K_+$;
+
+        \item $a < b\;: \Longleftrightarrow\; b - a\in K_+$.
+    \end{enumerate}
 \end{defi}
 
-Dies definiert eine {\em totale Ordnung} in $K$. d.h.
-$\forall\,a,\,b\in K$ gilt genau eine der Beziehungen:
-$a>b,\;a=b,\;a<b$.
-
-
-
+Dies definiert eine {\em totale Ordnung} in $K$. Das heißt $\forall\, a,\, b \in K$ gilt genau eine
+der Beziehungen: $a > b,\; a = b,\; a < b$.
 
 \begin{thm}
-Sei $\K$ ein K\"{o}rper und $\E_{\K}$ die entsprechende
-kartesische Ebene. Dann gilt:
-\begin{center}
-$\E_{\K}$ gen\"{u}gt den Axiomen der Anordnung
-$\Longleftrightarrow$ $\K$ ist geordnet.
-\end{center}
+    Sei $\K$ ein Körper und $\E_{\K}$ die entsprechende kartesische Ebene. Dann gilt:
+    \begin{center}
+        $\E_{\K}$ genügt den Axiomen der Anordnung $\Longleftrightarrow \K$ ist geordnet.
+    \end{center}
 \end{thm}
 
- 
 \begin{proof}
-\begin{itemize}
-\item
-\glqq{}$\Longrightarrow$\grqq{}\\
-Wir betrachten die $x$-Achse $g$.
-Nach Theorem~\ref{thm:satz.s1b} wird $g$ durch
-$O=(0,0)\in g$ in 2 Seiten geteilt; sei
-\begin{eqnarray*}
-K_+ & := & \{a\in \K:\;a\neq 0,\;(a,0)\mbox{ und }(1,0) \mbox{ liegen
-auf derselben Seite von }O\}\\
--K_+ & := & \{a\in \K:\;a\neq 0,\;(a,0)\mbox{ und }(1,0) \mbox{
-liegen auf verschiedenen Seiten von }O\}
-\end{eqnarray*}
-Dann ist $\K=K_+\cup\{0\}\cup -K_+$ - disjunkte Vereinigung.
+    \begin{itemize}
+        \item["`$\Longrightarrow$"'] Wir betrachten die $x$-Achse $g$. Nach
+            Theorem~\ref{thm:satz.s1b} wird $g$ durch $O = (0,0) \in g$ in 2 Seiten geteilt; sei
 
-Bleibt zu zeigen, dass mit $a,b\in K_+$ auch $a+b$ und $a\cdot b$ in
-$K_+$ liegen.
+            \begin{align*}
+                K_+ & := \{a \in \K:\; a \neq 0,\; (a,0) \mbox{ und } (1,0) \mbox{ liegen auf
+                derselben Seite von } O\}\\
+                -K_+ & := \{a \in \K:\; a \neq 0,\; (a,0) \mbox{ und } (1,0) \mbox{ liegen auf
+                verschiedenen Seiten von } O\}
+            \end{align*}
 
-\underline{Addition}: Die Addition $a+b$ in $\K$ entspricht dem
-nacheinander \glqq anlegen\grqq\ von Strecken der Längen $a$ und $b$
-auf der $x$-Achse $g$
-%der Addition von Strecken
-%% ACHTUNG:  HIER MUSS DEFINITITV NOCHMAL ÜBERDACHT WERDEN!!!!!
-%% WAS SOLL UNS DAS SAGEN??? "entspricht Addition von Strecken?!?!
-%% HIER BITTE EIN SAUBERES ARGUMENT!!!
-%% Dieses Argument ist aus dem Buch von Hartshorne kopiert, aber nur weil die
-%% "segment arithmetic" dort schon vorher behandelt wurde!!!
-%% siehe Hartshorne, Proposition 15.3
-$\Rightarrow\;a+b\in K_+$
+            Dann ist $\K = K_+ \cup \{0\} \cup -K_+$ eine disjunkte Vereinigung. Bleibt zu zeigen,
+            dass mit $a, b\in K_+$ auch $a + b$ und $a \cdot b$ in $K_+$ liegen.
 
+            \begin{description}
+                \item[Addition] Die Addition $a + b$ in $\K$ entspricht dem nacheinander "`anlegen"'
+                von Strecken der Längen $a$ und $b$ auf der $x$-Achse $g$ %der Addition von Strecken
 
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-16a-Satz.png}}
+                % XXX: HIER MUSS DEFINITIV NOCHMAL ÜBERDACHT WERDEN!!!!!
+                % WAS SOLL UNS DAS SAGEN??? "entspricht Addition von Strecken?!?!
+                % HIER BITTE EIN SAUBERES ARGUMENT!!!
+                % Dieses Argument ist aus dem Buch von Hartshorne kopiert, aber nur weil die
+                % "segment arithmetic" dort schon vorher behandelt wurde!!!
+                % siehe Hartshorne, Proposition 15.3
 
+                $\Rightarrow\; a + b \in K_+$
 
+                \centerline{\includegraphics[width=6cm]{BILDER/1-1-16a-Satz.png}}
 
-\underline{Multiplikation}: Parallele durch $B=(0,b)$ zur
-Geraden durch die beiden Punkte $E=(0,1),\;A=(a,0)$ schneidet
-$x$-Achse $g$ in $X=(a\cdot b,0)$
+                \item[Multiplikation] Parallele durch $B = (0,b)$ zur Geraden durch die beiden
+                    Punkte $E = (0,1),\; A = (a,0)$ schneidet $x$-Achse $g$ in $X = (a \cdot b, 0)$
 
-%Beh.:  $a\cdot b\in K_+$
+                    % Beh.:  $a\cdot b\in K_+$
 
+                    \centerline{\includegraphics[width=6cm]{BILDER/1-1-16b-Satz.png}}
 
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-16b-Satz.png}}
+                    \renewcommand{\labelenumi}{\roman{enumi})} % Nummerierung: (1) -> 1)
+                    \begin{enumerate}
+                        \item Sei $\Zw(OEB)$ und $g(B,X)$ parallel zu $g(A,E)$. Dann liegen ganz
+                            $g(B,X)$ und $O$ auf verschiedenen Seiten von $g(A,E)$, also auch
+                            $\Zw(OAX)$.
 
+                        \item Ist $\Zw(OBE)$ ergibt sich entsprechend $\Zw(OXA)$. In beiden Fällen
+                            liegen daher $X$ und $A$ auf derselben Seite von $O$, also $a \cdot b
+                            \in K_+$ und $K$ ist geordnet.
+                    \end{enumerate}
+            \end{description}
 
-i) Sei $\Zw(OEB)$ und $g(B,X)$ parallel zu $g(A,E)$. Dann liegen ganz
-$g(B,X)$ und $O$ auf verschiedenen Seiten von $g(A,E)$, also auch
-$\Zw(OAX)$. 
+        \item["`$\Longleftarrow$"'] Sei $K$ geordnet und $A = (a_1,a_2),\; B = (b_1,b_2),\; C =
+            (c_1,c_2)$ paarweise verschiedene Punkte einer Geraden $g:\; a x + b y + c = 0$.\\
+            \textbf{Zwischenrelation:}
 
-ii) Ist $\Zw(OBE)$ ergibt sich entsprechend $\Zw(OXA)$. In
-beiden F\"{a}llen liegen daher $X$ und $A$ auf derselben Seite von
-$O$, also $a\cdot b\in K_+$ und $K$ ist geordnet.
+            \renewcommand{\labelenumi}{\arabic{enumi})} % ändert die Nummerierung von (1) auf 1)
+            \begin{enumerate}
+                \item Sei $b \neq 0: \quad \Zw(ABC)\;: \Leftrightarrow\; a_1 > b_1 > c_1$ oder
+                    $a_1 < b_1 < c_1$;
 
+                \item sei $b = 0\; (\mbox{d.h. } a_1 = b_1 = c_1 = \frac{-c}{a}):$
 
-\item
-\glqq{}$\Longleftarrow$\grqq{}\\ 
-Sei $K$ geordnet und
-$A=(a_1,a_2),\;B=(b_1,b_2),\;C=(c_1,c_2)$ paarweise verschiedene
-Punkte einer Geraden $g:\;ax+by+c=0$.
+                    $\Zw(ABC)\;: \Leftrightarrow\; a_2 > b_2 > c_2$ oder $a_2 < b_2 < c_2$.
+            \end{enumerate}
 
-\underline{Zwischenrelation}:
-\begin{enumerate}
-    \item[1)] Sei $b\neq 0:\quad \Zw(ABC)\;:\Leftrightarrow\;a_1>b_1>c_1$ oder
-        $a_1<b_1<c_1$;
-    \item[2)] sei $b=0\;(\mbox{d.h. }a_1=b_1=c_1=\frac{-c}{a}):\\
-        \Zw(ABC)\;:\Leftrightarrow\;a_2>b_2>c_2$ oder
-        $a_2<b_2<c_2$.
-\end{enumerate}
-Man pr\"{u}ft nun die G\"{u}ltigkeit von (A1) - (A4) nach.
-%
-%Übung, Blatt 3
-%
-\end{itemize}
+            Man prüft nun die Gültigkeit von (A1) - (A4) nach. % Übung, Blatt 3
+    \end{itemize}
 \end{proof}
 
+\subsection*{Poincarésches Kreisscheibenmodell}
 
+Ein weiteres Modell, dass den Inzidenz- und Anordnungsaxiomen genügt, ist das Poincarésche
+Kreisscheibenmodell. Hierbei wählen wir die Menge der Punkte in einer offenen Kreisscheibe des
+$\R^2$. (Anstelle des $\R^2$ ließe sich auch der $\K^2$ für einen anderen geordneten Köprper
+verwenden.) Der Einfachheit halber wählen wir einen Kreis mit Mittelpunkt im Ursprung:
 
-
-\subsection*{Poincar\'esches Kreisscheibenmodell}
-
-Ein weiteres Modell, dass den Inzidenz- und Anordnungsaxiomen genügt 
-ist das Poincar\'esches Kreisscheibenmodell.
-Hierbei wählen wir die Menge der Punkte in einer offenen
-Kreisscheibe des $\R^2$. (Anstelle des $\R^2$ ließe sich auch der
-$\K^2$ für einen anderen geordneten Köprper verwenden.)
-Der Einfachheit halber wählen wir einen Kreis mit Mittelpunkt im Ursprung:
 $$
-\Gamma = \{ (x,y) \in \R^2 :  x^2+y^2 = r \}
+    \Gamma = \{ (x,y) \in \R^2 :  x^2 + y^2 = r \}
 $$
-Punkte in unserem {\em  Poincar\'eschen Kreisscheibenmodell} sind also aus
-$$
-\E = \{ (x,y) \in \R^2 :  x^2+y^2 < r \}.
-$$
-Geraden sind Teile von Kreisen oder Geraden $\gamma$ des $\R^2$,
-die $\Gamma$ {\em orthogonal schneiden}, d.h. die Tangenten an
-$\Gamma$ und $\gamma$ in den beiden Schnittpunkten 
-liegen orthogonal zueinander. Diese Orthogonalitätsbedingung ist im
-Fall einer Geraden $\gamma$ genau dann erfüllt, wenn der Ursprung
-$O=(0,0)$ auf der Geraden liegt.
 
+Punkte in unserem {\em  Poincaréschen Kreisscheibenmodell} sind also aus
 
+$$
+    \E = \{ (x,y) \in \R^2 :  x^2 + y^2 < r \}.
+$$
+
+Geraden sind Teile von Kreisen oder Geraden $\gamma$ des $\R^2$, die $\Gamma$ {\em orthogonal
+schneiden}, d.h. die Tangenten an $\Gamma$ und $\gamma$ in den beiden Schnittpunkten liegen
+orthogonal zueinander. Diese Orthogonalitätsbedingung ist im Fall einer Geraden $\gamma$ genau dann
+erfüllt, wenn der Ursprung $O = (0,0)$ auf der Geraden liegt.
 
 \centerline{\includegraphics[width=6cm]{BILDER/4-2-04b-Geraden.jpg}}
 
-
-
 \begin{thm} \label{thm:PoincareKreisscheibe}
-Das Poincar\'esche Kreisscheibenmodell gen\"{u}gt den Inzidenzaxiomen
-{\bf (I1)-(I3)}
-und den Anordnungsaxiomen {\bf (A1)-(A4)}.
+    Das Poincarésche Kreisscheibenmodell genügt den Inzidenzaxiomen {\bf (I1) -- (I3)} und den
+    Anordnungsaxiomen {\bf (A1) -- (A4)}.
 \end{thm}
-
-
-
-
 
 \subsection*{Inversion am Kreis}
 
-
-
-Um zu zeigen, dass das Poincar\'esche Kreisscheibenmodell dem
-Inzidenz-Axiom {\bf (I1)} genügt, benötigen wir zunächst ein paar
-Aussagen über sich orthogonal schneidende Kreise.
-
+Um zu zeigen, dass das Poincarésche Kreisscheibenmodell dem Inzidenz-Axiom {\bf (I1)} genügt,
+benötigen wir zunächst ein paar Aussagen über sich orthogonal schneidende Kreise.
 
 %% Folgendes kann man auch für beliebige Körper mit Ordnung und
 %% ... machen  (Euklidische Körper!)
 
 \begin{defi}
-\emph{$\Gamma\subset \R^2$ sei ein Kreis vom Radius $r$ und Mittelpunkt $M$.
-$A\in\R^2$ sei ein beliebiger Punkt, $A\neq M$. Sei
-$A'\in\pf{MA}$ derart, dass $|MA|\cdot|MA'|=r^2$ 
-%(solch ein Punkt $A'$ existiert stets!). 
-Wir sagen, $A'$ entsteht aus $A$ durch
-eine \emph{Inversion} $\varphi_\Gamma : \R^2\setminus\{M\} \to \R^2\setminus\{M\}$ am Kreis $\Gamma$}.\\
+    $\Gamma \subset \R^2$ sei ein Kreis vom Radius $r$ und Mittelpunkt $M$. $A \in \R^2$ sei ein
+    beliebiger Punkt, $A \neq M$. Sei $A' \in \pf{MA}$ derart, dass $|MA| \cdot |MA'| = r^2$
+    %(solch ein Punkt $A'$ existiert stets!).
+    Wir sagen, $A'$ entsteht aus $A$ durch eine \emph{Inversion} $\varphi_\Gamma :
+    \R^2 \setminus\{M\} \to \R^2 \setminus \{M\}$ am Kreis $\Gamma$.
 \end{defi}
-
-
-
 
 \centerline{\includegraphics[width=8cm]{BILDER/4-2-01-Inversion.jpg}}
 
+Die Punkte $A$ und $A'$ stehen in einer ganz besonderen Beziehung zueinander. Punkte außerhalb des
+Kreises werden durch die Inversion am Kreis auf Punkte innerhalb des Kreises abgebildet und
+umgekehrt. Liegt $A$ innerhalb des Kreises $\Gamma$, so bilden wir eine Gerade orthogonal zur
+Geraden $g$ durch $M$ und $A$ durch $A$. Diese schneidet $\Gamma$ in zwei Punkten $P$ und $Q$. Die
+Tangente an $\Gamma$ durch $P$ (orthogonal zu $g(M,P)$) trifft die Gerade $g$ in $A'$. Dies folgt
+aus der Ähnlichkeit der Dreiecke $MPA'$ und $MAP$ und dem Verhältnis der Seitenlängen
 
-Die Punkte $A$ und $A'$ stehen in einer ganz besonderen Beziehung
-zueinander. Punkte ausßerhalb des Kreises werden durch die Inversion
-am Kreis auf Punkte innerhalb des Kreises abgebildet und umgekehrt.
-Liegt $A$ innerhalb des Kreises $\Gamma$, so bilden wir eine Gerade
-orthogonal zur Geraden $g$ durch $M$ und $A$ durch $A$. Diese schneidet 
-$\Gamma$ in zwei Punkten $P$ und $Q$. Die Tangente an $\Gamma$ durch
-$P$ (orthogonal zu $g(M,P)$) trifft die Gerade $g$ in $A'$.
-Dies folgt aus der Ähnlichkeit der Dreiecke $MPA'$ und $MAP$ und dem
-Verhältnis der Seitenlängen
 $$
-\frac{|MA|}{r} = \frac{r}{|MA'|} 
-.
+    \frac{|MA|}{r} = \frac{r}{|MA'|}.
 $$
-
 
 \begin{thm}\label{thm:satz.s4b}
-Inversionen $\varphi_\Gamma$ am Kreis $\Gamma$ haben folgende
-Eigenschaften:
-\begin{enumerate}
-    %\item[\emph{\textbf{a)}}] Kreise durch $M$ werden in Geraden $g$ mit $M\notin
-    %    g$ abgebildet und umgekehrt.
-    \item[\emph{\textbf{a)}}] Ein Kreis $\gamma$, der $\Gamma$ orthogonal
-        schneidet, wird auf sich abgebildet.
-    \item[\emph{\textbf{b)}}] Enth\"{a}lt ein Kreis $\gamma$ zwei einander zugeordnete
-        Punkte $A$ und $A'=\varphi_\Gamma(A)$, dann schneiden sich
-        $\gamma$ und $\Gamma$ orthogonal.
-    %\item[\emph{\textbf{d)}}] Ist $\gamma$ ein Kreis und $M\notin\gamma$, dann ist
-    %    $\gamma'=\varphi_\Gamma(\gamma)$ ebenfalls ein Kreis.
-    %\item[\emph{\textbf{e)}}] Winkel bleiben invariant.
-\end{enumerate}
+    Inversionen $\varphi_\Gamma$ am Kreis $\Gamma$ haben folgende Eigenschaften:
+
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        %\item[\emph{\textbf{a)}}] Kreise durch $M$ werden in Geraden $g$ mit $M\notin
+        %    g$ abgebildet und umgekehrt.
+        \item Ein Kreis $\gamma$, der $\Gamma$ orthogonal schneidet, wird auf sich abgebildet.
+
+        \item Enthält ein Kreis $\gamma$ zwei einander zugeordnete Punkte $A$ und
+            $A' = \varphi_\Gamma(A)$, dann schneiden sich $\gamma$ und $\Gamma$ orthogonal.
+
+        %\item[\emph{\textbf{d)}}] Ist $\gamma$ ein Kreis und $M\notin\gamma$, dann ist
+        %    $\gamma'=\varphi_\Gamma(\gamma)$ ebenfalls ein Kreis.
+        %\item[\emph{\textbf{e)}}] Winkel bleiben invariant.
+    \end{enumerate}
 \end{thm}
 %\ref{satz.s4b}
 
-
-
 \begin{proof}
-{\bf a)} Da sich $\Gamma$ und $\gamma$ orthogonal schneiden,
-stehen die Tangenten und Radien paarweise aufeinander senkrecht.
-Nach dem {\em Sehnen-Tangenten-Satz} %(Übung, Blatt 3!!) 
-gilt
-\[ |MA|\cdot |MA'|=|MP|^2=r^2.\]
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item Da sich $\Gamma$ und $\gamma$ orthogonal schneiden, stehen die Tangenten und Radien
+            paarweise aufeinander senkrecht. Nach dem {\em Sehnen-Tangenten-Satz}
+            %(Übung, Blatt 3!!)
+            gilt
+            $$
+                |MA| \cdot |MA'| = |MP|^2 = r^2.
+            $$
+            \centerline{\includegraphics[width=6cm]{BILDER/4-2-02b-Inversion.jpg}}
 
-
-
-\centerline{\includegraphics[width=6cm]{BILDER/4-2-02b-Inversion.jpg}}
-
-
-
-
-
-{\bf b)} Gibt es umgekehrt $A,\,A'\in\gamma$ mit
-$|MA|\cdot|MA'|=r^2$, dann m\"{u}ssen sich $\Gamma$ und
-$\gamma$ schneiden. Sei $P$ ein Schnittpunkt von $\Gamma$ und
-$\gamma$. Dann ist $|MP|=r$, also
-$|MP|^2=|MA|\cdot|MA'|$ und $|MP|$ ist
-Tangentenabschnitt f\"{u}r $\gamma$, auf dem der Radius von $\gamma$
-orthogonal steht.
+        \item Gibt es umgekehrt $A,\, A' \in \gamma$ mit $|MA| \cdot |MA'| = r^2$, dann müssen sich
+            $\Gamma$ und $\gamma$ schneiden. Sei $P$ ein Schnittpunkt von $\Gamma$ und $\gamma$.
+            Dann ist $|MP| = r$, also $|MP|^2 = |MA| \cdot |MA'|$ und $|MP|$ ist Tangentenabschnitt
+            für $\gamma$, auf dem der Radius von $\gamma$ orthogonal steht.
+    \end{enumerate}
 \end{proof}
 
-
-
-Das Theorem zeigt insbesondere, dass das gesamte {\em Kreisbüschel} (Menge von
-Kreisen) durch zwei
-Punkte $A$ und $\varphi_\Gamma(A)$ den Kreis $\Gamma$ orthogonal schneidet.
-Liegt $A$ im Inneren der Kreisscheibe, so entsprechen die Schnitte des
-Kreisbüschels mit dem Inneren der Kreisscheibe, allen Geraden durch $A$
-im Poincar\'eschen Kreisscheibenmodel. 
-
+Das Theorem zeigt insbesondere, dass das gesamte {\em Kreisbüschel} (Menge von Kreisen) durch zwei
+Punkte $A$ und $\varphi_\Gamma(A)$ den Kreis $\Gamma$ orthogonal schneidet. Liegt $A$ im Inneren
+der Kreisscheibe, so entsprechen die Schnitte des Kreisbüschels mit dem Inneren der Kreisscheibe,
+allen Geraden durch $A$ im Poincaréschen Kreisscheibenmodel.
 
 \centerline{\includegraphics[width=6cm]{BILDER/4-2-06-Parallel.jpg}}
 
-
-Betrachtet man eine Gerade $g$ (bzw. einen orthogonal schneidenden
-Kreis $\gamma$) außerhalb von $A$, so sieht man auch, dass das
-Parallelenaxiom in der Poincar\'eschen Kreisscheibe nicht gilt.
-
-
-
+Betrachtet man eine Gerade $g$ (bzw. einen orthogonal schneidenden Kreis $\gamma$) außerhalb von
+$A$, so sieht man auch, dass das Parallelenaxiom in der Poincaréschen Kreisscheibe nicht gilt.
 
 \subsection*{Inzidenz und Anordnung im Kreisscheibenmodell}
 
-
-
-Die Axiome der Inzidenz und Anordnung gelten allerdings in der Poincar\'eschen Kreisscheibe.
-Dazu erklären wir die Beziehung \glqq Zwischen\grqq\ wie folgt:
-Seien $A,\,B,\,C\in\E$ kollinear. Liegen $A,\,B,\,C$ auf einem Durchmesser, also einer
-Geraden des $\R^2$, dann sei $Zw(ABC)$ wie im $\R^2$ erkl\"{a}rt.
-Liegen $A,\,B,\,C$ auf einem Kreis $\gamma$ mit Mittelpunkt $M'$,
-dann ziehen wir von $M'$ die Strahlen zu $A,\,B,\,C$, diese
-treffen die Verbindungsstrecke der beiden Schnittpunkte von
-$\gamma$ und $\Gamma$ in $A',\,B',\,C'$.
-Wir definieren
- $Zw(ABC)\;\Leftrightarrow\;Zw(A'B'C')$ im Sinne des $\R^2$.
-
+Die Axiome der Inzidenz und Anordnung gelten allerdings in der Poincaréschen Kreisscheibe. Dazu
+erklären wir die Beziehung "`Zwischen"' wie folgt: seien $A,\, B,\, C \in \E$ kollinear. Liegen
+$A,\, B,\, C$ auf einem Durchmesser, also einer Geraden des $\R^2$, dann sei $Zw(ABC)$ wie im $\R^2$
+erklärt. Liegen $A,\, B,\, C$ auf einem Kreis $\gamma$ mit Mittelpunkt $M'$, dann ziehen wir von
+$M'$ die Strahlen zu $A,\, B,\, C$, diese treffen die Verbindungsstrecke der beiden Schnittpunkte
+von $\gamma$ und $\Gamma$ in $A',\, B',\, C'$. Wir definieren $Zw(ABC)\; \Leftrightarrow\;
+Zw(A'B'C')$ im Sinne des $\R^2$.
 
 \centerline{\includegraphics[width=6cm]{BILDER/4-2-07-Zwischen.jpg}}
 
-
-
-
 \begin{proof}[Beweis von Theorem~\ref{thm:PoincareKreisscheibe}]
-{\bf (I2), (I3)} sind sicher erfüllt, genau so wie {\bf (A1) - (A3)}. %(\"{U}bung)??
+    {\bf (I2), (I3)} sind sicher erfüllt, genau so wie {\bf (A1) - (A3)}. %(Übung)??
+    \begin{description}
+        \item[(I1)] Seien $A,\, B \in \E$
+            \begin{enumerate}
+                \item $M,\, A,\, B$ kollinear $\Rightarrow\; \E$-Gerade ist der Durchmesser durch
+                    $A$ und $B$.
 
-{\bf (I1):} Seien $A,\,B\in\E$
-\begin{enumerate}
-\item[{\bf 1.}] $M,\,A,\,B$ kollinear $\Rightarrow\;\E$-Gerade
-ist der Durchmesser durch $A$ und $B$. \item[{\bf 2.}] $M,\,A,\,B$
-nicht kollinear, $A'=\varphi_\Gamma(A)\;\Rightarrow\;\exists$ genau
-einen Kreis $\gamma$ durch $A,\,B,\,A'$, $\gamma$ ist orthogonal zu
-$\Gamma$ nach Theorem~\ref{thm:satz.s4b}, b); ebenfalls $B'\in \gamma$ nach
-Theorem~\ref{thm:satz.s4b} (a).
-\end{enumerate}
+                \item $M,\, A,\, B$ nicht kollinear, $A' = \varphi_\Gamma(A)\; \Rightarrow\;
+                    \exists$ genau einen Kreis $\gamma$ durch $A,\, B,\, A'$, $\gamma$ ist
+                    orthogonal zu $\Gamma$ nach Theorem~\ref{thm:satz.s4b}, b); ebenfalls $B' \in
+                    \gamma$ nach Theorem~\ref{thm:satz.s4b} (a).
+            \end{enumerate}
+    \end{description}
+\end{proof}
 
+\begin{description}
+    \item[(A4) -- Axiom von Pasch] Gegeben sei das Dreieck $ABC\subset\E$. Je 2 Geraden (Kreise)
+        schneiden sich innerhalb $\Gamma$ in genau 1 Punkt $X$ (der 2. Schnittpunkt $X' =
+        \varphi_\Gamma(X)$ liegt außerhalb von $\Gamma$ (Übungsaufgabe).
+\end{description}
 
-
-
-{\bf (A4) - Axiom von Pasch:} Gegeben sei das Dreieck
-$ABC\subset\E$. Je 2 Geraden (Kreise) schneiden sich
-innerhalb $\Gamma$ in genau 1 Punkt $X$ (der 2. Schnittpunkt
-$X'=\varphi_\Gamma(X)$ liegt au{\ss}erhalb von $\Gamma$ (\"{U}bungsaufgabe).
-
-$\Rightarrow$ Inneres des Dreiecks $ABC$ ist wohldefiniert (2 Punkte
-auf derselben Seite der $\E$-Geraden $\Longleftrightarrow$ beide
-Punkte innerhalb oder au{\ss}erhalb des Kreises)
-
+$\Rightarrow$ Inneres des Dreiecks $ABC$ ist wohldefiniert (2 Punkte auf derselben Seite der
+$\E$-Geraden $\Longleftrightarrow$ beide Punkte innerhalb oder außerhalb des Kreises)
 
 \centerline{\includegraphics[width=5cm]{BILDER/4-2-08-Pasch.jpg}}
 
-
-
-Ist $g$ eine $\E$-Gerade mit Kreis $\gamma$, die durch keinen der
-Eckpunkte $A,\,B,\,C$ geht und etwa $\str{AB}$ in $D$ schneidet,
-dann liegen $A$ und $B$ auf verschiedenen Seiten von $g$, etwa $B$
-innerhalb $\gamma$. Angenommen, $B,\,C$ auf derselben Seite von
-$\gamma$, etwa beide innerhalb $\gamma\;\Rightarrow$ der Kreis
-durch $A,\,C$ enth\"{a}lt $A$ au{\ss}erhalb und $C$ innerhalb von
-$\gamma\;\Rightarrow\;\exists$ Schnittpunkt auf $AC$.
-\end{proof}
-
-
-
-
-
-
+Ist $g$ eine $\E$-Gerade mit Kreis $\gamma$, die durch keinen der Eckpunkte $A,\, B,\, C$ geht und
+etwa $\str{AB}$ in $D$ schneidet, dann liegen $A$ und $B$ auf verschiedenen Seiten von $g$, etwa $B$
+innerhalb $\gamma$. Angenommen, $B,\, C$ auf derselben Seite von $\gamma$, etwa beide innerhalb
+$\gamma\; \Rightarrow$ der Kreis durch $A,\, C$ enthält $A$ außerhalb und $C$ innerhalb von
+$\gamma\; \Rightarrow\; \exists$ Schnittpunkt auf $AC$.
 
 \section*{Vorlesung am 03.05.2011}
 % Vertretung durch Thomas
 
-
 \subsection*{Axiome der Kongruenz, Strecken}
 
-
-Wir f\"{u}hren eine Relation zwischen Strecken (und später auch zwischen Winkeln)
-ein und nennen diese \glqq{}Kongruenz\grqq{}, in Zeichen
-$\str{AB}\cong\str{CD}$, wenn
-folgende Axiome erf\"{u}llt sind: 
-%(Kongruenz ist in einem erweiterten Sinn eine \glqq{}Gleichheit\grqq{}):
-
+Wir führen eine Relation zwischen Strecken (und später auch zwischen Winkeln) ein und nennen diese
+"`Kongruenz"', in Zeichen $\str{AB} \cong \str{CD}$, wenn folgende Axiome erfüllt sind: 
+%(Kongruenz ist in einem erweiterten Sinn eine "`{}Gleichheit"'{}):
 
 \begin{enumerate}
-    \item[{\bf(C1)}] (Existenz) Sei $\str{AB}\subset\E\;(A\neq B)$ und
-        $C$ der Ursprung eines Strahls $r$. Dann gibt es genau
-        einen Punkt $D\in r,\;D\neq C,$ mit
-        $\str{AB}\cong\str{CD}$.
+    \item[{\bf (C1)}] (Existenz) Sei $\str{AB} \subset \E\; (A \neq B)$ und $C$ der Ursprung eines
+        Strahls $r$. Dann gibt es genau einen Punkt $D \in r,\; D \neq C,$ mit $\str{AB} \cong
+        \str{CD}$.
 
-%\includegraphics[width=3.5cm]{1-2-01-C1}
+    %\includegraphics[width=3.5cm]{1-2-01-C1}
 
-    \item[{\bf(C2)}] Wenn 2 Strecken einer dritten kongruent sind, dann
-    sind sie zueinander kongruent:
-    \[\str{AB}\cong\str{CD}\mbox{ und }\str{AB}\cong\str{EF}
-    \;\Rightarrow\;\str{CD}\cong\str{EF}.\]
-     Jede Strecke ist zu sich selbst kongruent:
+    \item[{\bf (C2)}] Wenn 2 Strecken einer dritten kongruent sind, dann sind sie zueinander kongruent:
 
+        $$
+            \str{AB} \cong \str{CD} \mbox{ und } \str{AB} \cong \str{EF}\; \Rightarrow\; \str{CD} \cong \str{EF}.
+        $$
 
-    \item[{\bf(C3)}] (Addition) Wenn $A,\,B,\,C\in \E$ und
-    $Zw(ABC)$\\ sowie $D,\,E,\,F\in \E$ mit $Zw(DEF)$
-    und\\
-    $\str{AB}\cong\str{DE}$, $\str{BC}\cong\str{EF}$, dann ist auch
-    $\str{AC}\cong\str{DF}$.
+        Jede Strecke ist zu sich selbst kongruent.
 
+    \item[{\bf (C3)}] (Addition) Wenn $A,\,B,\,C\in \E$ und $Zw(ABC)$\\
+        sowie $D,\, E,\, F \in \E$ mit $Zw(DEF)$ und\\
+        $\str{AB} \cong \str{DE}$, $\str{BC} \cong \str{EF}$, dann ist auch $\str{AC} \cong
+        \str{DF}$.
 
-%\includegraphics[width=4cm]{1-2-01-C3}
-
+    %\includegraphics[width=4cm]{1-2-01-C3}
 \end{enumerate}
 
-
-
-
 \begin{thm}\label{thm:satz.s1d}
-Die Kongruenz von Strecken ist eine \"{A}quivalenzrelation.
+    Die Kongruenz von Strecken ist eine Äquivalenzrelation.
 \end{thm}
 %\ref{satz.s1d}
 
 \begin{proof}
-\"{U}bungsaufgabe.
+    Übungsaufgabe.
 \end{proof}
 
+Die Definition der Kongruenz von Strecken erlaubt uns auch mit Strecken zu rechnen.
 
+\begin{defi}[Addition von Strecken]\label{def:d1a}
+    Seien $\str{AB}$ und $\str{CD}$ Strecken, $r = \pf{AB}$ ein Strahl. Ist $E$ der eindeutig
+    bestimmte Punkt auf $r$, so dass $\str{BE} \cong \str{CD}$ nach \textbf{(C1)}, dann heißt
+    $\str{AE}$ {\em die Summe von $\str{AB}$ und $\str{CD}$}:
 
-Die Definition der Kongruenz von Strecken erlaubt uns auch mit
-Strecken zu rechnen.
-
-
-\begin{defi}[Addition von Strecken]
-\label{def:d1a}
-Seien $\str{AB}$ und $\str{CD}$ Strecken, $r=\pf{AB}$ ein
-Strahl. Ist $E$ der eindeutig bestimmte Punkt auf $r$, so dass
-$\str{BE}\cong\str{CD}$ nach \textbf{(C1)}, dann hei{\ss}t $\str{AE}$
-{\em die Summe von $\str{AB}$ und $\str{CD}$}:
-\[\str{AB}+\str{CD}:=\str{AE}.\]
+    $$
+        \str{AB} + \str{CD} := \str{AE}.
+    $$
 \end{defi}
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-2-02-Add.png}}
 
-
-Die Addition ist eine wohldefinierte Operation auf den
-Äquivalenzklassen kongruenter Strecken, wie die folgende Aussage
-belegt. 
+Die Addition ist eine wohldefinierte Operation auf den Äquivalenzklassen kongruenter Strecken, wie
+die folgende Aussage belegt.
 
 %% BEMERKUNG: Man kann auch zeigen, dass die Addition assoziativ und
 %% als Operation auf den Äquivalenzklassen kommutativ ist.
 %% Siehe Hartshorne, Excercise 8.1
 
-
-
 \begin{thm}\label{thm:satz.s1e}
-Sei $\str{AB}\cong\str{A'B'}$ und
-$\str{CD}\cong\str{C'D'}\;\Longrightarrow\;\str{AB}+\str{CD}
-\cong\str{A'B'}+\str{C'D'}$\\ d.h. die Addition von Strecken ist
-unabh\"{a}ngig von den ausgew\"{a}hlten Repr\"{a}sentanten.
+    Sei $\str{AB} \cong \str{A'B'}$ und $\str{CD} \cong \str{C'D'}\; \Longrightarrow\; \str{AB} +
+    \str{CD} \cong \str{A'B'} + \str{C'D'}$
+
+    Das heißt die Addition von Strecken ist unabhängig von den ausgewählten Repräsentanten.
 \end{thm}
 %\ref{satz.s1e}
 
 \begin{proof}
-Sei $E$ wie in Definition~\ref{def:d1a}:
-$\str{AE}=\str{AB}+\str{CD}$ und entsprechend $E':\\ \str{A'E'}=\str{A'B'}+\str{C'D'}$\\
-$\Longrightarrow\;\str{BE}\cong\str{CD}\cong\str{C'D'}\cong\str{B'E'}
-\Longrightarrow\;\str{BE}\cong\str{B'E'}$ nach (\ref{thm:satz.s1d})
-$\Longrightarrow$ (C3) $\str{AE}\cong\str{A'E'}$.
+    Sei $E$ wie in Definition~\ref{def:d1a}: $\str{AE} = \str{AB}+\str{CD}$ und entsprechend $E':$
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-03-Add.png}}
+    $$
+        \str{A'E'} = \str{A'B'} + \str{C'D'}
+    $$
 
+    Daraus folgt $\str{BE} \cong \str{CD} \cong \str{C'D'} \cong \str{B'E'} \Longrightarrow\;
+    \str{BE} \cong \str{B'E'}$ nach (\ref{thm:satz.s1d}) $\Longrightarrow$ (C3)
+    $\str{AE}\cong\str{A'E'}$.
+
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-03-Add.png}}
 \end{proof}
 
-
-
-\begin{thm}[Differenz von Strecken]  \label{thm:satz.s1f}
-Seien $A,\,B,\,C$ kollinear mit $Zw(ABC)$ und
-$E,F$ seien zwei Punkte auf einem Strahl $\pf{DE}$ mit {\em Ausgangspunkt} $D$,
-so dass $\str{AB}\cong\str{DE}$ und
-$\str{AC}\cong\str{DF}$. Dann gilt
-$Zw(DEF)$ und $\str{BC}\cong\str{EF}$.
-($\str{BC}$ hei{\ss}t \emph{Differenz} von $\str{AC}$ und $\str{AB}$.)
+\begin{thm}[Differenz von Strecken]\label{thm:satz.s1f}
+    Seien $A,\, B,\, C$ kollinear mit $Zw(ABC)$ und $E,F$ seien zwei Punkte auf einem Strahl
+    $\pf{DE}$ mit {\em Ausgangspunkt} $D$, so dass $\str{AB} \cong \str{DE}$ und $\str{AC} \cong
+    \str{DF}$. Dann gilt $Zw(DEF)$ und $\str{BC} \cong \str{EF}$.  ($\str{BC}$ heißt
+    \emph{Differenz} von $\str{AC}$ und $\str{AB}$.)
 \end{thm}
 
-
-
 \begin{proof}
-    Sei $F'$ auf dem Strahl $\pf{DE}$ gewählt, so dass $Zw(DEF')$ und
-    $\str{BC}\cong\str{EF'}$ nach (C1)
-    $\stackrel{(C3)}{\Longrightarrow}$ $\str{AC}\cong\str{DF'}$.
-    Die Punkte $F$ und $F'$ liegen beide auf $\pf{DE}$. Ausserdem gilt
-     $\str{AC}\cong\str{DF}$, so dass aus (C2) und der Eindeutigkeit
-     in  (C1), auch $F=F'$ folgt. Also auch $Zw(DEF)$.
+    Sei $F'$ auf dem Strahl $\pf{DE}$ gewählt, so dass $Zw(DEF')$ und $\str{BC} \cong \str{EF'}$
+    nach (C1) $\stackrel{(C3)}{\Longrightarrow}$ $\str{AC} \cong \str{DF'}$. Die Punkte $F$ und
+    $F'$ liegen beide auf $\pf{DE}$. Ausserdem gilt $\str{AC} \cong \str{DF}$, so dass aus (C2) und
+    der Eindeutigkeit in (C1), auch $F=F'$ folgt. Also auch $Zw(DEF)$.
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-04-Diff.png}}
-
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-04-Diff.png}}
 \end{proof}
-
 
 Es ist auch möglich Strecken miteinander zu vergleichen:
 
-    \begin{defi} Seien
-    $\str{AB}$ und $\str{CD}$ Strecken in $\E$. Dann sei
-    $\str{AB}<\str{CD}\;:\Leftrightarrow\;\exists\,E\in\str{CD},\;Zw(CED)$
-    und  $\str{AB}\cong\str{CE}$.
-    \end{defi}
-
+\begin{defi}
+    Seien $\str{AB}$ und $\str{CD}$ Strecken in $\E$. Dann sei $\str{AB} < \str{CD}\;:
+    \Leftrightarrow\; \exists\, E \in \str{CD},\; Zw(CED)$ und $\str{AB} \cong \str{CE}$.
+\end{defi}
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-2-05-Ord.png}}
 
-
-
-
-\begin{thm}\label{thm:satz.s1g}
-\begin{enumerate}
-    \item[{\bf a)}] Ist $\str{AB}\cong\str{A'B'}$ und $\str{CD}\cong\str{C'D'}\;
-        \Longrightarrow\;\{\str{AB}<\str{CD}\Leftrightarrow\str{A'B'}<\str{C'D'}\}$
-    \item[{\bf b)}] \glqq{}$<$\grqq{} ist eine Ordnungsrelation in der Menge aller
-    Strecken, d.h.
+\begin{thm}\label{thm:satz.s1g}\ % Das erzwungene Leerzeichen sorgt für den Umbruch.
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \renewcommand{\labelenumii}{\alph{enumi}\textsubscript{\arabic{enumii}})}
+        % Nummerierung 2. Ebene
     \begin{enumerate}
-    \item[${\bf b_1)}$] $\str{AB}<\str{CD}$ und $\str{CD}<\str{EF}\;\Longrightarrow
-        \;\str{AB}<\str{EF}$
-    \item[${\bf b_2)}$] $\forall$ Strecken
-    $\str{AB},\,\str{CD}\subset\E$ gilt genau eine der
-    Relationen \\ $\str{AB}<\str{CD},\;\str{AB}=\str{CD}$ oder
-    $\str{AB}>\str{CD}$.
+        \item\label{thm:satz.slg.item1} Ist $\str{AB} \cong \str{A'B'}$ und $\str{CD} \cong
+            \str{C'D'}\; \Longrightarrow\; \{\str{AB} < \str{CD} \Leftrightarrow \str{A'B'} <
+            \str{C'D'}\}$
+
+        \item "`$ < $"' ist eine Ordnungsrelation in der Menge aller Strecken, d.h.
+            \begin{enumerate}
+                \item\label{thm:satz.slg.item2-1} $\str{AB} < \str{CD}$ und $\str{CD} < \str{EF}\;
+                    \Longrightarrow \; \str{AB} < \str{EF}$
+
+                \item\label{thm:satz.slg.item2-2} $\forall$ Strecken $\str{AB},\, \str{CD} \subset
+                    \E$ gilt genau eine der Relationen
+
+                    $\str{AB} < \str{CD},\; \str{AB} = \str{CD}$ oder $\str{AB}>\str{CD}$.
+            \end{enumerate}
     \end{enumerate}
-\end{enumerate}
 \end{thm}
 
-
-
 \begin{proof}
-{\bf zu a)}  \glqq{}$\Longrightarrow$\grqq{} Sei
-    $\str{AB}<\str{CD} \Longrightarrow\;\exists\,E\in\str{CD},\;Zw(CED)$
-    und  $\str{AB}\cong\str{CE}\;\stackrel{(C1)}{\Longrightarrow}\;
-    \exists\,E'\in r':\;\str{CE}\cong\str{C'E'}$ und $D',\,E'$ auf
-    derselben Seite von $C'$. Wegen $\str{CD}\cong\str{C'D'}$ und
-    Theorem~\ref{thm:satz.s1f} folgt $Zw(C'E'D')$ und
-    $\str{A'B'}\cong\str{CE}\cong\str{C'E'}$, also
-    $\str{A'B'}<\str{C'D'}$.
+    \begin{enumerate}
+        \item[zu ~\ref{thm:satz.slg.item1}.]\ % erzwungenes Leerzeichen => Umbruch
+            \begin{itemize}
+                \item["`$\Longrightarrow$"'] Sei $\str{AB} < \str{CD} \Longrightarrow\; \exists\, E
+                    \in \str{CD},\; Zw(CED)$ und $\str{AB} \cong \str{CE}\;
+                    \stackrel{(C1)}{\Longrightarrow}\; \exists\, E' \in r':\; \str{CE} \cong
+                    \str{C'E'}$ und $D',\, E'$ auf derselben Seite von $C'$.  Wegen $\str{CD} \cong
+                    \str{C'D'}$ und Theorem~\ref{thm:satz.s1f} folgt $Zw(C'E'D')$ und $\str{A'B'}
+                    \cong \str{CE} \cong \str{C'E'}$, also $\str{A'B'} < \str{C'D'}$.
 
-    \glqq{}$\Longleftarrow$\grqq{} genauso.
+                \item["`$\Longleftarrow$"'] genauso.
 
+                \centerline{\includegraphics[width=5cm]{BILDER/1-2-06a-Ord.png}}
+            \end{itemize}
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-06a-Ord.png}}
+            % \textbf{b)} Dem Beweis von b) stellen wir folgende Aussage voran:
 
+            % \begin{lemma}\label{lemma.l1d}
+            % Sind $A,B,C\in g$ kollinear und $Zw(ABC)$, dann liegen $A,\,B$ auf
+            % derselben Seite von $C$ und $B,\,C$ auf derselben Seite von $A$
+            % \emph{(sonst $Zw(ACB)$ bzw. $Zw(BAC)$)}. Gilt dann auch noch
+            % $Zw(ACD)$, also $A$ und $D$ auf verschiedenen Seiten von $C$, dann
+            % liegen $A$ und $D$ auch auf verschiedenen Seiten von $B$ und $B$
+            % und $D$ auf verschiedenen Seiten von $C$, also $Zw(ABD)$ und
+            % $Zw(BCD)$.
+            % \end{lemma}
+            % %\ref{lemma.l1d}
+            % Wir haben das Bild: \qquad\qquad
+            % \includegraphics[width=6cm]{1-2-07-Ord}
 
+            % \textbf{Beweis zu \ref{lemma.l1d}} Mit den Bezeichnungen aus
+            % Abschnitt 1.1 gilt:
+            % \[Zw(ABC)\wedge Zw(ACD)\;\Longrightarrow\;A\stackrel{C}{\sim}
+            % B\;\mbox{und}\;A\stackrel{C}{\nsim}D\;\Longrightarrow\;
+            % B\stackrel{C}{\nsim}D\;\Longrightarrow\; Zw(BCD)\] und
+            % \[Zw(BCD)\wedge Zw(ABC)\;\Longrightarrow\;C\stackrel{B}{\sim}
+            % D\;\mbox{und}\;A\stackrel{B}{\nsim}C\;\Longrightarrow\;
+            % A\stackrel{B}{\nsim}D\;\Longrightarrow\; Zw(ABD),\] qed.
 
-% \textbf{b)} Dem Beweis von b) stellen wir folgende Aussage voran:
+        \item[zu ~\ref{thm:satz.slg.item2-1}.] Sei $\str{AB} \cong \str{CX}$ mit $Zw(CXD)$ sowie
+            $\str{CD} \cong \str{EY}$ mit $Zw(EYF)$. Nach Theorem~\ref{thm:satz.s1f} gibt es ein $Z
+            \in \str{EY}$ mit $\str{CX} \cong \str{EZ}$. Aus $Zw(EYF)$ und $Zw(EZY)$ folgt
+            % aus Lemma \ref{lemma.l1d} 
+            $Zw(EZF)$ (Übung). % ACHTUNG: Diese Aussage ist nicht trivial!
+            Also $\str{AB} < \str{EF}$.
 
-% \begin{lemma}\label{lemma.l1d}
-% Sind $A,B,C\in g$ kollinear und $Zw(ABC)$, dann liegen $A,\,B$ auf
-% derselben Seite von $C$ und $B,\,C$ auf derselben Seite von $A$
-% \emph{(sonst $Zw(ACB)$ bzw. $Zw(BAC)$)}. Gilt dann auch noch
-% $Zw(ACD)$, also $A$ und $D$ auf verschiedenen Seiten von $C$, dann
-% liegen $A$ und $D$ auch auf verschiedenen Seiten von $B$ und $B$
-% und $D$ auf verschiedenen Seiten von $C$, also $Zw(ABD)$ und
-% $Zw(BCD)$.
-% \end{lemma}
-% %\ref{lemma.l1d}
-% Wir haben das Bild: \qquad\qquad
-% \includegraphics[width=6cm]{1-2-07-Ord}
+            \centerline{\includegraphics[width=5cm]{BILDER/1-2-06b1-Ord.png}}
 
-% \textbf{Beweis zu \ref{lemma.l1d}} Mit den Bezeichnungen aus
-% Abschnitt 1.1 gilt:
-% \[Zw(ABC)\wedge Zw(ACD)\;\Longrightarrow\;A\stackrel{C}{\sim}
-% B\;\mbox{und}\;A\stackrel{C}{\nsim}D\;\Longrightarrow\;
-% B\stackrel{C}{\nsim}D\;\Longrightarrow\; Zw(BCD)\] und
-% \[Zw(BCD)\wedge Zw(ABC)\;\Longrightarrow\;C\stackrel{B}{\sim}
-% D\;\mbox{und}\;A\stackrel{B}{\nsim}C\;\Longrightarrow\;
-% A\stackrel{B}{\nsim}D\;\Longrightarrow\; Zw(ABD),\] qed.
+        \item[zu ~\ref{thm:satz.slg.item2-2}.] Sei $r = \overrightarrow{CD}$ und $E \in r$ derart,
+            dass $\str{AB} \cong \str{CE}\; \Longrightarrow\; Zw(CED)\; (\str{AB} < \str{CD})$ oder
+            $E = D\; (\str{AB} \cong \str{CD})$ oder $Zw(CDE)\; (\str{AB} > \str{CD})$.
 
-
-
-{\bf zu $\mathbf b_1$)} 
-Sei $\str{AB}\cong\str{CX}$ mit $Zw(CXD)$ sowie $\str{CD}\cong\str{EY}$ mit
-$Zw(EYF)$. Nach Theorem~\ref{thm:satz.s1f} gibt es ein $Z\in\str{EY}$
-mit $\str{CX}\cong\str{EZ}$. Aus $Zw(EYF)$
-und $Zw(EZY)$ folgt   %% aus Lemma \ref{lemma.l1d} 
-$Zw(EZF)$ (Übung). % ACHTUNG: Diese Aussage ist nicht trivial! 
-Also $\str{AB}<\str{EF}$.
-
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-06b1-Ord.png}}
-
-
-{\bf zu $\mathbf b_2$)} 
-Sei $r=\overrightarrow{CD}$ und $E\in r$ derart, dass
-$\str{AB}\cong\str{CE}\;\Longrightarrow\;Zw(CED)\;(\str{AB}<\str{CD})$
-oder $E=D\;(\str{AB}\cong\str{CD})$ oder
-$Zw(CDE)\;(\str{AB}>\str{CD})$.
-
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-06b2-Ord.png}}
-
-
+            \centerline{\includegraphics[width=5cm]{BILDER/1-2-06b2-Ord.png}}
+    \end{enumerate}
 \end{proof}
-
-
-
-
 
 \subsection*{Kongruenz von Strecken für geordnete Körper}
 
-Die Kongruenz von Strecken in der kartesischen Ebene $\K^2$ kann wie
-gewohnt über die {\em Distanzfunktion} erklärt werden.
-Für zwei Punkte $A=(a_1,a_2)$ und $B=(b_1,b_2)$ ist die Distanz
+Die Kongruenz von Strecken in der kartesischen Ebene $\K^2$ kann wie gewohnt über die {\em
+Distanzfunktion} erklärt werden. Für zwei Punkte $A = (a_1,a_2)$ und $B = (b_1,b_2)$ ist die Distanz
 erklärt durch
+
 $$
-\dist(A,B)  := \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2}
-.
+    \dist(A,B) := \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2} .
 $$
-Wenn die Wurzel und damit die Distanzfunktion im Körper $\K$ erklärt
-ist, erklären wir zwei Strecken $AB$ und $CD$ {\em kongruent}, wenn
-$\dist(A,B) = \dist(C,D)$. Das ist natürlich genau dann der Fall, wenn
+
+Wenn die Wurzel und damit die Distanzfunktion im Körper $\K$ erklärt ist, erklären wir zwei Strecken
+$AB$ und $CD$ {\em kongruent}, wenn $\dist(A,B) = \dist(C,D)$. Das ist natürlich genau dann der
+Fall, wenn
+
 $$
-\dist^2(A,B) = (a_1-b_1)^2 + (a_2-b_2)^2 
-=
- (c_1-d_1)^2 + (c_2-d_2)^2
-= \dist^2(C,D)
-.
+\dist^2(A,B) = (a_1 - b_1)^2 + (a_2 - b_2)^2 = (c_1 - d_1)^2 + (c_2 - d_2)^2 = \dist^2(C,D).
 $$
-Letztere Bedingung hat den Vorteil, dass sie auch in Körpern $\K$
-definiert ist, in denen nicht alle Wurzeln existieren.
+
+Letztere Bedingung hat den Vorteil, dass sie auch in Körpern $\K$ definiert ist, in denen nicht alle
+Wurzeln existieren.
+
 %Wenn die Wurzel in $\K$ nicht erklärt ist, können wir Strecken $AB$ und $CD$ deshalb
 %einfach kongruent erklären wenn die entsprechende Gleichheit für die
 %Quadrate der Distanzfunktion gilt, d.h., wenn $\dist^2(A,B) =
 %\dist^2(C,D)$.
 
-Man könnte die Kongruenz auch über andere Distanzfunktionen erklären,
-etwa über
+Man könnte die Kongruenz auch über andere Distanzfunktionen erklären, etwa über
+
 $$
-\dist_1(A,B)  := |a_1-b_1| + |a_2-b_2|
+    \dist_1(A,B) := |a_1 - b_1| + |a_2 - b_2|
 $$
+
 oder
-$$ 
-\dist_{\infty}(A,B)  := \sup \{ |a_1-b_1|, |a_2-b_2| \}
-.
+
 $$
-%ACHTUNG: Dabei bekäme man aber Geometrien heraus, die nicht isomorph
-%zur oben erklärten sind!! (untereinander wären die beiden aber
-%durchaus isomorph!)
+    \dist_{\infty}(A,B) := \sup \{ |a_1 - b_1|, |a_2 - b_2| \}.
+$$
+
+% ACHTUNG: Dabei bekäme man aber Geometrien heraus, die nicht isomorph
+% zur oben erklärten sind!! (untereinander wären die beiden aber
+% durchaus isomorph!)
 % siehe Hartshorne, Übungen 8.7-8.9
 
-
-
-
-
-Für einen geordneten Körper~$\K$ gilt $\dist^2(A,B)>0$ genau dann wenn
-$A, B\in \K^2$ verschieden sind.
-
+Für einen geordneten Körper $\K$ gilt $\dist^2(A,B) > 0$ genau dann wenn $A, B\in \K^2$ verschieden
+sind.
 
 \begin{thm}
-In der kartesischen Ebene $\E_{\K}=\K^2$ über einem geordneten Körper
-$\K$ gelten die  Kongruenzaxiome {\bf (C2)} und  {\bf (C3)}. Das
-Kongruenzaxiom  {\bf (C1)}
-gilt genau dann, wenn es zu jedem Element $a\in \K$ 
-auch die Wurzel von $1+a^2$ in $\K$ gibt. 
-($\K$ heißt in diesem Fall {\em Pythagoreischer Körper}).
+    In der kartesischen Ebene $\E_{\K} = \K^2$ über einem geordneten Körper $\K$ gelten die
+    Kongruenzaxiome {\bf (C2)} und  {\bf (C3)}. Das Kongruenzaxiom {\bf (C1)} gilt genau dann, wenn
+    es zu jedem Element $a \in \K$ auch die Wurzel von $1 + a^2$ in $\K$ gibt. ($\K$ heißt in diesem
+    Fall {\em Pythagoreischer Körper}).
 \end{thm}
 
+Man beachte, dass wir im Kapitel über Euklids Elemente gesehen haben, dass die Konstruktionen mit
+Zirkel und Lineal immer innerhalb eines {\em Pythagoreischen Körpers} stattfinden.
 
-Man beachte, dass wir im Kapitel über Euklid's Elemente gesehen
-haben, dass die Konstruktionen mit Zirkel und Lineal immer innerhalb
-eines {\em Pythagoreischen Körpers} stattfinden. 
-
-%d.h., wenn wir die Punkte mit denen wir beginnen aus $\K^2$ wählen,
-%bleiben wir auch in $\K^2$... 
-
+% d.h., wenn wir die Punkte mit denen wir beginnen aus $\K^2$ wählen, bleiben wir auch in $\K^2$...
 
 \begin{proof}
-Das Kongruenzaxiom  {\bf (C2)} ist eine einfache Folgerung aus der Definition
-von $\dist^2(A,B)$. Der Nachweis von  {\bf (C3)} bleibt als Übungsaufgabe. 
+    Das Kongruenzaxiom {\bf (C2)} ist eine einfache Folgerung aus der Definition von $\dist^2(A,B)$.
+    Der Nachweis von {\bf (C3)} bleibt als Übungsaufgabe.
 
+    %{\bf TO BE FILLED:  Parts of proof of Proposition 16.1 in Hartshorne!}
 
-%{\bf TO BE FILLED:  Parts of proof of Proposition 16.1 in Hartshorne!}
+    Für die Äquivalenzaussage über {\bf (C1)} zeigen wir zunächst, dass die Aussage nicht für
+    beliebige Körper gilt. Für $a\in \K$ betrachten wir dazu die Strecke $OA$ mit $O = (0,0)$ und $A
+    = (a,1)$. Um zur Strecke $OA$ eine kongruente Strecke $OB$ auf der x-Achse "`abzutragen"',
+    benötigen wir einen Punkt $B = (b,0)$ mit $\dist^2(O,A) = \dist^2(O,B)$, also mit
 
-Für die Äquivalenzaussage über  {\bf (C1)} zeigen wir zunächst, dass
-die Aussage nicht für beliebige Körper gilt.
-Für $a\in \K$ betrachten wir dazu die Strecke $OA$ mit $O=(0,0)$ und
-$A=(a,1)$. Um zur Strecke $OA$ eine kongruente Strecke $OB$ auf der
-x-Achse \glqq abzutragen \grqq , benötigen wir einen Punkt $B=(b,0)$
-mit $\dist^2(O,A)= \dist^2(O,B)$, also mit 
-$$
-1+a^2 = b^2.
-$$
-Mit anderen Worten: Wir benötigen ein Element $b\in \K$, dass die
-Wurzel von $1+a^2$ ist.
+    $$
+        1 + a^2 = b^2.
+    $$
 
+    Mit anderen Worten: Wir benötigen ein Element $b \in \K$, dass die Wurzel von $1 + a^2$ ist.
 
-Umgekehrt: Angenommen für jedes $c\in \K$ gibt es ein Element )
-$\sqrt{1+c^2}\in\K$.
-Dann können wir für jedes Paar $a,b\in \K$, mit $a\not = 0$,
-die Wurzel aus $a^2+b^2$ in $\K$ finden: Zunächst gilt
-$$
-a^2+b^2 = a^2 \left(1+ \left(\frac{b}{a}\right)^2 \right).
-$$
-Mit $c=b/a$ gilt dann
-$$
-\sqrt{a^2+b^2} = |a| \cdot \sqrt{1+c^2}
-.
-$$
-%% ACHTUNG: Ist der Betrag überhaupt in $K$ erklärt!!?? (Ja weil, $K$ geordnet).
-Man beachte: Der Betrag $|a|$ von $a$ erklärt ist weil $\K$
-geordnet ist; und wir haben durch obiges Argument gezeigt, dass in
-{\em Pythagoreischen Körpern}~$\K$ die
-Distanz $\dist(A,B)$ von Strecken in $\E_{\K}$ immer auch ein Element des Körpers ist.
+    Umgekehrt: Angenommen für jedes $c\in \K$ gibt es ein Element $\sqrt{1 + c^2} \in \K$. Dann
+    können wir für jedes Paar $a, b \in \K$, mit $a \not = 0$, die Wurzel aus $a^2 + b^2$ in $\K$
+    finden: Zunächst gilt
 
-Sei $g$ eine Gerade in $\E_{\K}$ beschrieben durch $y=mx+b$, mit
-$m,b\in\K$.
-Für einen beliebigen Punkt $A=(a,ma+b)$ auf $g$ und ein $d\in \K$ wollen wir
-eine Strecke $AC$ der Länge $d$ auf $g$ abtragen. D.h., für
-$C=(c,mc+b)$ gilt
-$$
-\dist(AC)=\sqrt{(a-c)^2+( (ma+b) - (mc+b) )^2} = d,
-$$
-bzw.
-$$
-|a-c|\cdot \sqrt{1+m^2} = d.
-$$
-Da $\sqrt{1+m^2}\in\K$ nach Voraussetzung, lässt sich die letzte
-Gleichung in $\K$ nach $c$ auflösen. Dabei erhalten wir zwei Lösungen
-für die beiden möglichen Richtungen, in denen die Strecke $AC$
-abgetragen werden kann.
+    $$
+        a^2+b^2 = a^2 \left(1+ \left(\frac{b}{a}\right)^2 \right).
+    $$
+
+    Mit $c = b/a$ gilt dann
+
+    $$
+        \sqrt{a^2 + b^2} = |a| \cdot \sqrt{1 + c^2}.
+    $$
+
+    %% ACHTUNG: Ist der Betrag überhaupt in $K$ erklärt!!?? (Ja weil, $K$ geordnet).
+    Man beachte: Der Betrag $|a|$ von $a$ erklärt ist weil $\K$ geordnet ist; und wir haben durch
+    obiges Argument gezeigt, dass in {\em Pythagoreischen Körpern} $\K$ die Distanz $\dist(A,B)$ von
+    Strecken in $\E_{\K}$ immer auch ein Element des Körpers ist.
+
+    Sei $g$ eine Gerade in $\E_{\K}$ beschrieben durch $y = m x + b$, mit $m, b \in \K$. Für einen
+    beliebigen Punkt $A = (a, m a + b)$ auf $g$ und ein $d \in \K$ wollen wir eine Strecke $AC$ der
+    Länge $d$ auf $g$ abtragen. D.h., für $C = (c, m c + b)$ gilt
+
+    $$
+        \dist(AC) = \sqrt{(a - c)^2 + ( (m a + b) - (m c + b) )^2} = d,
+    $$
+
+    bzw.
+
+    $$
+        |a-c| \cdot \sqrt{1 + m^2} = d.
+    $$
+
+    Da $\sqrt{1 + m^2} \in \K$ nach Voraussetzung, lässt sich die letzte Gleichung in $\K$ nach $c$
+    auflösen. Dabei erhalten wir zwei Lösungen für die beiden möglichen Richtungen, in denen die
+    Strecke $AC$ abgetragen werden kann.
 \end{proof}
 
-
-
-
-{\bf An dieser Stelle könnte man noch als zweites Beispiel die
-  Kongruenz von Strecken in der Poincar\'eschen Kreisscheibe erklären.
-Dazu müsste man nur das Doppelverhältnis von vier Punkten in der
-Kartesischen Ebene definieren (siehe Hartshorne, S.339) und dann die
-``$P$-Kongruenz'' am Kreis erklären (siehe Hartshorne, S.358). Ein Beweis,
-dass (C1)-(C3) erfüllt sind sollte an dieser Stelle nicht gegeben werden.}
-
-
-
-
+\begin{bem}
+    An dieser Stelle könnte man noch als zweites Beispiel die Kongruenz von Strecken in der
+    Poincaréschen Kreisscheibe erklären. Dazu müsste man nur das Doppelverhältnis von vier Punkten
+    in der Kartesischen Ebene definieren (siehe Hartshorne, S.339) und dann die ``$P$-Kongruenz'' am
+    Kreis erklären (siehe Hartshorne, S.358). Ein Beweis, dass (C1) -- (C3) erfüllt sind, sollte an
+    dieser Stelle nicht gegeben werden.
+\end{bem}
 
 \section*{Vorlesung am 05.05.2011}
 % Vertretung durch Thomas
 
-
 \subsection*{Kongruenz von Winkeln}
 
-
 \begin{enumerate}
-    \item[{\bf(C4)}] (Existenz) Gegeben sei der Winkel $\wi(BAC)$ und
-    ein Strahl $\pf{DE}$. Dann existiert ein eindeutig bestimmter
-    Strahl $\pf{DF}$ auf einer vorgegebenen Seite von $g(D,E)$, so
-    dass $\wi(BAC)\cong\wi(EDF)$.
+    \item[{\bf(C4)}] (Existenz) Gegeben sei der Winkel $\wi(BAC)$ und ein Strahl $\pf{DE}$. Dann
+        existiert ein eindeutig bestimmter Strahl $\pf{DF}$ auf einer vorgegebenen Seite von
+        $g(D,E)$, so dass $\wi(BAC) \cong \wi(EDF)$.
 
+        \centerline{\includegraphics[width=5cm]{BILDER/1-2-08-C4.png}}
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-08-C4.png}}
+    \item[{\bf(C5)}] Für je 3 Winkel $\alpha,\, \beta,\, \gamma$ gilt: $\alpha \cong \beta$ und
+        $\alpha \cong \gamma\; \Longrightarrow\; \beta \cong \gamma$\\
 
+        %% KOMMENTAR NESSELMAN: (Woher?? Warum??)
+        %    (Diese Aussage ist aus dem Rest beweisbar, so ist es aber bequemer!)\\
+        %
+        % FOLGENDE Reflexivität war im Nesselmann-Skript Teil von C4!?!?
+        % Wir folgen hier Hartshorne...
 
-    \item[{\bf(C5)}] F\"{u}r je 3 Winkel $\alpha,\,\beta,\,\gamma$ gilt:
-    $\alpha\cong\beta$ und
-    $\alpha\cong\gamma\;\Longrightarrow\;\beta\cong\gamma$\\
-%
-%% KOMMENTAR NESSELMAN: (Woher?? Warum??)
-%    (Diese Aussage ist aus dem Rest beweisbar, so ist es aber
-%    bequemer!)\\    
-%
-% FOLGENDE Reflexivität war im Nesselmann-Skript Teil von C4!?!? 
-% Wir folgen hier Hartshorne...
-    Jeder Winkel ist zu sich selbst
-    kongruent: $\wi(BAC)\cong\wi(BAC)$.
+        Jeder Winkel ist zu sich selbst kongruent: $\wi(BAC) \cong \wi(BAC)$.
 
+    \item[{\bf(C6)}] Gilt für 2 Dreiecke $ABC$ und $DEF$: $\str{AB} \cong \str{DE},\; \str{AC} \cong
+        \str{DF}$ und $\wi(BAC) \cong \wi(EDF)\; \Longrightarrow\; \wi(ABC) \cong \wi(DEF)$
 
-    \item[{\bf(C6)}]
-    Gilt f\"{u}r 2 Dreiecke $ABC$ und $DEF$:
-    $\str{AB}\cong\str{DE},\;\str{AC}\cong\str{DF}$
-    und $\wi(BAC)\cong\wi(EDF)\;$
-    $\Longrightarrow\;\wi(ABC)\cong\wi(DEF)$ %\\
-%    (und damit durch Bezeichnungswechsel auch
-%   $\wi(BCA)\cong\wi(EFD)\;\Longrightarrow$
-%    die Dreiecke sind \glqq{}kongruent\grqq{})
- %; Beweis siehe Hilbert \cite{Hil}, I.5)
+        % (und damit durch Bezeichnungswechsel auch
+        % $\wi(BCA)\cong\wi(EFD)\;\Longrightarrow$
+        % die Dreiecke sind "`{}kongruent"'{})
+        % Beweis siehe Hilbert \cite{Hil}, I.5)
 
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-08-C6.png}}
-
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-08-C6.png}}
 \end{enumerate}
 
+\begin{bem}
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item Nach den Kongruenzaxiomen wird weder der Strecke noch dem Winkel eine Richtung
+            (Orientierung) zugeordnet.
 
+        \item Axiom (C6) gewährleistet die Homogenität der Ebene, d.h. die Ebene verhält sich an
+            jedem Punkt gleich.
 
-{\bf Bemerkung }
-\begin{enumerate}
-\item[\textbf{a)}]Nach den Kongruenzaxiomen wird weder der Strecke noch dem Winkel
-eine Richtung (Orientierung) zugeordnet.
-\item[\textbf{b)}]Axiom (C6) gew\"{a}hrleistet die Homogenit\"{a}t der
-  Ebene, d.h. die Ebene verhält sich an jedem Punkt gleich. 
-\item[\textbf{c)}]Die Kongruenzrelation der Winkel ist eine
-\"{A}quivalenzrelation (direkte Folge aus (C5)).
-\end{enumerate}
-
-
-
+        \item Die Kongruenzrelation der Winkel ist eine äquivalenzrelation (direkte Folge aus (C5)).
+    \end{enumerate}
+\end{bem}
 
 \begin{defi}[Hilbert-Ebene]
-Eine Ebene, in der die Axiome {\bf (I1)-(I3)}, {\bf (A1)-(A4)} und
-{\bf (C1)-(C6)} gelten, hei{\ss}t {\em Hilbert-Ebene}.
+    Eine Ebene, in der die Axiome {\bf (I1) -- (I3)}, {\bf (A1) -- (A4)} und {\bf (C1) --(C6)}
+    gelten, heißt {\em Hilbert-Ebene}.
 \end{defi}
 
+\begin{bem}
+    An dieser Stelle sollte man erklären, dass sich die Kongruenz von Winkeln in Kartesischen Ebenen
+    $\E_{\K}$ über den Tangenz erklären lässt (siehe Hartshorne, S.141ff). Der Nachweis, dass (C6)
+    gültig ist, ist dann etwas aufwendiger. Die Kongruenz von Winkeln in der Poincaréschen
+    Kreisscheibe ist wie in der Kartesischen Ebene erklärt. An dieser Stelle sollte man es deshalb
+    wohl dabei belassen zu erwähnen, dass es diese beiden Besipiele gibt (ohne es zu beweisen).
+\end{bem}
 
-
-
-
-{\bf An dieser Stelle sollte man erklären, dass sich die Kongruenz von
-  Winkeln in Kartesischen Ebenen $\E_{\K}$ über den Tangenz erklären
-  lässt (siehe Hartshorne, S.141ff) Der Nachweis, dass (C6) gültig ist
-  ist dann etwas aufwendiger... Die Kongruenz von Winkeln in der 
-  Poincar\'eschen Kreisscheibe ist wie in der Kartesischen Ebene
-  erklärt. An dieser Stelle sollte man es deshalb wohl dabei belassen
-  zu erwähnen, dass es diese beiden Besipiele gibt (ohne es zu beweisen)...}
 %% Vgl. dazu Stillwell, Section 3.5!
-
-
-
-
 
 \subsection*{Kongruenz von Dreiecken}
 
+Ein wesentlicher Teil der aus der euklidischen Geometrie bekannten Dreiecksgeometrie lässt sich
+bereits in einer Hilbert-Ebene beweisen.
 
-Ein wesentlicher Teil der aus der euklidischen Geometrie bekannten
-Dreiecksgeometrie l\"{a}sst sich bereits in einer Hilbert-Ebene
-beweisen.
 % und ist damit Bestandteil der absoluten Geometrie.
-%% WAS SOLL DAS DENN HEISSEN?? Niemand weiß was "absolute Geometrie"
-%% ist an dieser Stelle...
+% WAS SOLL DAS DENN HEISSEN?? Niemand weiß was "absolute Geometrie"
+% ist an dieser Stelle...
 
-
-%% ACHTUNG: Die kurze Notation  $\wi{A}$, etc... wird ab hier immer
-%% wieder verwendet! Sollte vielleicht drauf hingewiesen werden...
-
+% ACHTUNG: Die kurze Notation  $\wi{A}$, etc... wird ab hier immer
+% wieder verwendet! Sollte vielleicht drauf hingewiesen werden...
 
 \begin{defi}[Kongruenz von Dreiecken]
-  Zwei Dreiecke $ABC$ und
-    $DEF$ hei{\ss}en {\em kongruent}  $:\Longleftrightarrow$\\
-    $\str{AB}\cong\str{DE},\;\str{AC}\cong\str{DF},\;\str{BC}\cong\str{EF}$
-    und
-    $\wi{A}\cong\wi{D},\;\wi{B}\cong\wi{E},\;\wi{C}\cong\wi{F}$,
-    d.h. Seiten und Winkel sind paarweise zueinander kongruent:
-    $ABC \cong DEF$
- \end{defi}
-
-
+    Zwei Dreiecke $ABC$ und $DEF$ heißen {\em kongruent} $:\Longleftrightarrow$\\
+    $\str{AB} \cong \str{DE},\; \str{AC} \cong \str{DF},\; \str{BC} \cong \str{EF}$ und $\wi{A}
+    \cong \wi{D},\; \wi{B} \cong \wi{E},\; \wi{C} \cong \wi{F}$, d.h. Seiten und Winkel sind
+    paarweise zueinander kongruent: $ABC \cong DEF$
+\end{defi}
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-2-09-Kongruenz.png}}
 
-
-
-
-\begin{thm}[SWS-Kriterium]   \label{thm:satz.s1h}
-Dreiecke, die den Bedingungen von {\bf (C6)}
-gen\"{u}gen, sind kongruent.
+\begin{thm}[SWS-Kriterium]\label{thm:satz.s1h}
+    Dreiecke, die den Bedingungen von {\bf (C6)} genügen, sind kongruent.
 \end{thm}
 %\ref{satz.s1h}
 
 \begin{proof}
-Nach (C6) ist $\wi B\cong\wi E$ und $\wi C\cong\wi
-F$. Wir m\"{u}ssen noch $\str{BC}\cong\str{EF}$ zeigen.
+    Nach (C6) ist $\wi B \cong \wi E$ und $\wi C \cong \wi F$. Wir müssen noch $\str{BC} \cong
+    \str{EF}$ zeigen.
 
-Sei $F'$ derart, dass $\str{BC}\cong\str{EF'}$ und etwa $F'\neq F$
-$\stackrel{(C6)}{\Longrightarrow}$ $\wi(BAC)\cong\wi(EDF')$ und nach
-Voraussetzung $\wi(BAC)\cong\wi(EDF)$ im Widerspruch zu (C4)
-$\Longrightarrow\;F'=F$.
+    Sei $F'$ derart, dass $\str{BC} \cong \str{EF'}$ und etwa $F'\neq F$
+    $\stackrel{(C6)}{\Longrightarrow} \wi(BAC) \cong \wi(EDF')$ und nach Voraussetzung $\wi(BAC)
+    \cong \wi(EDF)$ im Widerspruch zu (C4) $\Longrightarrow\; F' = F$.
 \end{proof}
-
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-2-10-SWS.png}}
 
+Genauso erhält man:
 
-
-Genauso erh\"{a}lt man:
-
-\begin{thm}[WSW-Kriterium]  \label{thm:satz.s1i}
-Gelten f\"{u}r 2 Dreiecke $ABC$ und $DEF$ die
-Kongruenzen $\str{AC}\cong\str{DF},\;\wi A\cong\wi D,\;\wi B
-\cong\wi E\;\Longrightarrow\; ABC\cong DEF$, d.h. die
-Dreiecke sind kongruent.
+\begin{thm}[WSW-Kriterium]\label{thm:satz.s1i}
+    Gelten für 2 Dreiecke $ABC$ und $DEF$ die Kongruenzen $\str{AC} \cong \str{DF},\;\wi A \cong \wi
+    D,\; \wi B \cong \wi E\; \Longrightarrow\; ABC \cong DEF$, d.h. die Dreiecke sind kongruent.
 \end{thm}
 %\ref{satz.s1i}
 
 \begin{proof}
-Wie oben tragen wir $\str{BC}$ auf dem Strahl $\pf{EF}$
-ab
-$\Longrightarrow\;\exists\,F':\;\str{BC}\cong\str{EF'}\;\stackrel{(C6)}{\Longrightarrow}
-\;ABC\cong DEF'$ und $\wi(EDF')\cong\wi(BAC)\cong\wi(EDF)$.
+    Wie oben tragen wir $\str{BC}$ auf dem Strahl $\pf{EF}$ ab $\Longrightarrow\; \exists\, F':\;
+    \str{BC} \cong \str{EF'}\; \stackrel{(C6)}{\Longrightarrow} \; ABC \cong DEF'$ und $\wi(EDF')
+    \cong \wi(BAC) \cong \wi(EDF)$.
 
-Falls $F'\neq F\;\Longrightarrow\;\wi(EDF')<\wi(EDF)$ oder
-$\wi(EDF')>\wi(EDF)$ - Widerspruch.
+    Falls $F' \neq F\; \Longrightarrow\; \wi(EDF') < \wi(EDF)$ oder $\wi(EDF') > \wi(EDF)$ -
+    Widerspruch.
 \end{proof}
-
-
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-2-11-WSW.png}}
 
-
-
-\begin{thm}[SSS-Kriterium] \label{thm:satz.s1n}
-Wenn in zwei Dreiecken $ABC$ und $A'B'C'$ gilt
-$\str{AB}\cong\str{A'B'},\;\str{AC}\cong\str{A'C'}$ und
-$\str{BC}\cong\str{B'C'}$, dann ist $ABC \cong A'B'C'$.
+\begin{thm}[SSS-Kriterium]\label{thm:satz.s1n}
+    Wenn in zwei Dreiecken $ABC$ und $A'B'C'$ gilt $\str{AB} \cong \str{A'B'},\; \str{AC} \cong
+    \str{A'C'}$ und $\str{BC} \cong \str{B'C'}$, dann ist $ABC \cong A'B'C'$.
 \end{thm}
 %\ref{satz.s1n}
 
-
-F\"{u}r den Beweis des SSS-Kriteriums ben\"{o}tigt man erheblich
-mehr Aufwand. Wir kommen darauf zurück...
-
-
-
-
-
-
+Für den Beweis des SSS-Kriteriums benötigt man erheblich mehr Aufwand. Wir kommen darauf zurück\dots
 
 \subsection*{Rechnen mit Winkeln}
 
+Wie bei den Kongruenzaxiomen für Strecken, lassen sich auch für Winkel Summe, Differenz und eine
+Ordnungsrelation erklären.
 
-Wie bei den Kongruenzaxiomen für Strecken, lassen sich auch für Winkel
-Summe, Differenz und eine Ordnungsrelation erklären.
+\begin{defi}\
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{description}
+        \item[Summe von 2 Winkeln] Sei $\wi(BAC)$ ein Winkel und \pf{AD} ein Strahl im Innern, dann
+            heißt $\wi(BAC)$ die Summe von $\wi(BAD)$ und $\wi(DAC)$.
 
+            \centerline{\includegraphics[width=5cm]{BILDER/1-2-12a-Winkel.png}}
 
-\begin{defi}
-\begin{enumerate}
-\item[\emph{\textbf{a)}}] \emph{(Summe von 2 Winkeln)
-Sei $\wi(BAC)$ ein Winkel und \pf{AD} ein Strahl im Innern, dann
-hei{\ss}t $\wi(BAC)$ die} Summe \emph{von $\wi(BAD)$ und $\wi(DAC)$}.
+        \item[Nebenwinkel] Sei $\wi(BAC)$ ein Winkel und $D \in g(A,C)$ auf der anderen Seite von
+            $A$ wie $C$. Die Winkel $\wi(BAC)$ und $\wi(BAD)$ heißen \emph{Nebenwinkel}.
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-12a-Winkel.png}}
+            %% ACHTUNG:
+            % Hier sollte ein Bild zur Definition des Nebenwinkels hin, mit
+            % C,A,D auf einer Geraden ; entsprechend sollte das Bild (die
+            % Bezeichnungen) zur Definition des Rechten Winkels angepasst werden!
 
-\item[\textbf{b)}]
- (Nebenwinkel) Sei $\wi(BAC)$ ein Winkel und $D\in
-g(A,C)$ auf
-    der anderen Seite von $A$ wie $C$. Die Winkel $\wi(BAC)$ und
-    $\wi(BAD)$ hei{\ss}en \emph{Nebenwinkel}.
+        \item[Scheitelwinkel] $\wi(BAC)$ und $\wi(DAE)$ heißen \emph{Scheitelwinkel}.
 
+            \centerline{\includegraphics[width=5cm]{BILDER/1-2-12c-Winkel.png}}
 
-%% ACHTUNG:
-% Hier sollte ein Bild zur Definition des Nebenwinkels hin, mit
-% C,A,D auf einer Geraden ; entsprechend sollte das Bild (die
-% Bezeichnungen) zur Definition des Rechten Winkels angepasst werden!
+        \item[rechter Winkel -- Rechter] $\alpha$ heißt ein \emph{rechter Winkel} oder
+            \emph{Rechter} $:\Longleftrightarrow\; \alpha$ ist zu seinem Nebenwinkel kongruent
+            ($\alpha\cong\beta$).
 
-
-\item[\textbf{c)}] (Scheitelwinkel) $\wi(BAC)$ und $\wi(DAE)$ hei{\ss}en
-\emph{Scheitelwinkel}.
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-12c-Winkel.png}}
-
-\item[\textbf{d)}] (rechter Winkel - Rechter) $\alpha$ hei{\ss}t ein
-\emph{rechter Winkel} oder \emph{Rechter}
-$:\Longleftrightarrow\;\alpha$ ist zu seinem Nebenwinkel kongruent
-($\alpha\cong\beta$).
-
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-12d-Rechter.png}}
-
-\end{enumerate}
+        \centerline{\includegraphics[width=5cm]{BILDER/1-2-12d-Rechter.png}}
+    \end{description}
 \end{defi}
 
-
-
-
-
-
-
-
-
 \begin{thm}\label{thm:satz.s1k}
-Sind $\wi(BAC)$ und $\wi(BAD)$ sowie $\wi(B'A'C')$ und $\wi(B'A'D')$
-paarweise Nebenwinkel und
-$\wi(BAC)\cong\wi(B'A'C')\;\Longrightarrow\;\wi(BAD)\cong\wi(B'A'D')$.
+    Sind $\wi(BAC)$ und $\wi(BAD)$ sowie $\wi(B'A'C')$ und $\wi(B'A'D')$ paarweise Nebenwinkel und
+    $\wi(BAC) \cong \wi(B'A'C')\; \Longrightarrow\; \wi(BAD) \cong \wi(B'A'D')$.
 \end{thm}
 %\ref{satz.s1k}
 
-
 \begin{proof}
-Wir w\"{a}hlen $B',\,C',\,D'$ jeweils auf den
-entsprechenden Strahlen, so dass
+    Wir wählen $B',\, C',\, D'$ jeweils auf den entsprechenden Strahlen, so dass
 
-$\str{AB}\cong\str{A'B'}$,
- $\str{AC}\cong\str{A'C'}$, $\str{AD}\cong\str{A'D'}$ (nach (C1)).
+    $\str{AB} \cong \str{A'B'}$, $\str{AC} \cong \str{A'C'}$, $\str{AD} \cong \str{A'D'}$ (nach
+    (C1)).
 
-Das SWS-Kriterium~\ref{thm:satz.s1h} mehrfach anwenden ergibt:\\
+    Das SWS-Kriterium~\ref{thm:satz.s1h} mehrfach anwenden ergibt:
 
-\begin{enumerate}
-    \item[1.] $BAC\cong B'A'C'$
-    \item[2.] $\str{DC}\cong\str{D'C'}$ nach (C3)
-    $\stackrel{(SWS)}{\Longrightarrow}$
+    \renewcommand{\labelenumi}{\arabic{enumi}.} % ändert die Nummerierung von (1) auf 1.
+    \begin{enumerate}
+        \item $BAC\cong B'A'C'$
 
-    $BCD \cong B'C'D'\;\Longrightarrow$
+        \item $\str{DC}\cong\str{D'C'}$ nach (C3) $\stackrel{(SWS)}{\Longrightarrow}$
 
-    $\wi(BDA)\cong\wi(B'D'A')$
-    und $\str{BD}\cong\str{B'D'}$
-    $\Rightarrow$
-    \item[3.] $BDA\cong B'D'A'$
+            $BCD \cong B'C'D'\; \Longrightarrow$
 
-    $\Longrightarrow\;\wi(BAD)\cong\wi(B'A'D')$
+            $\wi(BDA) \cong \wi(B'D'A')$ und $\str{BD} \cong \str{B'D'}$ $\Rightarrow$
 
-\end{enumerate}
+        \item $BDA \cong B'D'A'$
 
+            $\Longrightarrow\; \wi(BAD) \cong \wi(B'A'D')$
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-13-Nebenwinkel.png}}
+    \end{enumerate}
 
-
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-13-Nebenwinkel.png}}
 \end{proof}
 
+% Folgendes mehr hervorheben?? Das ist ein Satz bei Hartshorne??
+% Siehe seine Bemerkung ("Note") auf Seite 93, dass hier Euklid's
+% I.13 ersetzt wird
 
+Eine direkte Konsequenz des Theorems ist, dass Scheitelwinkel $\alpha$ und $\alpha'$ zueinander
+kongruent sind. Sie sind nämlich beide Nebenwinkel eines Winkels $\beta$.
 
-%% Folgendes mehr hervorheben?? Das ist ein Satz bei Hartshorne??
-%% Siehe seine Bemerkung ("Note") auf Seite 93, dass hier Euklid's
-%% I.13 ersetzt wird
+\begin{thm}\label{thm:satz.s1l}
+    Mit den Bezeichnungen aus der Skizze gilt:
 
-Als eine direkte Konsequenz des Theorems ist, dass 
-Scheitelwinkel $\alpha$ und $\alpha '$ zueinander
-kongruent sind. Sie sind nämlich beide Nebenwinkel eines
-Winkels~$\beta$.
+    %% Achtung: Hier sollte man vielleicht einen Text in die Aussage schreiben
+    % (wie bei Hartshorne, S.93)
 
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-15b-Winkel.png}}
 
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item\label{thm:satz.s1l:item1} \emph{(Addition von Winkeln)} $\wi(BAD) \cong \wi(B'A'D')$
+            und $\wi(DAC) \cong \wi(D'A'C')$\\ $\Rightarrow\;\wi(BAC) \cong \wi(B'A'C')$
 
-
-\begin{thm}\label{thm:satz.s1l}  Mit den Bezeichnungen aus der Skizze
-  gilt:
-
-
-%% Achtung: Hier sollte man vielleicht einen Text in die Aussage schreiben
-% (wie bei Hartshorne, S.93)
-
-
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-15b-Winkel.png}}
-
-
-\begin{enumerate}
-\item[\emph{\textbf{a)}}]\emph{(Addition von Winkeln)}
-$\wi(BAD)\cong\wi(B'A'D')$ und $\wi(DAC)\cong\wi(D'A'C')$\\
-$\Rightarrow\;\wi(BAC)\cong\wi(B'A'C')$
-\item[\emph{\textbf{b)}}]\emph{(Subtraktion von Winkeln)}
-$\wi(BAC)\cong\wi(B'A'C')$ und $\wi(DAC)\cong\wi(D'A'C')$\\
-$\Rightarrow\;\wi(BAD)\cong\wi(B'A'D')$
-\end{enumerate}
+        \item\label{thm:satz.s1l:item2} \emph{(Subtraktion von Winkeln)} $\wi(BAC) \cong
+            \wi(B'A'C')$ und $\wi(DAC) \cong \wi(D'A'C')$\\
+            $\Rightarrow\; \wi(BAD) \cong \wi(B'A'D')$
+    \end{enumerate}
 \end{thm}
 
+$\wi(BAD)$ heißt die \emph{Differenz} der Winkel $\wi(BAC)$ und $\wi(DAC)$:
 
-$\wi(BAD)$ hei{\ss}t die \emph{Differenz} der Winkel $\wi(BAC)$ und
-$\wi(DAC)$: \[\wi(BAC)-\wi(DAC):=\wi(BAD).\]
-
+$$
+    \wi(BAC) - \wi(DAC) := \wi(BAD).
+$$
 
 \begin{proof}
-{\bf b)}  Seien $B',\,C'$ so gew\"{a}hlt, dass
-$\str{AB}\cong\str{A'B'}$ und $\str{AC}\cong\str{A'C'}$
-$\stackrel{(SWS)}{\Longrightarrow} ABC \cong A'B'C'$ und
-daher $\wi(ABC)\cong\wi(A'B'C'),\;\wi(ACB)\cong\wi(A'C'B')$ und
-$\str{BC}\cong\str{B'C'}$
-$\stackrel{(WSW)}{\Longrightarrow} ACD \cong A'C'D'$ und
-somit $\str{CD}\cong\str{C'D'}$ und daher als Differenz kongruenter
-Strecken $\str{BD}\cong\str{B'D'}$
-% THOMAS (?) Sollte das folgende nicht \stackrel{(SWS)} sein???
-$\stackrel{(WSW)}{\Longrightarrow} BAD \cong B'A'D'$ und
-folglich $\wi(BAD)\cong\wi{B'A'D'}$.
+    \begin{description}
+        \item[~\ref{thm:satz.s1l:item2}] Seien $B',\, C'$ so gewählt, dass $\str{AB} \cong
+            \str{A'B'}$ und $\str{AC} \cong \str{A'C'} \stackrel{(SWS)}{\Longrightarrow} ABC \cong
+            A'B'C'$ und daher $\wi(ABC) \cong \wi(A'B'C'),\; \wi(ACB) \cong \wi(A'C'B')$ und
+            $\str{BC} \cong \str{B'C'}$ $\stackrel{(WSW)}{\Longrightarrow} ACD \cong  A'C'D'$ und
+            somit $\str{CD} \cong \str{C'D'}$ und daher als Differenz kongruenter Strecken $\str{BD}
+            \cong \str{B'D'}$
+            % THOMAS (?) Sollte das folgende nicht \stackrel{(SWS)} sein???
+            $\stackrel{(WSW)}{\Longrightarrow} BAD \cong B'A'D'$ und folglich $\wi(BAD) \cong
+            \wi{B'A'D'}$.
 
+        \item[~\ref{thm:satz.s1l:item1}] Als Nebenwinkel zu den kongruenten Winkeln $\alpha$ und
+            $\alpha'$ ergibt sich wegen Theorem~\ref{thm:satz.s1k} die Kongruenz $\wi(DAE) \cong
+            \wi(D'A'E')$ und daher nach ~\ref{thm:satz.s1l:item2}
 
-{\bf a)}  Als Nebenwinkel zu den kongruenten Winkeln $\alpha$ und
-$\alpha'$ ergibt sich wegen Theorem~\ref{thm:satz.s1k} die Kongruenz
-$\wi(DAE)\cong\wi(D'A'E')$ und daher nach b)
-\[\beta=\wi(CAE)=\wi(DAE)-\wi(DAC)\cong\wi(D'A'E')-\wi(D'A'C')=\wi(C'A'E')=\beta'.\]
-Wiederum aus Theorem~\ref{thm:satz.s1k} folgt die Kongruenz
-$\wi(BAC)\cong\wi(B'A'C')$ f\"{u}r die Nebenwinkel von $\beta$ und
-$\beta'$.
+            $$
+                \beta = \wi(CAE) = \wi(DAE) - \wi(DAC) \cong \wi(D'A'E') - \wi(D'A'C') = \wi(C'A'E') =
+                \beta'.
+            $$
 
+            Wiederum aus Theorem~\ref{thm:satz.s1k} folgt die Kongruenz $\wi(BAC) \cong \wi(B'A'C')$
+            für die Nebenwinkel von $\beta$ und $\beta'$.
 
-\centerline{\includegraphics[width=7cm]{BILDER/1-2-15a-Winkel.jpg}}
-
-
+            \centerline{\includegraphics[width=7cm]{BILDER/1-2-15a-Winkel.jpg}}
+    \end{description}
 \end{proof}
 
-
-
-\begin{defi} \emph{Gegeben seien zwei Winkel $\wi(BAC)$ und
-$\wi(EDF)$. Der Winkel $\wi(BAC)$ hei{\ss}t} kleiner \emph{als der
-Winkel $\wi(EDF)$, wenn es einen Strahl $\pf{DG}$ im Innern von
-$\wi(EDF)$ gibt, so dass $\wi(BAC)\cong\wi(GDF)$. $\wi(EDF)$
-hei{\ss}t} gr\"{o}{\ss}er \emph{als} $\wi(BAC)$.
+\begin{defi}
+    Gegeben seien zwei Winkel $\wi(BAC)$ und $\wi(EDF)$. Der Winkel $\wi(BAC)$ heißt kleiner als der
+    Winkel $\wi(EDF)$, wenn es einen Strahl $\pf{DG}$ im Innern von $\wi(EDF)$ gibt, so dass
+    $\wi(BAC) \cong \wi(GDF)$. $\wi(EDF)$ heißt größer als $\wi(BAC)$.
 \end{defi}
-
 
 \centerline{\includegraphics[width=5cm]{BILDER/1-2-16-Winkel.png}}
 
-
-
-
-\begin{thm}
-\begin{enumerate}
-    \item[\emph{\textbf{a)}}] Ist $\alpha\cong\alpha'$ und $\beta\cong\beta'\;\Rightarrow$
-    $\{\alpha<\beta\;\Longleftrightarrow\;\alpha'<\beta'\}$.
-    \item[\emph{\textbf{b)}}] \glqq{}$<$\grqq{} definiert eine Ordnung auf der
-    Menge der Winkel, d.h.
+\begin{thm}\
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \renewcommand{\labelenumii}{\alph{enumi}\textsubscript{\arabic{enumii}})}
+        % ändert Nummerierung 2. Ebene
     \begin{enumerate}
-        \item[$\bf{(b_1)}$]  $\alpha<\beta$ und $\beta<\gamma\;\Rightarrow\;\alpha<\gamma$.
-        \item[$\bf{(b_2)}$] $\forall$ Winkel $\alpha$ und $\beta$ gilt
-        genau eine der Beziehungen:
-        $\alpha<\beta,\;\alpha\cong\beta,\;\alpha>\beta$.
+        \item Ist $\alpha \cong \alpha'$ und $\beta \cong \beta'\;\Rightarrow$ $\{\alpha < \beta\;
+            \Longleftrightarrow\; \alpha' < \beta'\}$.
+
+        \item "`$ < $"' definiert eine Ordnung auf der Menge der Winkel, d.h.
+        \begin{enumerate}
+            \item $\alpha < \beta$ und $\beta < \gamma\; \Rightarrow\; \alpha < \gamma$.
+
+            \item $\forall$ Winkel $\alpha$ und $\beta$ gilt genau eine der Beziehungen: $\alpha <
+                \beta,\;\alpha \cong \beta,\;\alpha > \beta$.
+        \end{enumerate}
     \end{enumerate}
-\end{enumerate}
-\end{thm}
-
-
-
-\begin{proof}
-Verl\"{a}uft entsprechend wie der Beweis von Theorem~\ref{thm:satz.s1g}
-f\"{u}r Strecken. %(Übung?!?!?!?)
-\end{proof}
-
-
-
-
-
-
-%% BEMERKUNG: Folgendes sind bei Euklid noch implizite Annahmen oder
-%% Axiome (CHECK!!???!!)
-
-\begin{thm}\label{thm:satz.s1m}
-\begin{enumerate}
-    \item[\emph{\textbf{a)}}]Es gibt rechte Winkel.
-    \item[\emph{\textbf{b)}}] Je 2 rechte Winkel sind zueinander kongruent.
-\end{enumerate}
 \end{thm}
 
 \begin{proof}
-{\bf a)} 
-$C$ sei derart, dass $\str{OB}\cong\str{OC}$, $D$ sei
-der Schnittpunkt der Strecke $\str{BC}$ mit $\pf{OA}$
-
-1. $D=O\in g(B,C)\;\Rightarrow\;\wi(BOA)\cong\wi(COA)$ und damit
-Rechter.
-
-2. $D\neq O\notin g(B,C)\;\Rightarrow\; BOD\cong COD \;
-\Rightarrow\;\wi(ODB)\cong\wi(ODC)$ und damit Rechter.
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-18a-Winkel.png}}
-
-
-
-{\bf b)} Angenommen, $\alpha\neq\alpha'$ seien verschiedene rechte
-Winkel, etwa $\alpha<\alpha'\;\Rightarrow$ tragen $\alpha$ am
-Strahl $\pf{A'B'}$ an und erhalten $\alpha\cong\wi(E'A'B')$ und
-$\pf{A'E'}$ im Innern von $\alpha'\;\Rightarrow\;C'$ im Innern von
-$\wi(E'A'D')\cong\beta\;\Rightarrow\;\beta'<\beta$.
-
-Jedoch: $\alpha'\cong\beta'<\beta\cong\alpha\;
-\Rightarrow\;\alpha'<\alpha$, Widerspruch. 
-
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-18b-Winkel.png}}
-
-
+    Verläuft entsprechend wie der Beweis von Theorem~\ref{thm:satz.s1g} für Strecken. %(Übung?)
 \end{proof}
 
+% BEMERKUNG: Folgendes sind bei Euklid noch implizite Annahmen oder Axiome (CHECK!)
 
+\begin{thm}\label{thm:satz.s1m}\
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item Es gibt rechte Winkel.
 
+        \item Je 2 rechte Winkel sind zueinander kongruent.
+    \end{enumerate}
+\end{thm}
 
+\begin{proof}
+    \renewcommand{\labelenumi}{\alph{enumi})} % ändert die Nummerierung von (1) auf a)
+    \begin{enumerate}
+        \item $C$ sei derart, dass $\str{OB} \cong \str{OC}$, $D$ sei der Schnittpunkt der Strecke
+            $\str{BC}$ mit $\pf{OA}$
+
+            \begin{enumerate}
+                \item $D = O\in g(B,C)\; \Rightarrow\; \wi(BOA) \cong \wi(COA)$ und damit Rechter.
+
+                \item $D \neq O \notin g(B,C)\; \Rightarrow\; BOD \cong COD\; \Rightarrow\; \wi(ODB)
+                    \cong \wi(ODC)$ und damit Rechter.
+            \end{enumerate}
+
+            \centerline{\includegraphics[width=5cm]{BILDER/1-2-18a-Winkel.png}}
+
+        \item Angenommen, $\alpha \neq \alpha'$ seien verschiedene rechte Winkel, etwa $\alpha <
+            \alpha'\; \Rightarrow$ tragen $\alpha$ am Strahl $\pf{A'B'}$ an und erhalten $\alpha
+            \cong \wi(E'A'B')$ und $\pf{A'E'}$ im Innern von $\alpha'\; \Rightarrow\; C'$ im Innern
+            von $\wi(E'A'D') \cong \beta\; \Rightarrow\; \beta' < \beta$.
+
+            Jedoch: $\alpha' \cong \beta' < \beta \cong \alpha\; \Rightarrow\; \alpha' < \alpha$,
+            Widerspruch.
+
+            \centerline{\includegraphics[width=5cm]{BILDER/1-2-18b-Winkel.png}}
+    \end{enumerate}
+\end{proof}
 
 \section*{Vorlesung am 10.05.2011}
 
-
-
-
-
-
 \subsection*{Beweis des SSS-Kriteriums}
 
-Die Addition von Winkeln erlaubt auch einen
-Beweis des SSS-Kriteriums (Theorem~\ref{thm:satz.s1n}).
+Die Addition von Winkeln erlaubt auch einen Beweis des SSS-Kriteriums (Theorem~\ref{thm:satz.s1n}).
 Zur Vorbereitung zunächst zwei Aussagen über gleichschenklige Dreiecke.
 
-
 \begin{thm}\label{thm:lemma.l1b}
-Gilt in einem Dreieck $ABC$ die Kongruenz
-$\str{AC}\cong\str{BC}$, dann ist auch $\wi(CAB)\cong\wi(CBA)$, d.h.
-das Dreieck ist gleichschenklig. Umgekehrt folgt aus der Kongruenz
-der Winkel $\wi A\cong\wi B$ die Kongruenz der Seiten
-$\str{AC}\cong\str{BC}$.
+    Gilt in einem Dreieck $ABC$ die Kongruenz $\str{AC} \cong \str{BC}$, dann ist auch $\wi(CAB)
+    \cong \wi(CBA)$, d.h. das Dreieck ist gleichschenklig. Umgekehrt folgt aus der Kongruenz der
+    Winkel $\wi A \cong \wi B$ die Kongruenz der Seiten $\str{AC} \cong \str{BC}$.
 \end{thm}
 %\ref{lemma.l1b}
 
 \begin{proof}
-Mit $B'=A,\;A'=B$ und $C'=C$ ist in beiden F\"{a}llen
-$ABC \cong A'B'C'$ - im 1. Fall wegen (SWS) und im 2. Fall
-wegen (WSW).
+    Mit $B' = A,\;A' = B$ und $C' = C$ ist in beiden Fällen $ABC \cong A'B'C'$ - im 1. Fall wegen
+    (SWS) und im 2. Fall wegen (WSW).
 \end{proof}
 
-
 \begin{thm}[Existenz gleichschenkliger Dreiecke]\label{thm:folg.f1a}
-Zu jeder Strecke $\str{AB}$ gibt es ein gleichschenkliges Dreieck
-mit $\str{AB}$ als Grundseite.
+    Zu jeder Strecke $\str{AB}$ gibt es ein gleichschenkliges Dreieck mit $\str{AB}$ als Grundseite.
 \end{thm}
 %\ref{folg.f1a}
 
-
 \begin{proof}
-Sei $\str{AB}$ gegeben und $C\notin g(A,B)$. Dann
-gibt es ein Dreieck $\triangle= ABC$. Wenn
-$\wi(CAB)\cong\wi(CBA)$, dann ist $\triangle$ gleichschenklig nach
-Theorem~\ref{thm:lemma.l1b}. Andernfalls sei etwa $\wi(CAB)<\wi(CBA)$.
-Dann tragen wir gem\"{a}{\ss} (C4) den Winkel $\wi(CAB)$ bei $B$ ab. Der
-zweite Schenkel $\pf{BE}$ schneidet nach \ref{thm:satz.s1c}. 
-Die Strecke $\str{AC}$, etwa im Punkt $D$. Dann ist wieder nach 
-Theorem~\ref{thm:lemma.l1b} $ABD$ gleichschenklig.
+    Sei $\str{AB}$ gegeben und $C \notin g(A,B)$. Dann gibt es ein Dreieck $\triangle= ABC$. Wenn
+    $\wi(CAB)\cong\wi(CBA)$, dann ist $\triangle$ gleichschenklig nach Theorem~\ref{thm:lemma.l1b}.
+    Andernfalls sei etwa $\wi(CAB) < \wi(CBA)$.  Dann tragen wir gemäß (C4) den Winkel $\wi(CAB)$
+    bei $B$ ab. Der zweite Schenkel $\pf{BE}$ schneidet nach \ref{thm:satz.s1c}. Die Strecke
+    $\str{AC}$, etwa im Punkt $D$. Dann ist wieder nach Theorem~\ref{thm:lemma.l1b} $ABD$
+    gleichschenklig.
 
-
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-20-Dreieck.png}}
-
-
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-20-Dreieck.png}}
 \end{proof}
-
-
-
 
 \begin{proof}[Beweis des SSS-Kriteriums, Theorem~\ref{thm:satz.s1n}]
-Es ist zu zeigen, dass sich die Kongruenz der Seiten
-auf die Winkel \"{u}bertr\"{a}gt.
+    Es ist zu zeigen, dass sich die Kongruenz der Seiten auf die Winkel überträgt.
 
+    \centerline{\includegraphics[width=5cm]{BILDER/1-2-21-SSS.png}}
 
-\centerline{\includegraphics[width=5cm]{BILDER/1-2-21-SSS.png}}
+    Sei $B''$ derart, dass $\wi(BAC) \cong \wi(B''A'C')$ und $\str{AB} \cong \str{A'B''}$
 
+    $\stackrel{(SWS)}{\Longrightarrow}\; ABC \cong A'B''C'\; \Rightarrow\;\str{BC} \cong
+    \str{B''C'}$
 
-Sei $B''$ derart, dass $\wi(BAC)\cong\wi(B''A'C')$ und
-$\str{AB}\cong\str{A'B''}$
+    $B'A'B''$ und $B'C'B''$ sind gleichschenklig\\
+    $\Longrightarrow$ (Theorem~\ref{thm:lemma.l1b}) $\wi(A'B'B'') \cong \wi(A'B''B')$
 
-$\stackrel{(SWS)}{\Longrightarrow}\; ABC \cong A'B''C'\;
-\Rightarrow\;\str{BC}\cong\str{B''C'}$
+    genauso: $\wi(C'B'B'') \cong \wi(C'B''B')$
 
-$B'A'B''$ und $B'C'B''$ sind gleichschenklig\\
-$\Longrightarrow$ (Theorem~\ref{thm:lemma.l1b})
-$\wi(A'B'B'')\cong\wi(A'B''B')$
+    $\Longrightarrow\; (\ref{thm:satz.s1l:item1}$ (Addition der Winkel)
 
-genauso: $\wi(C'B'B'')\cong\wi(C'B''B')$
+    $\wi(A'B'C') \cong \wi(A'B''C') \cong \wi(ABC)$
 
-$\Longrightarrow\;(\ref{thm:satz.s1l} a)$ (Addition der Winkel)
+    $\stackrel{(SWS)}{\Longrightarrow}\; A'B''C' \cong A'B'C'$.
 
-$\wi(A'B'C')\cong\wi(A'B''C')\cong\wi(ABC)$
-
-$\stackrel{(SWS)}{\Longrightarrow}\; A'B''C'\cong A'B'C'$.
-
-Aus $ABC\cong A'B''C'$ folgt $ABC\cong A'B'C'$
-
+    Aus $ABC \cong A'B''C'$ folgt $ABC \cong A'B'C'$
 \end{proof}
 
-
-
-
-
-
-
-
-
-
-%\subsection*{Kongruenz von Strecken und Winkeln in der Poincar\'eschen
+%\subsection*{Kongruenz von Strecken und Winkeln in der Poincaréschen
 %Kreisscheibe?}
-
-
-
 
 %\section*{Vorlesung am 12.05.2011}
 
-
-
-
-
-
-%\subsection*{Literatur} 
+%\subsection*{Literatur}
 %\cite[Kapitel 1 und 2]{SS-2005},
 %\cite[Chapter 1]{stillwell-2005},
 %\cite[Chapter 1]{hartshorne-2000}
 %\cite[Chapter 1]{coxeter-1969}
-
-
-
-
-
-
-
-
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "AxiomatischeGeometrie"
-%%% End: 
