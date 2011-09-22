@@ -1,52 +1,52 @@
 % Auch hier hat GeoGebra den TikZ-Output versaut, daher wird's selbst zurechtgebogen. Oder gleich
 % ganz selbstgemacht.
 \begin{tikzpicture}[]
-	% Beschränkung für das gesamte Bild, eigentlich nicht notwendig, erzeugt aber überall 0.5cm
-	% Abstand, was ganz brauchbar ist.
-	\clip (-0.5,-0.5) rectangle (5,2.5);
-	% x-Achse:
-	\draw [->] (0,0) -- (5,0);
-	% Ursprung des Koordinatensystems:
-	\coordinate (U) at (2.5,0);
-	\fill (U) circle (2pt);
-	% der Halbkreis:
-	\begin{scope}
-		\clip (0.4,0) rectangle (4.6,2.1);
-		% Ganz schöne Verrenkung:
-		% Da wir den Kreis gleich nochmal für die Punkte auf dem Kreis brauchen, geben wir ihm mit
-		% \node den Namen (c). Dadurch wird das Zeichnen aber komisch. Zum Verständnis einfach mal
-		% den Kram in den eckigen Klammern ausblenden und schauen was dasteht: wir definieren eine
-		% Node mit dem Namen (c) an Koordinate (2.5,0). Soweit so gut. Diese Node soll gezeichnet
-		% werden (draw), soll ein Kreis sein (circle) und eine minimale Größe von 4cm haben, was
-		% hier dem Durchmesser entspricht.
-		\node [draw, circle, minimum size=4cm] (c) at (U) {};
-	\end{scope}
-	% Punkt A soll auf dem Kreis liegen und die x-Koordinate soll 1 sein. Dafür soll uns TikZ den
-	% Schnittpunkt aus dem Kreis und der Strecke (1,0) -- (1,2) berechnen:
-	\coordinate [label=130:$A$] (A) at (intersection of (1,0) -- (1,2) and c);
-	% und jetzt muss Punkt A nur noch gezeichnet werden:
-	\fill (A) circle (2pt);
-	% bei Punkt B verfahren wir genauso, außer dass wir dafür die Strecke für den Schnittpunkt auch
-	% noch zeichnen müssen (keine Ahnung warum, aber ohne gibt's nicht den richtigen Schnittpunkt)
-	\path (4.3,0) -- (4.3,2);
-	\coordinate [label=right:$B$] (B) at (intersection of (4.3,0) -- (4.3,2) and c);
-	\fill (B) circle (2pt);
-	% Strecke zwischen A und B:
-	\draw (A) -- (B);
-	% Mittelpunkt zwischen AB:
-	\node (X) at ($ (A)!.5!(B) $) {};
-	% Strecke vom Ursprung zum Mittelpunkt
-	% Keine Ahnung, warum man nicht einfach (U) -- (X) machen kann, er macht's nicht richtig. Wenn
-	% man aber sagt, er soll es genau bis (X) machen, dann wird's auch richtig gezeichnet. Komisches
-	% Ding.
-	\draw (U) -- ($ (U)!1.0!(X) $);
-	%TODO: folgenden Kram erklären!
-	\draw ($ (X)!0.3!(A) $) let
-			\p1 = ($ (X) - (A) $)
-		in
-			arc (170:257:{0.3*veclen(\x1,\y1)});
-	\fill let
-			\p1 = ($ (X)!0.13!(A) $), \p2 = ($ (X)!0.1!(U) $)
-		in
-			(\x1,\y2) circle (1pt);
+    % Beschränkung für das gesamte Bild, eigentlich nicht notwendig, erzeugt aber überall 0.5cm
+    % Abstand, was ganz brauchbar ist.
+    \clip (-0.5,-0.5) rectangle (5,2.5);
+    % x-Achse:
+    \draw [->] (0,0) -- (5,0);
+    % Ursprung des Koordinatensystems:
+    \coordinate (U) at (2.5,0);
+    \fill [color=colPktKon] (U) circle (2pt);
+    % der Halbkreis:
+    \begin{scope}
+        \clip (0.4,0) rectangle (4.6,2.1);
+        % Ganz schöne Verrenkung:
+        % Da wir den Kreis gleich nochmal für die Punkte auf dem Kreis brauchen, geben wir ihm mit
+        % \node den Namen (c). Dadurch wird das Zeichnen aber komisch. Zum Verständnis einfach mal
+        % den Kram in den eckigen Klammern ausblenden und schauen was dasteht: wir definieren eine
+        % Node mit dem Namen (c) an Koordinate (2.5,0). Soweit so gut. Diese Node soll gezeichnet
+        % werden (draw), soll ein Kreis sein (circle) und eine minimale Größe von 4cm haben, was
+        % hier dem Durchmesser entspricht.
+        \node [draw, circle, minimum size=4cm] (c) at (U) {};
+    \end{scope}
+    % Punkt A soll auf dem Kreis liegen und die x-Koordinate soll 1 sein. Dafür soll uns TikZ den
+    % Schnittpunkt aus dem Kreis und der Strecke (1,0) -- (1,2) berechnen:
+    \coordinate [label=130:$A$] (A) at (intersection of (1,0) -- (1,2) and c);
+    % und jetzt muss Punkt A nur noch gezeichnet werden:
+    \fill [color=colPkt] (A) circle (2pt);
+    % bei Punkt B verfahren wir genauso, außer dass wir dafür die Strecke für den Schnittpunkt auch
+    % noch zeichnen müssen (keine Ahnung warum, aber ohne gibt's nicht den richtigen Schnittpunkt)
+    \path (4.3,0) -- (4.3,2);
+    \coordinate [label=right:$B$] (B) at (intersection of (4.3,0) -- (4.3,2) and c);
+    \fill [color=colPkt] (B) circle (2pt);
+    % Strecke zwischen A und B:
+    \draw (A) -- (B);
+    % Mittelpunkt zwischen AB:
+    \node (X) at ($ (A)!.5!(B) $) {};
+    % Strecke vom Ursprung zum Mittelpunkt
+    % Keine Ahnung, warum man nicht einfach (U) -- (X) machen kann, er macht's nicht richtig. Wenn
+    % man aber sagt, er soll es genau bis (X) machen, dann wird's auch richtig gezeichnet. Komisches
+    % Ding.
+    \draw (U) -- ($ (U)!1.0!(X) $);
+    %TODO: folgenden Kram erklären!
+    \draw ($ (X)!0.3!(A) $) let
+            \p1 = ($ (X) - (A) $)
+        in
+            arc (170:257:{0.3*veclen(\x1,\y1)});
+    \fill let
+            \p1 = ($ (X)!0.13!(A) $), \p2 = ($ (X)!0.1!(U) $)
+        in
+            (\x1,\y2) circle (1pt);
 \end{tikzpicture}

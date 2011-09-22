@@ -4,15 +4,15 @@
 % xmax =  4.5
 % ymax =  4.5
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-	\clip(-0.5,-0.5) rectangle (4.5,4.5);
-	\draw(2,2) circle (2cm);
-	\draw (0.59,0.59)-- (3.41,0.59);
-	\draw (0.26,2.99)-- (3.74,1.01);
-	\draw (0.02,2.31)-- (3.03,3.72);
-	\draw (1.14,3.81)-- (3.87,1.29);
-	\fill [color=black] (1.41,2.34) circle (1.5pt);
-	\fill [color=black] (1.84,3.16) circle (1.5pt);
-	\fill [color=black] (1.54,3.44) circle (1.5pt);
-	\fill [color=black] (2.58,3.51) circle (1.5pt);
-	\fill [color=black] (2.78,2.3) circle (1.5pt);
+    \clip(-0.5,-0.5) rectangle (4.5,4.5);
+    \draw(2,2) circle (2cm);
+    \draw (0.59,0.59)-- (3.41,0.59);
+    \draw (0.26,2.99)-- (3.74,1.01);
+    \draw (0.02,2.31)-- (3.03,3.72);
+    \draw (1.14,3.81)-- (3.87,1.29);
+    \fill [color=colPkt] (1.41,2.34) circle (1.5pt);
+    \fill [color=colPkt] (1.84,3.16) circle (1.5pt);
+    \fill [color=colPkt] (1.54,3.44) circle (1.5pt);
+    \fill [color=colPkt] (2.58,3.51) circle (1.5pt);
+    \fill [color=colPkt] (2.78,2.3) circle (1.5pt);
 \end{tikzpicture}

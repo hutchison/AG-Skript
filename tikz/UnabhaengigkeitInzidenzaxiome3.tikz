@@ -1,8 +1,8 @@
 \begin{tikzpicture}
-	\fill [color=black] (0,0) circle (1.5pt);
-	\fill [color=black] (2,0) circle (1.5pt);
-	\fill [color=black] (0,1) circle (1.5pt);
-	\fill [color=black] (2,1) circle (1.5pt);
+	\fill [color=colPkt] (0,0) circle (1.5pt);
+	\fill [color=colPkt] (2,0) circle (1.5pt);
+	\fill [color=colPkt] (0,1) circle (1.5pt);
+	\fill [color=colPkt] (2,1) circle (1.5pt);
 	\draw (0,0) -- (2,0) -- (2,1) -- (0,1) -- (0,0);
 	\draw (1,-0.5) node[anchor=north, text width=3.5cm] {(I2) und (I3) erfüllt, (I1) nicht erfüllt};
 \end{tikzpicture}
