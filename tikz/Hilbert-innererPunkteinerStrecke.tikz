@@ -1,0 +1,17 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-0.5,-1) rectangle (5.5,2.5);
+    \draw (0,0) coordinate (A);
+    \draw (4,0) coordinate (B);
+    \draw (5,-0.66) coordinate (D);
+    \draw (0.6,1.21) coordinate (E);
+    \draw (1,2) coordinate (F);
+    \draw [domain=-0.5:5.5] plot(\x,{(-0--2*\x)/1});
+    \draw [domain=-0.5:5.5] plot(\x,{(--8-2*\x)/3});
+    \draw [domain=-0.5:5.5] plot(\x,{(-0-0*\x)/4});
+    \draw [dash pattern=on 4pt off 4pt,domain=-0.5:5.5] plot(\x,{(--6.44-1.87*\x)/4.39});
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[below] {$A$};
+    \filldraw [color=colPkt] (4,0) circle (1.5pt) node[above] {$B$};
+    \filldraw [color=colPktKon] (1,2) circle (1.5pt) node[right] {$F$};
+    \filldraw [color=colPktKon] (0.6,1.21) circle (1.5pt) node[below] {$E$};
+    \filldraw [color=colPktKon] (5,-0.66) circle (1.5pt) node[above] {$D$};
+\end{tikzpicture}
