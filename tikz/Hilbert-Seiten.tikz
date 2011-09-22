@@ -1,0 +1,13 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-1.5,-1.5) rectangle (2,3);
+    \draw (-1,1) coordinate (A);
+    \draw (1,2) coordinate (B);
+    \draw (1,-1) coordinate (C);
+    \draw [domain=-2.5:3] plot(\x,{(-0-0*\x)/20});
+    \draw (A)-- (B);
+    \draw (A)-- (C);
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[left] {$A$};
+    \filldraw [color=colPkt] (B) circle (1.5pt) node[right] {$B$};
+    \filldraw [color=colPkt] (C) circle (1.5pt) node[right] {$C$};
+    \draw (1.8,0) node[above] {$g$};
+\end{tikzpicture}

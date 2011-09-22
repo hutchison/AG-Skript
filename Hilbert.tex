@@ -265,11 +265,9 @@ Auf Basis der Beziehung "`Zwischen"' können wir präzisieren was eine Strecke i
 
 \begin{defi}[Strecke]
     Seien $A,\,B\in \E$ zwei verschiedene Punkte. Dann heißt die Menge
-
     $$
     \str{AB}:=\{A,\,B\}\cup\{X\in\E \; | \;\Zw(AXB)\}
     $$
-
     die {\em Strecke} $\str{AB}$ oder auch $\str{BA}$. $A$ und $B$ sind {\em Randpunkte}, $\{X \in
     \varepsilon:\; \Zw(AXB)\}$ sind {\em innere Punkte} der Strecke.
 \end{defi}
@@ -352,15 +350,16 @@ zu erklären, benötigt man ein weiteres Axiom:
 $S_1$ und $S_2$ heißen die beiden \emph{(verschiedenen) Seiten} von $g$. D.h., $A$ und $B$
 liegen auf derselben Seite und $A$ und $C$ auf verschiedenen Seiten von $g$.
 
-\centerline{\includegraphics[width=6cm]{BILDER/1-1-06a-Seiten.png}}
+\begin{figure}[h]
+    \input{tikz/Hilbert-Seiten.tikz}
+    \caption{Seiten einer Gerade}
+\end{figure}
 
 Formal definiert jede Gerade $g$ eine Relation auf $\E\setminus g$ durch
-
 $$
     \mbox{Für } A,\, B \in \E \setminus g \mbox{ gilt } A \stackrel{g}{\sim} B :
     \Longleftrightarrow\; A=B\; \mbox{oder}\; A \neq B\; \mbox{und}\; \str{AB} \cap g = \emptyset.
 $$
-
 \begin{proof}[Beweis von Theorem \ref{thm:satz.s1a}]
     Zum Beweis des Theorems genügt es zu zeigen, dass $\stackrel{g}{\sim}$ eine Äquivalenzrelation
     mit genau 2 Äquivalenzklassen ist.
@@ -371,12 +370,10 @@ $$
     \begin{itemize}
         \item Aufwändiger ist die {\bf Transitivität}:\\
         Sei $A,\, B,\, C \in \E \setminus g$, dann müssen wir zeigen:
-
         $$
             A \stackrel{g}{\sim} B\; \mbox{ und } B \stackrel{g}{\sim} C\; \Rightarrow\; A
             \stackrel{g}{\sim} C
         $$
-
         Sei also $\str{AB} \cap g = \emptyset,\; \str{BC} \cap g = \emptyset$.
 
         \begin{description}
@@ -402,7 +399,6 @@ $$
                 % $$
                 %   AC \cup CB = AB \quad \mbox{und} \quad AC \cap CB = \{C\}
                 % $$
-
                 Nun wenden wir mehrfach Fall 1 an, da  $E,\,A,\,B$ und  $E,\,A,\,C$ nicht kollinear:
 
                 \centerline{\includegraphics[width=6cm]{BILDER/1-1-06c-Seiten.png}}
@@ -418,18 +414,14 @@ $$
         \begin{description}
             \item[1. Klasse $S_1$] Wegen \textbf{(I3)} gibt es ein $A \in \E \setminus g$. $S_1$
                 können wir daher wählen als
-
                 $$
                     [A] := \{ A \} \cup \{ X \in \E:\, \str{AX} \cap g = \emptyset \}
                 $$
-
             \item[2. Klasse $S_2$] Sei $D\in g$ wie oben
-
                 $$
                     \stackrel{(A4)}{\Longrightarrow} \exists\, C \in \E:\; \Zw(ADC)\; \Rightarrow\;
                     C \notin S_1\; \Rightarrow\; S_2 := [C]
                 $$
-
                 \centerline{\includegraphics[width=6cm]{BILDER/1-1-06d-Seiten.png}}
         \end{description}
 
@@ -692,17 +684,13 @@ Ein weiteres Modell, dass den Inzidenz- und Anordnungsaxiomen genügt, ist das P
 Kreisscheibenmodell. Hierbei wählen wir die Menge der Punkte in einer offenen Kreisscheibe des
 $\R^2$. (Anstelle des $\R^2$ ließe sich auch der $\K^2$ für einen anderen geordneten Köprper
 verwenden.) Der Einfachheit halber wählen wir einen Kreis mit Mittelpunkt im Ursprung:
-
 $$
     \Gamma = \{ (x,y) \in \R^2 :  x^2 + y^2 = r \}
 $$
-
 Punkte in unserem {\em  Poincaréschen Kreisscheibenmodell} sind also aus
-
 $$
     \E = \{ (x,y) \in \R^2 :  x^2 + y^2 < r \}.
 $$
-
 Geraden sind Teile von Kreisen oder Geraden $\gamma$ des $\R^2$, die $\Gamma$ {\em orthogonal
 schneiden}, d.h. die Tangenten an $\Gamma$ und $\gamma$ in den beiden Schnittpunkten liegen
 orthogonal zueinander. Diese Orthogonalitätsbedingung ist im Fall einer Geraden $\gamma$ genau dann
@@ -739,11 +727,9 @@ umgekehrt. Liegt $A$ innerhalb des Kreises $\Gamma$, so bilden wir eine Gerade o
 Geraden $g$ durch $M$ und $A$ durch $A$. Diese schneidet $\Gamma$ in zwei Punkten $P$ und $Q$. Die
 Tangente an $\Gamma$ durch $P$ (orthogonal zu $g(M,P)$) trifft die Gerade $g$ in $A'$. Dies folgt
 aus der Ähnlichkeit der Dreiecke $MPA'$ und $MAP$ und dem Verhältnis der Seitenlängen
-
 $$
     \frac{|MA|}{r} = \frac{r}{|MA'|}.
 $$
-
 \begin{thm}\label{thm:satz.s4b}
     Inversionen $\varphi_\Gamma$ am Kreis $\Gamma$ haben folgende Eigenschaften:
 
@@ -854,11 +840,9 @@ Wir führen eine Relation zwischen Strecken (und später auch zwischen Winkeln) 
     %\includegraphics[width=3.5cm]{1-2-01-C1}
 
     \item[{\bf (C2)}] Wenn 2 Strecken einer dritten kongruent sind, dann sind sie zueinander kongruent:
-
         $$
             \str{AB} \cong \str{CD} \mbox{ und } \str{AB} \cong \str{EF}\; \Rightarrow\; \str{CD} \cong \str{EF}.
         $$
-
         Jede Strecke ist zu sich selbst kongruent.
 
     \item[{\bf (C3)}] (Addition) Wenn $A,\,B,\,C\in \E$ und $Zw(ABC)$\\
@@ -884,7 +868,6 @@ Die Definition der Kongruenz von Strecken erlaubt uns auch mit Strecken zu rechn
     Seien $\str{AB}$ und $\str{CD}$ Strecken, $r = \pf{AB}$ ein Strahl. Ist $E$ der eindeutig
     bestimmte Punkt auf $r$, so dass $\str{BE} \cong \str{CD}$ nach \textbf{(C1)}, dann heißt
     $\str{AE}$ {\em die Summe von $\str{AB}$ und $\str{CD}$}:
-
     $$
         \str{AB} + \str{CD} := \str{AE}.
     $$
@@ -909,11 +892,9 @@ die folgende Aussage belegt.
 
 \begin{proof}
     Sei $E$ wie in Definition~\ref{def:d1a}: $\str{AE} = \str{AB}+\str{CD}$ und entsprechend $E':$
-
     $$
         \str{A'E'} = \str{A'B'} + \str{C'D'}
     $$
-
     Daraus folgt $\str{BE} \cong \str{CD} \cong \str{C'D'} \cong \str{B'E'} \Longrightarrow\;
     \str{BE} \cong \str{B'E'}$ nach (\ref{thm:satz.s1d}) $\Longrightarrow$ (C3)
     $\str{AE}\cong\str{A'E'}$.
@@ -1030,19 +1011,15 @@ Es ist auch möglich Strecken miteinander zu vergleichen:
 Die Kongruenz von Strecken in der kartesischen Ebene $\K^2$ kann wie gewohnt über die {\em
 Distanzfunktion} erklärt werden. Für zwei Punkte $A = (a_1,a_2)$ und $B = (b_1,b_2)$ ist die Distanz
 erklärt durch
-
 $$
     \dist(A,B) := \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2} .
 $$
-
 Wenn die Wurzel und damit die Distanzfunktion im Körper $\K$ erklärt ist, erklären wir zwei Strecken
 $AB$ und $CD$ {\em kongruent}, wenn $\dist(A,B) = \dist(C,D)$. Das ist natürlich genau dann der
 Fall, wenn
-
 $$
 \dist^2(A,B) = (a_1 - b_1)^2 + (a_2 - b_2)^2 = (c_1 - d_1)^2 + (c_2 - d_2)^2 = \dist^2(C,D).
 $$
-
 Letztere Bedingung hat den Vorteil, dass sie auch in Körpern $\K$ definiert ist, in denen nicht alle
 Wurzeln existieren.
 
@@ -1052,17 +1029,13 @@ Wurzeln existieren.
 %\dist^2(C,D)$.
 
 Man könnte die Kongruenz auch über andere Distanzfunktionen erklären, etwa über
-
 $$
     \dist_1(A,B) := |a_1 - b_1| + |a_2 - b_2|
 $$
-
 oder
-
 $$
     \dist_{\infty}(A,B) := \sup \{ |a_1 - b_1|, |a_2 - b_2| \}.
 $$
-
 % ACHTUNG: Dabei bekäme man aber Geometrien heraus, die nicht isomorph
 % zur oben erklärten sind!! (untereinander wären die beiden aber
 % durchaus isomorph!)
@@ -1093,27 +1066,21 @@ Zirkel und Lineal immer innerhalb eines {\em Pythagoreischen Körpers} stattfind
     beliebige Körper gilt. Für $a\in \K$ betrachten wir dazu die Strecke $OA$ mit $O = (0,0)$ und $A
     = (a,1)$. Um zur Strecke $OA$ eine kongruente Strecke $OB$ auf der x-Achse "`abzutragen"',
     benötigen wir einen Punkt $B = (b,0)$ mit $\dist^2(O,A) = \dist^2(O,B)$, also mit
-
     $$
         1 + a^2 = b^2.
     $$
-
     Mit anderen Worten: Wir benötigen ein Element $b \in \K$, dass die Wurzel von $1 + a^2$ ist.
 
     Umgekehrt: Angenommen für jedes $c\in \K$ gibt es ein Element $\sqrt{1 + c^2} \in \K$. Dann
     können wir für jedes Paar $a, b \in \K$, mit $a \not = 0$, die Wurzel aus $a^2 + b^2$ in $\K$
     finden: Zunächst gilt
-
     $$
         a^2+b^2 = a^2 \left(1+ \left(\frac{b}{a}\right)^2 \right).
     $$
-
     Mit $c = b/a$ gilt dann
-
     $$
         \sqrt{a^2 + b^2} = |a| \cdot \sqrt{1 + c^2}.
     $$
-
     %% ACHTUNG: Ist der Betrag überhaupt in $K$ erklärt!!?? (Ja weil, $K$ geordnet).
     Man beachte: Der Betrag $|a|$ von $a$ erklärt ist weil $\K$ geordnet ist; und wir haben durch
     obiges Argument gezeigt, dass in {\em Pythagoreischen Körpern} $\K$ die Distanz $\dist(A,B)$ von
@@ -1122,17 +1089,13 @@ Zirkel und Lineal immer innerhalb eines {\em Pythagoreischen Körpers} stattfind
     Sei $g$ eine Gerade in $\E_{\K}$ beschrieben durch $y = m x + b$, mit $m, b \in \K$. Für einen
     beliebigen Punkt $A = (a, m a + b)$ auf $g$ und ein $d \in \K$ wollen wir eine Strecke $AC$ der
     Länge $d$ auf $g$ abtragen. D.h., für $C = (c, m c + b)$ gilt
-
     $$
         \dist(AC) = \sqrt{(a - c)^2 + ( (m a + b) - (m c + b) )^2} = d,
     $$
-
     bzw.
-
     $$
         |a-c| \cdot \sqrt{1 + m^2} = d.
     $$
-
     Da $\sqrt{1 + m^2} \in \K$ nach Voraussetzung, lässt sich die letzte Gleichung in $\K$ nach $c$
     auflösen. Dabei erhalten wir zwei Lösungen für die beiden möglichen Richtungen, in denen die
     Strecke $AC$ abgetragen werden kann.
@@ -1365,11 +1328,9 @@ kongruent sind. Sie sind nämlich beide Nebenwinkel eines Winkels $\beta$.
 \end{thm}
 
 $\wi(BAD)$ heißt die \emph{Differenz} der Winkel $\wi(BAC)$ und $\wi(DAC)$:
-
 $$
     \wi(BAC) - \wi(DAC) := \wi(BAD).
 $$
-
 \begin{proof}
     \begin{description}
         \item[~\ref{thm:satz.s1l:item2}] Seien $B',\, C'$ so gewählt, dass $\str{AB} \cong
@@ -1385,12 +1346,10 @@ $$
         \item[~\ref{thm:satz.s1l:item1}] Als Nebenwinkel zu den kongruenten Winkeln $\alpha$ und
             $\alpha'$ ergibt sich wegen Theorem~\ref{thm:satz.s1k} die Kongruenz $\wi(DAE) \cong
             \wi(D'A'E')$ und daher nach ~\ref{thm:satz.s1l:item2}
-
             $$
                 \beta = \wi(CAE) = \wi(DAE) - \wi(DAC) \cong \wi(D'A'E') - \wi(D'A'C') = \wi(C'A'E') =
                 \beta'.
             $$
-
             Wiederum aus Theorem~\ref{thm:satz.s1k} folgt die Kongruenz $\wi(BAC) \cong \wi(B'A'C')$
             für die Nebenwinkel von $\beta$ und $\beta'$.
 
