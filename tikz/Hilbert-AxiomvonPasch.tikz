@@ -1,0 +1,12 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    \clip(-0.5,-0.5) rectangle (4.5,2.5);
+    \draw (3,2) coordinate (A);
+    \draw (0,0) coordinate (B);
+    \draw (4,0) coordinate (C);
+    \draw (A)--(B)--(C)--(A);
+    \draw [domain=-0.5:4.5] plot(\x,{(--19-7*\x)/10});
+    \filldraw [color=colPkt] (A) circle (1.5pt) node[above] {$A$};
+    \filldraw [color=colPkt] (B) circle (1.5pt) node[left]  {$B$};
+    \filldraw [color=colPkt] (C) circle (1.5pt) node[right] {$C$};
+    \draw[color=black] (B) node[above=1.2cm] {$g$};
+\end{tikzpicture}
