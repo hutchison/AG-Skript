@@ -7,4 +7,4 @@
   + Falls z.B. ein `\item` breiter als 100 Zeichen ist, wird eine neue Zeile aufgemacht, die einmal
     weiter eingerückt ist als die Zeile davor.
   + Ausnahmen bei Einrückungen sind erlaubt, wenn's dadurch schöner aussieht (siehe
-    `\usepackage[pdfauthor=...]` in `AxiomatischeGeometrie.tex``)
+    `\usepackage[pdfauthor=...]` in `AxiomatischeGeometrie.tex`)
