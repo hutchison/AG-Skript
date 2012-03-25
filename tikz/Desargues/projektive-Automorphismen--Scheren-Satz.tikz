@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=0.65]
+
+  \draw (2,1) 	  coordinate (A);
+  \draw (2.25,0) 	  coordinate (B);
+  \draw (2.64,1.32) coordinate (C);
+  \draw (3.01,0) 	  coordinate (D);
+  \draw (5.34,2.67) coordinate (A');
+  \draw (6,0) 	  coordinate (B');
+  \draw (7.04,3.52) coordinate (C');
+  \draw (8.04,0) 	  coordinate (D');
+		
+  \draw [domain=-0.5:8] plot(\x,{(-0-1*\x)/-2});
+  \draw [domain=-0.5:8.5] plot(\x,{(-0-0*\x)/2.25});
+	
+  \draw (D) --(A) --(B) --(C);
+  \draw (D')--(A')--(B')--(C');
+				
+  \draw [dash pattern= on 3pt off 3pt] (C) --(D);
+  \draw [dash pattern= on 3pt off 3pt] (C')--(D');
+	
+  \fill [color=colPkt] (A) circle (2.3pt) node[above] {\footnotesize $A$};
+  \fill [color=colPkt] (B) circle (2.3pt) node[below] {\footnotesize $B$};
+  \fill [color=colPkt] (C) circle (2.3pt) node[above] {\footnotesize $C$};
+  \fill [color=colPkt] (D) circle (2.3pt) node[below] {\footnotesize $D$};
+				
+  \fill [color=colPkt] (A') circle (2.3pt) node[above] {\footnotesize $A'$};
+  \fill [color=colPkt] (B') circle (2.3pt) node[below] {\footnotesize $B'$};
+  \fill [color=colPkt] (C') circle (2.3pt) node[above] {\footnotesize $C'$};
+  \fill [color=colPkt] (D') circle (2.3pt) node[below] {\footnotesize $D'$};
+\end{tikzpicture}

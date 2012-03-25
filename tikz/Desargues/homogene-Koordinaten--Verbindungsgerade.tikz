@@ -1,0 +1,11 @@
+\tdplotsetmaincoords{70}{115}		% ---Betrachtung auf das Koordinatensystem---
+\begin{tikzpicture}[line cap=round, line join=round, tdplot_main_coords,>=triangle 45,scale=2]
+
+  \filldraw [color=yellow!90!white, semitransparent] (0,0,0) -- (1,1.5,0) -- (-1,1.5,0) --cycle;
+  \draw (0.2,1.15,0) node{\footnotesize $\big(v \times w \big)^\perp$};
+
+  \draw [-stealth,color=black] (0,0,0) -- (-1,1.5,0) node[right]{\footnotesize $w$};
+  \draw [-stealth,color=black] (0,0,0) -- (1,1.5,0)  node[right]{\footnotesize $v$};
+  \draw [-stealth,color=black] (0,0,0) -- (0,0,1)    node[above]{\footnotesize $v\times w$};
+
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,xscale=1.5,scale=1.25]
+
+  \draw [thick] (0,0) rectangle (6,4);
+  \draw [domain=0:6] plot(\x,{(--12-0*\x)/4});	
+		
+  \draw [domain=2.0:2.6163, color=black!40!white] plot(\x,{(-1.63331--0.8703*\x)/0.21458});
+  \draw [color=black!40!white] (2.53249,0.94374)-- (2.61639,3);
+  \draw [color=black!40!white] (1.75859,1.10351)-- (2.61639,3);
+  \draw [color=black!40!white] (1.61108,1.47231)-- (2.61639,3);
+  \draw [color=black!40!white] (2.90444,1.2537)-- (2.61639,3);
+		
+  \draw (1,3)-- (2,0.5);
+  \draw (2,0.5)-- (5,3);
+  \draw (2.53249,0.94374)-- (1,3);
+  \draw (1.75859,1.10351)-- (5,3);
+
+  \draw [domain=1.611:5.00] plot(\x,{(-2.23374-1.34971*\x)/-2.99409});
+  \draw [domain=1.0:2.9044] plot(\x,{(--6.10299-1.42871*\x)/1.55809});
+  % \draw [domain=1.0:3.1789] plot(\x,{(--6.75041-1.27186*\x)/1.82618}); 
+  % irgendwie zeichnet er das nicht ordentlich, stattdessen
+  \draw (1,3) -- (3.17895,1.48245); 
+  \draw [domain=1.5115:5.0] plot(\x,{(-3.66563-1.15182*\x)/-3.14157});
+	
+\end{tikzpicture}

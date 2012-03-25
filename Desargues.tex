@@ -1,10 +1,681 @@
 % vim:tw=100:ts=4:sw=4:sts=4:et:
+
 %Zitat von Arthur Cayley (1821-1895): "All geometry is projective geometry"
 % siehe Wallner, Pottmann, Seite 1
+\section{Vorlesung}
 
 \subsection*{Gérard Desargues}
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "AxiomatischeGeometrie"
-%%% End: 
+\begin{itemize}
+    \item Hinweise zum Leben und seinen Werken
+
+    \item Hinweise zum Leben und seinen Werken
+
+    \item Hinweise zum Leben und seinen Werken
+\end{itemize} 
+
+\subsection*{Costruzione Legittima}
+Die ersten Anfänge der projektiven Geometrie liegen in der Malerei des $15.$ Jahrhunderts.  Zu
+dieser Zeit entwickelte sich in Italien die Technik der \textsl{Costruzione Legittima}.  Mit dieser
+Technik konnten erstmals räumlich erscheinende Bilder gezeichnet werden. Diese Technik ist jedoch
+nicht nur für die Malerei bedeutend, sondern beinhaltet auch die Grundgedanken der projektiven
+Geometrie. Dazu betrachten wir die folgenden Bilder. 
+\begin{figure}[h]
+    \input{tikz/Desargues/Costrizione-Legittima1.tikz}
+    \caption{Konstruktion mit Zirkel und Lineal}
+\end{figure}
+\begin{enumerate}[(a)] %\vspace{-0.5cm}
+    \item Konstruiere Gerade als Horizont
+    \item Konstruiere äquidistante Punkte am unteren Bildende
+    \item Verbinde diese Punkte mit einem Punkt am Horizont
+    \item Konstruiere Gerade "`quer"' durch das Bild, beginnend bei einem der äqudistanten Punkte
+    \item Konstruiere Parallelen zum Horizont durch die entstandenen Schnittpunkte
+\end{enumerate}
+
+Intuitiv ist klar, dass die so erzeugten Rechtecke alle gleich groß sind, sie wirken nur
+perspektivisch verkleinert. Ebeneso sind die Seiten der Rechtecke Parallelen, die sich jedoch am
+Horizont schneiden. Damit liegt die Fordung nahe, dass sich Parallelen schneiden sollten, und zwar
+in der Gerade unendlich ferner Punkte, dem Horizont.
+
+Die Konstruktion unterliegt der Benutzung des Lineals und für die Parallelenkonstruktion des Zirkels
+(\ref{Euklid-KonLotUndParallele}). Jedoch ist auch eine Konstruktion eines perspektivischen
+gefließten Bodens nur mit dem Lineal möglich. Dies wird im zweiten Bild erläutert.
+
+\begin{figure}[h]
+    \input{tikz/Desargues/Costrizione-Legittima2.tikz}
+    \caption{Konstruktion mit Lineal}
+\end{figure}
+\begin{enumerate}[(a)]
+    \item Konstruiere Gerade als Horizont
+    \item Wähle $3$ Punkte auf Horizont einen weiteren unter dem Horizont
+    \item Konstruiere Gerade durch die Punkte auf dem Horizont und dem frei gewählten
+    \item wat soll das
+    \item wat soll das
+    \item wat soll das
+\end{enumerate}
+
+\subsection*{Axiomatisierung}
+
+   Für eine Menge $\mathbb{P}$ von Punkten und Geraden (gewissen Teilmengen von 
+   $\mathbb{P}$) betrachten wir die \textit{Inzidenzaxiome}:
+
+  \begin{enumerate}
+    \item[{\bf(Ip1)}] Durch je zwei verschiedene Punkte gibt es genau eine Gerade.
+    \item[{\bf(Ip2)}] Zwei verschiedene Geraden schneiden sich in genau einem Punkt.
+    \item[{\bf(Ip3)}] Es gibt $4$ Punkte, von denen je $3$ nicht auf einer Geraden 
+                      liegen (nicht kollinear sind).
+  \end{enumerate}
+
+
+  \begin{defi}[projektive Ebene] \ \\
+    Eine projektive Ebene ist eine Menge von Punkten und Geraden, die (\textbf{Ip1}), 
+    (\textbf{Ip2}) und (\textbf{Ip3}) erfüllen.
+    
+  \end{defi}
+
+  \begin{description}
+      \item[Modell 1] Endliche projektive Ebene \\
+          Als Menge aller Punkte wählen wir $\mathbb{P} = \lbrace A,B,C,D,E,F,G \}$ mit dazugehörigen Geraden\\
+          $\mathcal{G} = \big \{ \{ A,B,E \}, \{ C,D,E \}, \{ B,C,F \}, \{ A,D,F \},\{ A,C,G \}, \{ B,D,G \}, \{ E,F,G \} \big\}$ \\
+          Wie man leicht nachprüfen kann, werden die $3$ Inzidenzaxiome dabei durch 
+          \textcolor{orange}{[nach (\textbf{Ip1}) \& (\textbf{Ip2})]}, 
+          \textcolor{green}{[nach (\textbf{Ip1})]}, [nach (\textbf{Ip3})] erfüllt. 
+          Auch die sogenannte Fano-Ebene (nach Gino Fano\footnote{Gino Fano, 
+          $^*$ 5. Januar 1871 Mantua, $\dag$ 8. November 1952 Verona, italienischer Mathematiker}) 
+          erfüllt die Inzidenzaxiome (Ip1), (Ip2) und (Ip3). In der Fano-Ebene wird der Kreis 
+          durch die Punkte $B,C$ und $F$ als Gerade aufgefasst. Nur so können die Inzidenzaxiome 
+          erfüllt werden. Im Laufe des Kapitels werden wir noch öfter auf dieses Modell verweisen.
+          
+          \begin{figure}[h]
+            \begin{tabular}{cc}
+              \input{tikz/Desargues/Modell1-EndlicheProjektiveEbene.tikz}
+              &
+              \input{tikz/Desargues/Modell1-FanoEbene.tikz}
+            \end{tabular}
+            \caption{endliche projektive Ebene und Fano-Ebene}
+          \end{figure}
+        
+      \item[Modell 2] Reelle projektive Ebene $\Pro_2(\R)$ \label{Desargues-ReelleProjektiveEbene} \\
+          In der reellen projektiven Ebene $\mathbb{P}_2(\R)$ wählen wir 
+          $\mathbb{P} = \{ \mbox{Geraden im $\R^3$ durch $0$} \}$ und analog 
+          $\mathcal{G} = \{ \mbox{Ebenen im $\R^3$ durch $0$} \}$. In gewisser Weise werden dadurch 
+          Punkte zu Geraden und Geraden zu Ebenen. Daher werden Punkte in diesem Modell auch als
+          (projektive) Punkte und Geraden als (projektive) Geraden bezeichnet.
+          \begin{align*}
+              &&\text{(projektiver) Punkte:} &
+                  \langle v \rangle = \{ \lambda \cdot v \mid \lambda \in \R \} \text{ für ein } v\in \R^3 \backslash \{ 0 \} \\
+              &&\text{(projektive) Gerade:} & 
+                  \Big\{ \begin{pmatrix} x \\ y \\ z\end{pmatrix} \in \R^3 
+                  \mid ax + by + cz = 0 \wedge a,b,c \in \R\backslash \{0\} \Big\} = 
+                  \begin{pmatrix} a \\ b \\ c\end{pmatrix}^\perp
+          \end{align*}
+          Somit lässt sich die projektive Gerade vollständig über das orthogonale Komplement 
+          von $\begin{pmatrix} a & b & c\end{pmatrix}^T$, bzw. durch den projektiven Punkt 
+          $\langle \begin{pmatrix} a & b & c\end{pmatrix}^T \rangle$ beschreiben.
+  \end{description}
+
+    
+
+  \begin{bem}[Die reelle projektive Ebene $\mathbb{P}_2(\R)$ erfüllt die Inzidenzaxiome.] \ \\
+    (\textbf{Ip1}) $\&$ (\textbf{Ip2}) sind bekannte Regeln aus der linearen Algebra. Das dritte 
+    Inzidenzaxiom (\textbf{Ip3}) gilt zum Beispiel für die projektiven Punkte 
+    \begin{align*}
+      \langle \begin{pmatrix} 1\\0\\0 \end{pmatrix} \rangle, 
+      \langle \begin{pmatrix} 0\\1\\0 \end{pmatrix} \rangle, 
+      \langle \begin{pmatrix} 0\\0\\1 \end{pmatrix} \rangle, 
+      \langle \begin{pmatrix} 1\\1\\1 \end{pmatrix} \rangle
+      \intertext{Für die projektive Gerade durch die ersten beiden Punkte gilt beispielsweise}
+      g\left( \langle \begin{pmatrix} 1\\0\\0 \end{pmatrix} \rangle, \langle \begin{pmatrix} 0\\1\\0 \end{pmatrix} \rangle \right)
+          = \left \{ \begin{pmatrix} x\\y\\z \end{pmatrix} \in \R^3 \mid z = 0 \right \}
+    \end{align*}
+    Diese Ebene (projektive Gerade) enthält jedoch nicht die beiden anderen Punkte. Analog prüft man dies für die anderen Punktepaare.
+  \end{bem}
+  
+\subsection*{Rechnen mit homogenen Koordinaten}
+  Nach der Definition in Modell 2 \ref{Desargues-ReelleProjektiveEbene} entsprechen Punkte in $\mathbb{P}_2(\R)$ Geraden 
+  und Geraden in $\mathbb{P}_2(\R)$ Ebenen durch den Ursprung unseres Koordinatensystems. Daher ist es sinnvoll Punkte 
+  nicht einfach nur als $3$-Tupel $(x,y,z)$ zu betrachten. Stattdessen betrachtet man die homogenen Koordinaten des Punktes.
+
+  \begin{defi}[homogene Koordinaten] \ \\
+    Die homogenen Koordinaten eines projektiven Punktes $P$ in der reellen projektiven Ebene $\mathbb{P}_2(\R)$ sind alle 
+    $v\in \R^3\backslash\{0\}$ mit $P=\langle v \rangle$.
+  \end{defi}
+
+  Damit ergeben sich auch andere Vorstellung bzgl. des Schnittes zweier projektiven Punkte, oder zweier projektiven Ebene. 
+  Durch die Geraden- oder Ebenedarstellung der projektiven Puntke, Geraden können wir für die Schnitte die Mittel der Linearen 
+  Algebra nutzen. \par \medskip
+  
+  \textbf{Berechnung der Verbindungsgerade zweier Punkte} \par
+  Gegeben sind die projektiven Punkte (Geraden) $P=\langle v \rangle$ und $Q=\langle w \rangle$ 
+  mit $P\neq Q$. Die projektive Verbingungsgerade zwischen diesen beiden Punkten ist eine Ebene, 
+  die sich über den Normalenvektor ausdrücken lässt. So ergibt sich die Verbindungsstrecke als: 
+  \par
+  \begin{center}
+    $g(P,Q) = P \vee Q = \big( v \times w \big)^\perp$
+  \end{center} \par
+  mit der Abbildung "`Join"' $\vee: \mathbb{P} \times \mathbb{P} \rightarrow \mathcal{G}$. In 
+  der Skizze ist die Ebene angedeutet.
+  \begin{figure}[h]
+    \input{tikz/Desargues/homogene-Koordinaten--Verbindungsgerade.tikz}
+    \caption{projektive Verbindungsgerade in der reellen projektiven Ebene}
+  \end{figure}
+
+  \textbf{Berechnung von Schnittpunkten zweier Geraden} \par
+  Gegeben seien die projektiven Geraden $g=v^\perp$ und $h=w^\perp$ mit $g\neq h$. Für den 
+  projektiven Schnittpunkt beider projektiven Geraden erhält man einen projektiven Punkt. 
+  Dieser ergibt sich zu:
+  \begin{center}
+    $P = g \wedge h = v \times w $
+  \end{center}
+  mit der Abbildung "`Meet"' $\wedge: \mathcal{G} \times \mathcal{G} \rightarrow \mathbb{P}$ 
+  \begin{figure}[h]
+    \input{tikz/Desargues/homogene-Koordinaten--Schnittpunkt-zweier-Gerade.tikz}
+    \caption{Schnittpunkt zweier projektiven Geraden}
+  \end{figure}
+
+
+\subsection*{Dualitätsprinzip}
+
+  Zu jeder projektiven Ebene $\big( \mathbb{P}, \mathcal{G}, \vee, \wedge \big)$ gibt es eine duale projektive Ebene, in 
+  der die Rollen von $\mathbb{P}$ und $\mathcal{G}$ und von $\vee$ und $\wedge$ vertauscht sind. 
+  $\big( \mathcal{G}, \mathbb{P}, \wedge, \vee \big) - \big( \mathbb{P}^*$, $ \mathcal{G}^*, \vee, \wedge \big)$
+
+  Der Grundgedanke dieses Dualitätsprinzips ist, dass in einer wahren Aussagen die Rollen von Punkt und Gerade, sowie von 
+  Verbindungsgerade zwischen zwei Punkten und Schnittpunkt zweier Geraden vertauscht werden können, ohne dass die wahre 
+  Aussage ihre Gültigkeit verliert. 
+
+  \begin{bem} Insbesondere gelten 
+    \begin{enumerate}
+      \item $\mathbb{P}_2(\R)$ ist selbstdual
+      \item Die Fano-Ebene ist selbstdual
+      \item (Ip1)$^*$ = (Ip2) und (Ip2)$^*$=(Ip1)
+    \end{enumerate}
+  \end{bem}
+
+  \begin{thm}[Dualität von (\textbf{Ip3}) - (\textbf{Ip3})$^*$] \ \\
+    In einer projektiven Ebene gibt es vier Geraden, von denen je $3$ keinen Punkt gemein haben.
+  \end{thm}
+
+  \begin{description}
+      \item[Modell 3] projektive Ebene $\mathbb{P}_2(\K)$ über einem Körper $\K$ \\
+          Auch hier werden die projektiven Punkte wie in Modell 2, diesemal jedoch über einem beliebigen Körper $\K$, definiert. 
+          Die projektive Ebene ergibt sich dann durch
+          \begin{align*}
+            \mathbb{P}_2(\K) = \Big( \K^3\backslash \{0\}\Big) \Big/_\sim \quad 
+            \mbox{wobei} \quad v \sim w : \quad \Leftrightarrow \quad v=\lambda w 
+            \mbox{ für } \lambda \in \K
+          \end{align*}
+          erzeugt. $v,w \in \K^3\backslash\{0\}$ heißen homogene Koordinaten der Punkte $P=\langle v \rangle$, $Q=\langle w \rangle$.
+  \end{description}
+
+  \begin{bsp}
+    Für $\K=\K_2 = \{0,1\}$, den Körper mit zwei Elementen erhält man
+    \begin{align*}
+      \K_2^3 \backslash \{0\} \Big/_\sim = \mathbb{P}_2(\K_2) 
+          & = \left\{ \langle \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \rangle, 
+                      \langle \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \rangle, 
+                      \langle \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \rangle, 
+                      \langle \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \rangle, 
+                      \langle \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \rangle, 
+                      \langle \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \rangle, 
+                      \langle \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \rangle 
+              \right\}
+    \end{align*}
+    als die homogenen Koordinaten der Fano-Ebene.
+  \end{bsp}
+
+\subsection*{projektive Automorphismen}
+
+  \begin{defi}
+    Jede reguläre Abbildung/Matrix $M\in$ GL$_3(\K)$ induziert eine projektive Abbildung 
+    \begin{align*}
+      \mathbb{P}_2(\K) \rightarrow  \mathbb{P}_2(\K) \quad \mbox{durch} \quad 
+      \langle x \rangle \mapsto \langle Mx \rangle \qquad x \in \K^{3}\backslash\{0\} 
+    \end{align*}
+  \end{defi}
+
+  \begin{thm} Die projektiven Abbildungen bilden eine Gruppe.
+    \begin{align*}
+      \mathbb{P} \mbox{GL}_2(\K) = \mbox{GL}_3(\K) \Big/ \big( \R \cdot \Id \big)
+    \end{align*}
+  \end{thm}
+
+  \begin{proof}
+    Der fehlt mir...
+  \end{proof}
+  
+  SPHÄRISCHES MODELL
+  
+  \begin{thm} [projektive Standardbasis] \ \\
+    Zu einem vollständigen Viereck ABCD (je $3$ Punkte sind nicht kollinear) mit $A=\langle a \rangle$, $B=\langle b \rangle$,
+    $C=\langle c \rangle$ und $D=\langle d \rangle \in \mathbb{P}_2(\K)$ gibt es eine projektive Abbildung 
+    $\mathcal P: \mathbb{P}_2(\K) \rightarrow \mathbb{P}_2(\K)$ auf die projektive Standardbasis
+    \begin{align*}
+      \mathcal{P}(A) = \langle \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \rangle \quad 
+      \mathcal{P}(B) = \langle \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \rangle \quad    
+      \mathcal{P}(C) = \langle \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \rangle \quad
+      \mathcal{P}(D) = \langle \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \rangle ,
+    \end{align*}
+    bzw. es gibt eine Matrix $M\in \mbox{GL}_3(\K)$ mit
+    \begin{align*}
+      \langle M \cdot a \rangle = \langle \begin{pmatrix} \lambda \\ 0 \\ 0 \end{pmatrix} \rangle \quad
+      \langle M \cdot b \rangle = \langle \begin{pmatrix} 0 \\ \lambda \\ 0 \end{pmatrix} \rangle \quad
+      \langle M \cdot c \rangle = \langle \begin{pmatrix} 0 \\ 0 \\ \lambda \end{pmatrix} \rangle \quad
+      \langle M \cdot d \rangle = \langle \begin{pmatrix} \lambda \\ \lambda \\ \lambda  \end{pmatrix} \rangle, \quad \lambda \in \K
+    \end{align*}
+  \end{thm}
+
+  \begin{proof}
+    Den hab ich zwar (beim mir is es ein 2-zeiler), verstehe ihn aber nicht... :D
+  \end{proof}
+
+  \begin{thm}[Theorem von Pappos\footnote{Pappos von Alexandria, ca. $300$ n. Chr., griechischer Mathematiker}] \ \\
+    In $\mathbb{P}_2(\K)$ seien zwei verschiedene Geraden $g$ und $g'$, sowie paarweise verschiedene Punkte $A,B,C \in g$ und $A',B',C' \in g'$ von denen keiner 
+    $S=g\cap g'$ ist. Dann liegen die Punkte
+    \begin{align*}
+      (A\vee B') \wedge (A'\vee B) := P \quad (B\vee C') \wedge (B'\vee C) := Q \quad (A\vee C') \wedge (A'\vee C) := R  
+    \end{align*}
+    auf einer gemeinsamen Geraden.
+    
+    
+    \begin{figure}[h]
+      \input{tikz/Desargues/projektive-Automorphismen--Theorem-von-Pappos.tikz}
+      \caption{Satz von Pappos}
+    \end{figure}
+
+  \end{thm}
+
+  \begin{proof}
+    Bilde $S, A, A'$ und $P$ projektiv auf die projektive Standardbasis ab. Festlegung:
+    \begin{align*}
+      S  =  \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \qquad 
+      A  =  \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \qquad    
+      A' =  \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \qquad
+      P  =  \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
+    \end{align*}
+    Daraus ergeben sich dann die homogenen Koordinaten für die restlichen Punkte. So liegt zum Beispiel der Punkt $B$ auf 
+    der Geraden $S \vee A$. $B$ ergibt sich demnach als Linearkombination der Punkte $A$ und $P$. Da es sich um homogene 
+    Koordinaten handelt, ist $B=\begin{pmatrix} 1 & 1 & 0 \end{pmatrix}^T$. Durch analoge Überlegungen erhält man für die 
+    restlichen Punkte $A,B,C,A',B',C'$
+    \begin{align*}
+      \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, 
+      \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, 
+      \begin{pmatrix} \gamma  \\ 1 \\ 0 \end{pmatrix}, 
+      \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}, 
+      \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, 
+      \begin{pmatrix} \gamma' \\ 0 \\ 1 \end{pmatrix}
+    \end{align*}
+    
+    Die homogenen Koordinaten der Punkte $P,Q$ und $R$ sind demnach
+    \begin{align*}
+      \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \qquad 
+      \begin{pmatrix} \gamma\gamma'-1\\ \gamma'-1\\ \gamma-1 \end{pmatrix} \qquad
+      \begin{pmatrix} \gamma\gamma'  \\ \gamma'  \\ \gamma   \end{pmatrix} \qquad   
+    \end{align*}
+    Diese liegen alle in einer Ebene, bzw. einer projektiven Geraden.
+  \end{proof}
+
+  Man kann zeigen, dass der Satz von Pappos den Satz von Desargues impliziert (Hessenberg $1905$).
+
+  \begin{thm}[Theorem von Desargues] \label{Theorem-von-Desargues}\ \\
+    Wenn zwei Dreiecke in Perspektive eines Punktes liegen, so liegen sie auch in Perspektive bzgl. einer Geraden. In Perspektive 
+    eines Punktes bedeutet dabei: Es gibt einen Punkt $P\in \mathbb{P}_2(\K)$, sodass für die Dreiecke $ABC$ und $A'B'C'$ gilt: 
+    $P\in \big\{ (A\vee A'), (B\vee B'), (C\vee C') \big\}$.
+    
+    \begin{figure}[h]
+      \input{tikz/Desargues/projektive-Automorphismen--Theorem-von-Desargues.tikz}
+      \caption{Theorem von Desargues}
+    \end{figure}
+  \end{thm}
+
+  \begin{proof}
+    fehlt noch...
+  \end{proof}
+
+  Ausgehend von diesem Satz können zwei wichtige Folgerungen gezogen werden. Nach dem Dualitätsprinzip existiert auch das duale 
+  Theorem von Desargues$^*$. Eine weitere wichtige Folgerung ist der Scheren-Satz.
+
+  \begin{thm}[Scheren-Satz] \ \\
+    Sind $ABCD$ und $A'B'C'D'$ Vierecke in einer projektiven Ebene, mit alternierenden Ecken auf verschiedenen Geraden und gelten 
+    die Beziehungen $AB\parallel A'B'$, $BC\parallel B'C'$, sowie $AD\parallel A'D'$, so gilt auch $CD \parallel C'D'$.
+
+    \begin{figure}[h]
+      \input{tikz/Desargues/projektive-Automorphismen--Scheren-Satz.tikz}
+      \caption{Der Scheren-Satz}
+    \end{figure}
+  \end{thm}
+
+  \begin{proof}
+    Setze $E=(B \vee C) \wedge (A \vee D)$ und analog $E' = (B' \vee C') \wedge (A' \vee D')$, dann enstehen zwei Dreiecke $ABE$ und 
+    $A'B'E'$, die zueinander parallele Seiten besitzen. Damit liegen sie in Perspektive bzgl. der Geraden durch unendlich fernen 
+    Punkte. Weiterhin folgt damit
+    \begin{align*}
+      = & [\mbox{Desargues}^*]\Rightarrow \mbox{ $ABE$ und $A'B'E'$ in Perspektive bzgl. 
+        Schnittpunkt $P$ der beiden Geraden} \\
+      \Rightarrow & CDE, C'D'E' \mbox{ in Perspektive bzgl. $P$} \\
+      \Rightarrow & [\mbox{Desargues}] \Rightarrow CD \parallel C'D'
+    \end{align*}
+  \end{proof}
+
+  \begin{defi}[Pappos-Ebene] \ \\
+    Eine projektive Ebene, die das "`Axiom von Pappos"' erfüllt, heißt Pappos-Ebene.
+  \end{defi}
+
+  \begin{bem}
+    Man kann zeigen, dass jede Pappos-Ebene isomorph ist zu einer Ebene $\mathbb{P}_2(\K)$. 
+  \end{bem}
+
+\subsection*{Projektive Arithmetik}
+    In diesem Abschnitt geht es um die projektive Addition und Multiplikation. Wir werden dafür den Begriff der Parallelität 
+    verwenden. Dies bedeutet jedoch lediglich, dass sich zwei Parallelen im "`Unendlichen"' schneiden. 
+
+
+    \begin{description}
+        \item[Addition] Bevor wir die Addition begründen können, benötigen wir ein Grundgerüst. Dieses besteht aus $3$ Geraden, 
+              die sich nicht in einem gemeinsamen Punkt schneiden. Die eine Gerade ist die $x$-Achse, die andere die $y$-Achse und 
+              schließlich die Gerade unendlich ferner Punkte.
+              \begin{enumerate}
+                \item Konstruiere $g_1$ mit $g_1 \parallel x$-Achse
+                \item Konstruiere $g_2 = a \vee $($g_1\cap y$-Achse)
+                \item Konstruiere $g_3$ durch $b$ mit $g_3 \parallel y$-Achse
+                \item Konstruiere $g_4$ durch $g_3 \wedge g_1$ mit $g_4 \parallel g_2$ \par
+                      $\qquad \Rightarrow a+b := g_4 \wedge x$-Achse 
+              \end{enumerate}
+              
+              \begin{figure}[h]
+                \input{tikz/Desargues/projektive-Arithmetik--Gerade-unendlich-ferner-Punkte.tikz}
+                \caption{projektive Addition}
+              \end{figure}
+
+              Wegen des Theorems von Desargues \ref{Theorem-von-Desargues} ist die Summe $a+b$ darüberhinaus unabhängig von der Wahl 
+              der Geraden $g_1$ ist. 
+
+              \begin{figure}[h]
+                \input{tikz/Desargues/projektive-Arithmetik--Addition.tikz}
+                \caption{Unabhängigkeit der Summe $a+b$ von $g_1$}
+              \end{figure}
+            
+        \item[Multiplikation] Für die projektive Multiplikation benötigen wir ein ähnliches Grundgerüst. Wir wählen wieder die $x$- und 
+              die $y$-Achse. Zusätlich sollen die Punkte $1_x$ und $1_y$ auf der $x$- bzw. auf der $y$-Achse liegen. Ausgehend von diesem
+              Setup kann die Multiplikation nun wie folgt erklärt werden.
+              
+              \begin{enumerate}
+                \item Konstruiere $g_1 = 1_x \vee 1_y$
+                \item Konstruiere $g_2 = a \vee 1_y$
+                \item Konstruiere $g_3$ durch $b$ mit $g_3 \parallel g_1$
+                \item Konstruiere $g_4$ durch $g_3 \wedge y$-Achse mit $g_4 \parallel g_2$ \par
+                      $\qquad \Rightarrow a\cdot b := g_4 \wedge x$-Achse 
+              \end{enumerate}             
+              
+              \begin{figure}[h]
+                \input{tikz/Desargues/projektive-Arithmetik--Multiplikation.tikz}
+                \caption{projektive Multiplikation}
+              \end{figure}
+    \end{description}
+  
+
+\subsection*{Zentral- und Parallelprojektion}
+
+    \begin{defi}[projektiver $n$-dimensionaler Raum] \ \\
+        $\displaystyle{\Pro_n(\K) = \Big( \K^{n+1} \backslash\lbrace 0 \rbrace \Big) \Big/_\sim }$ mit der Äquivalenzrelation 
+        $v \sim w: \; \Leftrightarrow \; v= \lambda \cdot w$ für ein $\lambda \in \K$ heißt projektiver $n$-dimensionaler 
+        Raum über einem Körper $\K$. \par
+        $v\in \K^{n+1}$ bezeichnen die homogenen Koordinaten des projektiven Punktes $\langle v \rangle$.
+    \end{defi}
+
+
+  \textbf{Zentralprojektion} \par
+
+  \begin{defi}[Abbildungsebene, Betrachtungspunkt, Zentralprojektion] \ \\
+    Für die \textit{Abbildungsebene} (Projektionsebene) $\mathcal{A} = \big\{ x\in \K^n \mid \langle a,x \rangle + b = 0 \big\}$ 
+    mit $a\in \K^{n}\backslash \{0\}, b\in \K$ und den \textit{Betrachtungspunkt} (Projektionszentrum) 
+    $z\in \K^n\backslash\{ \mathcal{A} \}$ ist die Zentralprojektion $Z_\pi: \K^n \rightarrow \mathcal{A}$ die Abbildung, die 
+    jedem Punkt $p\in \K^n$ den Schnittpunkt $p'$ der Geraden durch $p$ und $z$ mit $\mathcal{A}$ zuordnet, 
+    $Z_\pi(p) = g(z,p) \cap \mathcal{A}$, definiert für 
+    $p\notin \big\{ x\in \K^n \mid \langle x,a \rangle = \langle z,a \rangle \big\}$.
+  \end{defi}
+
+
+
+  \begin{figure}[h]
+    \input{tikz/Desargues/Zentralprojektion-und-Parallelprojektion--Zentralprojektion.tikz}
+    \caption{Zentralprojektion}
+  \end{figure}
+
+
+
+  \begin{thm}
+    Für die Zentralprojektion gilt:
+    \begin{align*}
+      Z_\pi(p) := p' = \underbrace{ \left( \frac{\langle a,p \rangle + b }{\langle a,p-z \rangle} \right) }_{ \lambda_1} \cdot z  
+                       \underbrace{-\left( \frac{\langle a,z \rangle + b }{\langle a,p-z \rangle} \right) }_{ \lambda_2} \cdot p
+    \end{align*}
+  \end{thm}
+
+  \begin{bem}
+  Durch diese Definition, lässt sich leicht überprüfen, dass $p'$ in der Abbildungsebene und auf der Geraden $g(z,p)$ liegt. 
+    \begin{enumerate}
+      \item $p'\in g(p,z)$, da $\lambda_1 + \lambda_2 = 1$
+      \item $p'\in \mathcal{A}$, da $\langle p',a \rangle +b = 0$
+            \begin{align*}
+              \Rightarrow \langle p',a \rangle & = \lambda_1 \cdot \langle z,a \rangle + \lambda_2 \cdot \langle p,a \rangle 
+                                                 = \frac{b\langle z,a \rangle - b\langle p,a \rangle}{\langle a,p-z \rangle} 
+                                                 = -b
+            \end{align*}
+    \end{enumerate}
+  \end{bem}
+
+  In homogenen Koordinaten: \par
+
+  Sei $\mathcal{A} = \big\{ x \in \mathbb{P}_n(\K) \mid \langle \overline{a},x \rangle = 0 \big\}$ für $\overline{a}=\ve{a}{b} \in \K^{n+1}\backslash\{0\}$ die 
+  Abbildungsebene in homogenen Koordinaten. Die $(n-1)$-dimensionalen Ebenen in $\mathbb{P}_n(\K)$ werden durch projektive Punkte parametrisiert. Mit den homogenen 
+  Koordinaten $\overline{z}=\ve{z}{1}$ und $\overline{p}=\ve{p}{1}$ ergibt sich
+  \begin{align*}
+    Z_\pi(\overline{p}) & = \langle \overline{a},\overline{p} \rangle \cdot \overline{z} - \langle \overline{a},\overline{z} \rangle \cdot \overline{p} \\
+                        & = \overline{z} \cdot \big( \overline{a}^T \overline{p} \big) - \big( \overline{a}^T \overline{z} \big) \cdot \overline{p} \\
+                        & = \big( \overline{z}\overline{a}^T - \overline{a}^T\overline{z} \cdot \Id_{n+1} \big) \cdot \overline{p}
+  \end{align*}
+
+
+  \textbf{Parallelprojektion}
+
+  \begin{defi}[Projektionsrichtung, Parallelprojektion] \ \\
+    Sei $\mathcal{A}=\big\{ x \in \K^n \mid \langle a,x \rangle + b = 0 \big\}$ mit $a \in \K^n \backslash\{0\}$ und $b\in \K$ die 
+    Abbildungsebene (Projektionsebene) und    sei $v\in \K^n$ die \textit{Projektionsrichtung} mit $\langle a,v \rangle \neq 0$. 
+    Unter der Parallelprojektion $P_\pi: \K^n \rightarrow \mathcal{A}$ versteht man die Abbildung, die jedem Punkt $p\in \K^n$ den 
+    Schnittpunkt $p'$ der Geraden durch $p$ mit Richtung $v$ mit $\mathcal{A}$ zuordnet, 
+    $P_\pi = \big\{ x\in\K^n \mid x=p+\lambda \cdot v, \lambda \in \K \big\} \cap \mathcal{A}$.
+  \end{defi}
+
+
+  \begin{figure}[h]
+    \input{tikz/Desargues/Zentralprojektion-und-Parallelprojektion--Parallelprojektion.tikz}
+    \caption{Parallelprojektion}
+  \end{figure}
+
+
+  \begin{thm}
+    Für die Parallelprojektion gilt:
+    \begin{align*}
+      P_\pi(p) := p' = p - \underbrace{\left( \frac{\langle a,p \rangle + b}{\langle a,v \rangle} \right)}_{\lambda} \cdot v
+    \end{align*}
+  \end{thm}
+
+  \begin{bem}
+    Auch hier lassen sich zur Zentralprojektoin analoge Aussagen treffen. So ist
+    \begin{enumerate}
+      \item $p'\in \big\{ p + \lambda\cdot v \mid \lambda \in \K \big\}$ 
+      \item $p'\in \mathcal{A}$, weil $\langle p',a \rangle + b = \langle p,a \rangle - \big( \langle a,p \rangle + b \big) + b = 0$
+    \end{enumerate}
+  \end{bem}
+
+  In homogenen Koordinaten: \par
+
+  Sei $\mathcal{A} = \big\{ x\in \mathbb{P}_n(\K) \mid \langle \overline{a},x \rangle = 0 \big\}$ für 
+  $\overline{a}= \ve{a}{b} \in \K^{n+1}\backslash\{0\}$ die Abbildungsebene in homogenen Koordinaten. Die 
+  homogenen Koordinaten der Punkte in $\{p+\lambda \cdot v \mid \lambda \in \K \}$ sind 
+  \begin{align*}
+   \ve{p+\lambda \cdot v}{1} & = \ve{p}{1} + \lambda \cdot \ve{v}{0} = \overline{p} + \lambda \cdot \overline{v}. 
+    \intertext{Damit ergibt sich}
+    P_\pi(\overline{p}) 
+      & = \langle \overline{a},\overline{p} \rangle \cdot \overline{v} - \langle \overline{a},\overline{v} \rangle \cdot \overline{p} \\
+      & = \overline{v} \cdot \big( \overline{a}^T \overline{p} \big) - \big( \overline{a}^T \overline{p} \big) \cdot \overline{p} \\
+      & = \big( \overline{v}\overline{a}^T - \overline{a}^T \overline{v} \cdot \Id_{n+1} \big) \cdot \overline{p}
+  \end{align*}
+
+  Von der Vorstellung her ist besonders der $1$-dimensionale projektive Raum $\Pro_1(\K)$ über einem Körper $\K$ mit den homogenen Koordinaten
+  $\ve{\alpha}{1},\ve{1}{0}$ bedeutend. 
+  
+  \begin{figure}[h]
+    \input{tikz/Desargues/Zentralprojektion-und-Parallelprojektion--1-dimensionaler-projektiver-Raum.tikz}
+    \caption{Zentralprojektion im $1$-dim. projektiven Raum}
+  \end{figure}
+  
+  \begin{align*}
+    \ve{1}{1} \mapsto \ve{1}{1}, & \ve{2}{1} \mapsto \ve{1}{\frac{1}{2}}, \ve{3}{1} \mapsto \ve{1}{\frac{1}{3}} &
+    \text{allgemein:} \ve{n}{1} \mapsto \ve{1}{\frac{1}{n}}
+  \end{align*}
+  
+  Die drei (elementaren) Projektivitäten sind
+  \begin{equation*}
+    \begin{array}{rl}
+      \text{Isometrie:}  & x \mapsto x+t \\
+      \text{Streckung:}  & x \mapsto \alpha \cdot x \\
+      \text{Projektion:} & x \mapsto \frac{1}{x}
+    \end{array}
+  \end{equation*}
+  
+  \begin{bem}
+    Projektivitäten $\Pro_1(\R) \to \Pro_1(\R)$ werden durch Matrizen
+    \begin{align*}
+      M = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in GL_2(\R) \qquad (\mbox{d.h.} ad-bc \neq 0 )
+    \end{align*}
+    beschrieben:
+    \begin{align*}
+      \langle \ve{x}{1} \rangle \mapsto \langle M \ve{x}{1} \rangle 
+          = \begin{cases} \langle \ve{\frac{ax+b}{cx+d}}{1} \rangle, & \mbox{falls $cx+d \neq 0$} \\
+                          \langle \ve{1}{0} \rangle,                 & \mbox{sonst.}
+            \end{cases}
+    \end{align*}
+  \end{bem}
+
+  \begin{bem} [Möbiustransformationen] \ \\
+    \begin{enumerate}
+      \item Für $\K=\C$ heißen die Abb. $\Pro_1(\K) \to \Pro_1(\K)$ mit $\displaystyle{ z\mapsto \frac{az+b}{cz+d}}$ auch Möbiustransformationen.
+      \item $\displaystyle{\frac{ax+b}{cx+d}}$ nicht konstant $\Leftrightarrow$ $ad-bc \neq 0$
+      \item Projektivitäten $\displaystyle{f(x) = \frac{ax+b}{cx+d}}$ werden von den elementaren Projektivitäten ($x\mapsto x+t, x\mapsto \alpha x, x\mapsto \frac{1}{x})$
+            erzeugt. \par
+            \begin{proof}
+              Wegen $\displaystyle{\frac{ax+b}{cx+d} 
+              = \frac{ \frac{a}{c}\cdot (cx+d) + b - \frac{ad}{c} }{cx+d}} = \frac{a}{c} + \left( \frac{bc-ad}{c} \right) \cdot \left( \frac{1}{cx+d} \right)$ ergibt sich
+              \begin{align*}
+                \frac{ax+b}{cx+d} 
+                    = \begin{cases} 
+                          \frac{a}{c} + \left( \frac{bc-ad}{c} \right) \cdot \left( \frac{1}{cx+d} \right), & \mbox{falls } c\neq 0 \\
+                          \frac{a}{d} \cdot x + \frac{b}{d}, & \mbox{sonst.}
+                      \end{cases}
+              \end{align*}
+            \end{proof}
+    \end{enumerate}
+  \end{bem}
+  
+\subsection*{Doppelverhältnis}
+  \begin{defi}[Doppelverhältnis] \ \\
+    Für $4$ Punkte auf einer Geraden mit Koordinaten $p,q,r,s\in \Pro_1(\R)$ ist das \textit{Doppelverhältnis}
+    \begin{equation*}
+      \text{DV}(p,q;r,s) : = \left(\frac{r-p}{s-p}\right) \Big/ \left(\frac{r-q}{s-q}\right) = \frac{\text{TV}(r,s,p)}{\text{TV}(r,s,q)}
+    \end{equation*}
+  \end{defi}
+  
+  \begin{thm}
+    Projektivitäten $\displaystyle{f(x)=\frac{ax+b}{cx+d}}$ erhalten das Doppelverhältnis.
+  \end{thm}
+  \begin{proof}
+    Es genügt elementare Projektivitäten zu betrachten.\par
+    \begin{enumerate}[(1)]
+      \item klar für $x\mapsto x+t$ und $x\mapsto \alpha x$
+      \item Betrachte $x\mapsto \frac{1}{x}$. Dann ergibt sich
+            \begin{equation*}
+                \text{DV}\left( \frac{1}{p}, \frac{1}{q}; \frac{1}{r}, \frac{1}{s} \right)
+                  = \left( \frac{ \frac{1}{r}-\frac{1}{p} }{ \frac{1}{s}-\frac{1}{p} }\right)\Big/\left(\frac{ \frac{1}{r}-\frac{1}{q} }{ \frac{1}{s}-\frac{1}{q}}\right) 
+                  = \left( \frac{ \frac{p-r}{rp} }{ \frac{p-s}{sp} } \right) \Big/ \left( \frac{ \frac{q-r}{rq} }{ \frac{q-s}{sq} } \right) 
+                  = \text{DV}(p,q;r,s)
+            \end{equation*}
+    \end{enumerate}
+  \end{proof}
+  
+  
+  \textbf{Erweiterung zur oberen Halbebene.} Betrachte $\Pro_1(\R)$ als Rand der oberen komplexen Halbebene 
+  $\mathcal{H}=\lbrace z\in \C \mid \Imag(z) >0 \rbrace.$
+  \begin{figure}[h]
+    \input{tikz/Desargues/Doppelverhaeltnis--obere-Halbebene.tikz}
+    \caption{obere komplexe Halbebene}
+  \end{figure}
+  Erweitere $\displaystyle{f(x)=\frac{ax+b}{cx+d}}$ zu einer Abbildung $\mathcal{H}\to \mathcal{H}$:
+  \begin{enumerate}[(1)]
+    \item Die Abbildung $x\mapsto x+t$ lässt sich erweitern ($t\in \R$)
+    \item Die Abbildung $x\mapsto \alpha \cdot x$ lässt sich erweitern für $\alpha > 0$ \par
+          $\overline{z} \mapsto -\overline{z}$ ist eine Abb. von $\mathcal{H} \to \mathcal{H}$ und daher \par
+          $ z\mapsto \alpha \overline{z}=-\lvert \alpha \rvert \overline{z}$ für $\alpha < 0$ ist eine Abb. 
+          von $\mathcal{H}\to \mathcal{H}$.
+    \item Die Abbildung $x \mapsto \frac{1}{x}$ ist keine Abb. $\mathcal{H}\to \mathcal{H}$ (Inversion am Kreis) \par
+          Aber: $z\mapsto \frac{1}{\overline{z}}$ ist eine Abbildung von $\mathcal{H}\to \mathcal{H}$ (Reflexion/Inversion am Einheitskreis)
+
+  \end{enumerate}
+  
+  Damit ist die Erweiterung von $\displaystyle{f(x)=\frac{ax+b}{cx+d}}$ auf $\mathcal{H}\to \mathcal{H}$ eine Kombination von Erweiterungen elementaren Projektivitäten. 
+  Die Gruppe dieser speziellen Möbiustransformationen bezeichnen wir mit $\Sym(\mathcal{H})$.
+  
+  \begin{thm} \ \\
+    Jede Abbildung aus $\Sym(\mathcal{H})$ bildet hyperbolische Geraden auf hyperbolische Geraden ab.
+  \end{thm}
+  \begin{proof}
+   ....
+  \end{proof}
+
+  \textbf{Spiegelungen in $\mathcal{H}$} 
+  \begin{defi}
+    Eine Abbildung $\mathcal{H}\to \mathcal{H}$ heißt hyperbolische Spiegelung, wenn sie eine Spiegelung an einer Achse parallel zur imaginären Achse, oder eine 
+    Inversion an einem Kreis mit Mittelpunkt auf der reellen Achse ist.
+  \end{defi}
+  
+  \begin{bem}
+    \begin{enumerate}[(1)]
+      \item Die Abbildungen $z\mapsto -\overline{z}$ und $z\mapsto \frac{1}{\overline{z}}$ sind hyperbolische Spiegelungen
+      \item Die Abbildungen $z\mapsto z+t$ und $z\mapsto \alpha z$ mit $\alpha>0$ sind Produkte von je zwei hyperbolischen Geraden 
+      \item Das Poincaré'sche Kreisscheibenmodell am Einheitskreis $\lbrace z\in \C \mid \lvert z \rvert <1 \rbrace$ wird durch
+            \begin{equation*}
+              z \mapsto \frac{1-zi}{z-i}
+            \end{equation*}
+            auf das Poincaré'sche Halbscheibenmodell abgebildet.
+    \end{enumerate}
+  \end{bem}
+  \textbf{hyperbolische Distanzen}
+  Die Möbiustransformationen bilden das Doppelverhältnis $\text{DV}(a,b;p,q)$ auf sich oder sein konjugiert komplexes ab.
+  \begin{thm}
+    Das Doppelverhältnis von $4$ Punkten auf einer hyperbolischen Gerade ist reell.
+  \end{thm}
+  \begin{proof}
+    ....
+  \end{proof}
+  
+  \begin{bem}
+    Möbiustransformationen der oberen imaginären Achse bilden die "`Enden"' $\lbrace 0,\infty \rbrace$ auf sich ab. \par
+    Für $a,b \in \R$ gilt
+    \begin{align*}
+      \text{DV}(ai,bi,0,\infty) & = \lim_{q\to \infty} \left(\frac{ai-0}{ai/q-1}\right) \Big/ \left(\frac{bi-0}{bi/q-1}\right) = \frac{a}{b} \\
+      \text{DV}(ai,bi,\infty,0) & = \ldots =\frac{b}{a} \\
+      \Rightarrow \left\vert \log{\frac{a}{b}} \right\vert & = \lvert \log a - \log b \rvert = \lvert \log b - \log a \rvert = \left\vert \log{\frac{b}{a}} \right\vert
+    \end{align*}
+  \end{bem}
+  
+  \begin{defi}
+    Wir definieren $\displaystyle{ \left\vert \log \frac{a}{b} \right \vert}$ als die hyperbolische Distanz von $ai, bi \in \mathcal{H}$.
+  \end{defi}
+  
+  \begin{bem}
+    Für andere Punkte $A$,$B \in \mathcal{H}$ wird die Distanz über die hyperbolische Gerade $g=g(A,B)$ durch Möbiustransformationen ermittelt.
+    \begin{equation*}
+      F:\mathcal{H} \to \mathcal{H} \text{ mit } F(g) = \lbrace z\in \mathcal{H} \mid \Real(z) = 0 \rbrace: \dist(A,B) := \left\vert \frac{F(A)}{F(B)} \right\vert
+    \end{equation*}
+  \end{bem}

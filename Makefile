@@ -5,4 +5,4 @@ AxiomatischeGeometrie.pdf: $(TEX) $(TIKZ)
 	pdflatex AxiomatischeGeometrie.tex
 
 clean:
-	rm *.log
+	rm -f *.log *.aux *.out

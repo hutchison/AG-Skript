@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=0.5]
+			
+  \clip (-1,-1) rectangle (7,6);
+			
+  \draw (0,0)       coordinate (A);		
+  \draw (1.5,2.598) coordinate (B);		
+  \draw (4.5,2.598) coordinate (C);		
+  \draw (6,0)       coordinate (D);		
+  \draw (3,5.196)   coordinate (E);		
+  \draw (4.5,2.598) coordinate (C);		
+  \draw (3,0)       coordinate (F);		
+  \draw (3,1.732)   coordinate (G);
+					
+  \draw (A)--(E)--(D)--(A);		
+  \draw (A)--(C);		
+  \draw (B)--(D);		
+  \draw (E)--(F);	
+			
+  \draw (G) circle (1.73205cm);
+					
+  \fill [color=colPkt] (A) circle (3pt) node[below left]  {\footnotesize $A$};	
+  \fill [color=colPkt] (B) circle (3pt) node[left]  {\footnotesize $B$};	
+  \fill [color=colPkt] (C) circle (3pt) node[right] {\footnotesize $C$};	
+  \fill [color=colPkt] (D) circle (3pt) node[below right] {\footnotesize $D$};	
+  \fill [color=colPkt] (E) circle (3pt) node[above] {\footnotesize $E$};	
+  \fill [color=colPkt] (F) circle (3pt) node[below] {\footnotesize $F$};	
+  \fill [color=colPkt] (G) circle (3pt) node[below=2pt, left=5pt] {\footnotesize $G$};
+		
+\end{tikzpicture}

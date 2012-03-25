@@ -1,0 +1,23 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	
+	\draw (0,0) coordinate (O);
+	\draw (1.5,0) coordinate (X);
+	\draw (3,0) coordinate (A);
+	\draw (4,0) coordinate (B);
+	\draw (8,0) coordinate (AB);
+	\draw (1.25,0.75) coordinate (Y);
+	\draw (3.33333,2) coordinate (F);
+	
+	\foreach \x/\xtext in {1.5/1_x,3/a,4/b,8/a\cdot b}
+	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\xtext$};
+	
+	\draw [-stealth] (O) -- (8.5,0) node[right] {$x$};
+	\draw [-stealth] (O) -- (4,2.4) node[right] {$y$};
+	\draw (X) -- (Y);
+	\draw [dash pattern=on 2pt off 2pt] (Y) -- (A);
+	
+	\draw (B) -- (F);
+	\draw [dash pattern=on 2pt off 2pt] (F) -- (AB);
+	
+	\draw (Y) node[above] {\footnotesize $1_y$};
+\end{tikzpicture}

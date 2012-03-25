@@ -1,0 +1,12 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\draw [color=black!30!white,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.5,0) grid (3,3.5);
+	
+	\draw [-stealth,color=black] (-3.5,0) -- (3,0);
+	\draw [-stealth,color=black] (0,0) -- (0,3.5);
+
+	\clip (-3.5,0) rectangle (3,3.5);
+	\draw (0,0) circle (2cm);
+	\draw (-3,0) -- (-3,3.5);
+	\fill [color=black] (2,2) circle (1.5pt) node[above] {\footnotesize $z=x+iy$};
+
+\end{tikzpicture}

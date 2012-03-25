@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+
+  \clip (-0.5,-0.5) rectangle (4.5,3.6);
+			
+  \draw (0,0) coordinate (A);
+  \draw (0.75,1.5) coordinate (B);
+  \draw (2.25,1.5) coordinate (C);
+  \draw (3,0) coordinate (D);
+  \draw (1.5,3) coordinate (E);
+  \draw (4,1) coordinate (F);
+  \draw (1.5,1) coordinate (G);
+			
+  \draw (A)--(B)--(C)--(D)--(A);
+  \draw [color=orange] (A)--(C)--(E)--(B)--(D)--(F)--(C);
+  \draw [color=green]  (E)--(G)--(F);
+			
+  \fill [color=colPkt] (A) circle (1.5pt) node[below left]  {\footnotesize $A$};
+  \fill [color=colPkt] (B) circle (1.5pt) node[above left]  {\footnotesize $B$};
+  \fill [color=colPkt] (C) circle (1.5pt) node[above right] {\footnotesize $C$};
+  \fill [color=colPkt] (D) circle (1.5pt) node[below right] {\footnotesize $D$};
+  \fill [color=colPkt] (E) circle (1.5pt) node[above] {\footnotesize $E$};
+  \fill [color=colPkt] (F) circle (1.5pt) node[right] {\footnotesize $F$};
+  \fill [color=colPkt] (G) circle (1.5pt) node[below] {\footnotesize $G$};
+		
+\end{tikzpicture}

@@ -9,7 +9,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{a4}
-%\usepackage{fullpage} % UM DEN REGENWALD ZU RETTEN...
+\usepackage{fullpage} % UM DEN REGENWALD ZU RETTEN...
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
@@ -17,6 +17,8 @@
 \usepackage{times}
 \usepackage{color}
 \usepackage{graphicx}
+
+\usepackage{fixltx2e}
 
 \usepackage{ifthen}
 \usepackage{ifpdf}
@@ -30,26 +32,24 @@
 
 \usepackage{blindtext}
 
-\usepackage{hyperref}
-
 \usepackage{color,soul} % to highlight text with the command \hl{...}
 \definecolor{myhighlightcolor}{gray}{0.92}
 \sethlcolor{myhighlightcolor}
 
 \usepackage[pdfauthor={Achill Schuermann},
             pdftitle={Axiomatische Geometrie},
-            pdfsubject={Notizen zur gleichnamigen Vorlesung an der Universitaet Rostock, SS
-        2011}]{hyperref}
+            pdfsubject={Notizen zur gleichnamigen Vorlesung an der Universitaet Rostock, SS 2011}]
+            {hyperref}
 
 % Some general settings
 \renewcommand{\baselinestretch}{1.3}
 \parindent0mm
 \parskip1.2ex
 
-\topmargin-2cm
-\textheight24cm
-\textwidth15.5cm
-\oddsidemargin1.0cm
+%\topmargin-2cm
+%\textheight24cm
+%\textwidth15.5cm
+%\oddsidemargin1.0cm
 
 % EINEN INDEX KOENNTE MAN AUCH NOCH EINBAUEN
 % dazu werden im Text einfach die entsprechenden Begriffe mit ``\index{BlaBla}'' gesammelt
@@ -96,7 +96,7 @@
 
 %% Ohne Nummerierung
 \theoremstyle{definition}
-\newtheorem*{bsp}{BSP}
+%\newtheorem*{beispiel}{BSP}
 
 % Ein paar Parameter um mit der Nummerierung und dem Inhaltsverzeichnis zu spielen:
 %\setcounter{tocdepth}{1}
@@ -152,13 +152,11 @@
 \bibliographystyle{plain}
 \bibliography{AxiomatischeGeometrieBiblio.bib}
 
-\end{document}
+%INDEX ???
 
-% INDEX ???
-
-%\newpage % to get page for index right in table of contents?
-%\cleardoublepage
-%\phantomsection
-%\printindex
+\newpage % to get page for index right in table of contents?
+\cleardoublepage
+\phantomsection
+\printindex
 
 \end{document}

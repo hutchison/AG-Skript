@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,xscale=1.5,scale=1.25]
+  \draw [thick] (0,0) rectangle (6,4);	
+  \draw [domain=0:6] plot(\x,{(--3-0*\x)/1});	
+  \draw (3,3)-- (6,0);	
+  \draw (3,3)-- (5,0);	
+  \draw (3,3)-- (4,0);	
+  \draw (3,3)-- (3,0);	
+  \draw (3,3)-- (2,0);	
+  \draw (3,3)-- (1,0);
+  \draw (3,3)-- (0,0);
+  \draw (1.84,1.84)-- (6,0);
+  \draw [domain=0.63:5.37] plot(\x,{(--5.52-0*\x)/8.8});
+  \draw [domain=1.04:4.96] plot(\x,{(--11.04-0*\x)/10.64});
+  \draw [domain=1.33:4.67] plot(\x,{(--16.57-0*\x)/12.48});
+  \draw [domain=1.54:4.46] plot(\x,{(--22.09-0*\x)/14.32});
+  \draw [domain=1.71:4.29] plot(\x,{(--27.61-0*\x)/16.16});
+  \draw [domain=1.84:4.16] plot(\x,{(--1.84-0*\x)/1});
+	
+\end{tikzpicture}

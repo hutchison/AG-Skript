@@ -1,0 +1,43 @@
+\tdplotsetmaincoords{70}{130}		% ---Betrachtung auf das Koordinatensystem---
+\begin{tikzpicture}[tdplot_main_coords]
+  \draw (0,0,0) coordinate (W1);
+  \draw (0,2,0) coordinate (W2);
+  \draw (0,2,2) coordinate (W3);
+  \draw (0,0,2) coordinate (W4);
+  \draw (2,0,0) coordinate (W5);
+  \draw (2,2,0) coordinate (W6);
+  \draw (2,2,2) coordinate (W7);
+  \draw (2,0,2) coordinate (W8);		
+			
+  \draw (W1)--(W2)--(W3)--(W4) --cycle;
+  \draw (W5)--(W6)--(W7)--(W8) --cycle;
+  \draw (W1)--(W5);
+  \draw (W2)--(W6);
+  \draw (W3)--(W7);
+  \draw (W4)--(W8);
+			
+  \filldraw [color=yellow, semitransparent](-4,3,3) -- (-4,7,3) -- (-4,7,7) -- (-4,3,7) -- cycle;
+  \draw (-4,4,6) node[above] {\footnotesize Abbildungsebene $\mathcal{A}$};
+			
+  \draw [->] (0,0,3) -- (-1,1,4);
+  \draw [rotate=26] (-0.5,0.5,3.5) node[above] {\footnotesize Projektionsrichtung $\vec{v}$};
+			
+  \draw [color=black!50!white] (W1)--(-4,4,4);
+  \draw [color=black!50!white] (W2)--(-4,6,4);
+  \draw [color=black!50!white] (W3)--(-4,6,6);
+  \draw [color=black!50!white] (W4)--(-4,4,6);
+  \draw (-4,4,4)--(-4,6,4)--(-4,6,6)--(-4,4,6)--cycle;
+			
+  \fill [color=colPkt] (-4,4,4) circle (1pt);
+  \fill [color=colPkt] (-4,6,4) circle (1pt);
+  \fill [color=colPkt] (-4,6,6) circle (1pt);
+  \fill [color=colPkt] (-4,4,6) circle (1pt);			
+  \fill [color=colPkt] (W1) circle (1.5pt);
+  \fill [color=colPkt] (W2) circle (1.5pt);
+  \fill [color=colPkt] (W3) circle (1.5pt);
+  \fill [color=colPkt] (W4) circle (1.5pt);
+  \fill [color=colPkt] (W5) circle (1.5pt);
+  \fill [color=colPkt] (W6) circle (1.5pt);
+  \fill [color=colPkt] (W7) circle (1.5pt);
+  \fill [color=colPkt] (W8) circle (1.5pt);
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=0.8cm]
+				
+  \clip(-0.5,-1.5) rectangle (6.5,2.5);
+  \draw (0,0) 	 coordinate (P);	
+  \draw (2,1) 	 coordinate (A);	
+  \draw (1.5,0)  coordinate (B);	
+  \draw (2,-0.5) coordinate (C);
+  \draw (4,2)    coordinate (A');	
+  \draw (5,0)    coordinate (B');	
+  \draw (4,-1)   coordinate (C');
+	
+  \draw [domain=0.0:9.5, color=black!50!white] plot(\x,{(-0--1*\x)/2});
+  \draw [domain=0.0:9.5, color=black!50!white] plot(\x,{(-0-0*\x)/3});
+  \draw [domain=0.0:9.5, color=black!50!white] plot(\x,{(-0-0.5*\x)/2});
+				
+  \draw (A)--(B)--(C)--cycle;
+  \draw (A')--(B')--(C')--cycle;
+				
+  \fill [color=colPkt] (P)  circle (1.875pt) node[left]  {\footnotesize $P$};
+  \fill [color=colPkt] (A)  circle (1.875pt) node[above] {\footnotesize $A$};
+  \fill [color=colPkt] (B)  circle (1.875pt) node[above] {\footnotesize $B$};
+  \fill [color=colPkt] (C)  circle (1.875pt) node[below] {\footnotesize $C$};
+  \fill [color=colPkt] (A') circle (1.875pt) node[above] {\footnotesize $A'$};
+  \fill [color=colPkt] (B') circle (1.875pt) node[below] {\footnotesize $B'$};
+  \fill [color=colPkt] (C') circle (1.875pt) node[below] {\footnotesize $C'$};
+\end{tikzpicture}

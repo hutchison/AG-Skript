@@ -1,0 +1,47 @@
+\tdplotsetmaincoords{70}{130}		% ---Betrachtung auf das Koordinatensystem---
+\begin{tikzpicture}[tdplot_main_coords]
+ \draw (4,0,0)  coordinate (P);
+ \draw (-2,3,4) coordinate (W1);
+ \draw (-2,5,4) coordinate (W2);
+ \draw (-2,3,2) coordinate (W3);
+ \draw (-2,5,2) coordinate (W4);
+ \draw (-4,3,4) coordinate (W5);
+ \draw (-4,5,4) coordinate (W6);
+ \draw (-4,3,2) coordinate (W7);
+ \draw (-4,5,2) coordinate (W8);		
+			
+ \draw (W1)--(W2)--(W4)--(W3) --cycle;
+ \draw (W5)--(W6)--(W8)--(W7) --cycle;
+ \draw (W1)--(W5);
+ \draw (W2)--(W6);
+ \draw (W3)--(W7);
+ \draw (W4)--(W8);
+
+ \filldraw [color=yellow, semitransparent](0,1.3,1) -- (0,1.3,3) -- (0,4,3) -- (0,4,1) -- cycle;
+ \draw (0,4,1) node[right] {\footnotesize Abbildungsebene $\mathcal{A}$};
+			
+ \draw [color=black!50!white] (P)--(W1);
+ \draw [color=black!50!white] (P)--(W2);
+ \draw [color=black!50!white] (P)--(W3);
+ \draw [color=black!50!white] (P)--(W4);
+ %\draw (P)--(W5);
+ %\draw (P)--(W6);
+ %\draw (P)--(W7);
+ %\draw (P)--(W8);
+			
+ \draw (0,2,2.6666667) -- (0,3.3333334,2.6666667) -- (0,3.3333334,1.3333334) -- (0,2,1.333334) -- cycle;
+ \fill [color=colPkt] (0,2,2.6666667) circle (1pt);
+ \fill [color=colPkt] (0,3.3333334,2.6666667) circle (1pt);
+ \fill [color=colPkt] (0,3.3333334,1.3333334) circle (1pt);
+ \fill [color=colPkt] (0,2,1.333334) circle (1pt);
+			
+ \fill [color=colPkt] (P)  circle (1.5pt) node[right = 0.5cm, color=black] {\footnotesize Betrachtungspunkt $z$};
+ \fill [color=colPkt] (W1) circle (1.5pt);
+ \fill [color=colPkt] (W2) circle (1.5pt);
+ \fill [color=colPkt] (W3) circle (1.5pt);
+ \fill [color=colPkt] (W4) circle (1.5pt);
+ \fill [color=colPkt] (W5) circle (1.5pt);
+ \fill [color=colPkt] (W6) circle (1.5pt);
+ \fill [color=colPkt] (W7) circle (1.5pt);
+ \fill [color=colPkt] (W8) circle (1.5pt);
+\end{tikzpicture}
