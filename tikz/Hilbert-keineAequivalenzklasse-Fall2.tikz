@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    % Beschneidung:
+    \clip(-3,-2) rectangle (3,3);
+    % Koordinaten:
+    \draw (0,0.5) coordinate (A);
+    \draw (2,2) coordinate (B);
+    \draw (-2.5,-1.375) coordinate (C);
+    \draw (0.666,0) coordinate (D);
+    \draw (-2,2) coordinate (E);
+    % Geraden durch DE bzw. CB:
+    \draw (-3,-1.75) -- (3, 2.75);
+    \draw (-3,2.75) -- (3,-1.75);
+    % Strecken CE und BE:
+    \draw [dashed] (C) -- (E);
+    \draw [dashed] (B) -- (E);
+    % Endpunkte der Geraden g
+    \draw (-3,0) coordinate (g1);
+    \draw (3,0) coordinate (g2);
+    % Gerade g
+    \draw (g1) -- (g2);
+    % Bezeichnung der Geraden g
+    \draw (g2) node[anchor=south east] {$g$};
+    % Punktbezeichnungen:
+    \fill [color=colPkt] (A) circle (1.5pt) node[above] {$A$};
+    \fill [color=colPkt] (B) circle (1.5pt) node[below] {$B$};
+    \fill [color=colPkt] (C) circle (1.5pt) node[below] {$C$};
+    \fill [color=colPkt] (D) circle (1.5pt) node[below] {$D$};
+    \fill [color=colPkt] (E) circle (1.5pt) node[above] {$E$};
+\end{tikzpicture}
