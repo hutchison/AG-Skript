@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    % Endpunkte der Geraden g
+    \draw (-3,0) coordinate (g1);
+    \draw (3,0) coordinate (g2);
+    % Gerade g
+    \draw (g1) -- (g2);
+    % Bezeichnung der Geraden g
+    \draw (g2) node[below] {$g$};
+    % Koordinaten:
+    \draw (0,0) coordinate (A);
+    \draw (1,2) coordinate (E);
+    \draw (-0.5,-1) coordinate (H1);
+    \draw (1.5,3) coordinate (H2);
+    % Gerade durch A und E:
+    \draw (H1) -- (H2);
+    % Punktbezeichnungen:
+    \fill [color=colPkt] (A) circle (1.5pt) node[below=3mm] {$A$};
+    \fill [color=colPkt] (E) circle (1.5pt) node[left] {$E$};
+    % Streckenabschnitt:
+    \node at (-1.5,0) [above] {$S_1$};
+    \node at (1.5,0) [above] {$S_2$};
+    % Halbkreise:
+    \draw [thick] (-1pt,1pt) arc (0:50:2mm);
+    \draw [thick] (-1pt,1pt) arc (0:-70:2mm);
+    \draw [thick] (1pt,-1pt) arc (180:115:2mm);
+    \draw [thick] (1pt,-1pt) arc (180:225:2mm);
+\end{tikzpicture}
