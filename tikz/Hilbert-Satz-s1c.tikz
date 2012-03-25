@@ -1,0 +1,51 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    % Koordinaten:
+    \coordinate (A) at (-1,0);
+    \coordinate (B) at (1,3);
+    \coordinate (C) at (4,0);
+    \coordinate (D) at (3.5,2.5);
+    \coordinate (E) at (-3,0);
+    % Endpunkte der Geraden m:
+    \coordinate (m1) at (-3,0);
+    \coordinate (m2) at (5,0);
+    % Endpunkte der Geraden l:
+    \coordinate (l1) at (-2,-1.5);
+    \coordinate (l2) at (2,4.5);
+    % Endpunkte der Geraden n:
+    \coordinate (n1) at (-3.5,-1.388);
+    \coordinate (n2) at (5, 3.333);
+
+    % Gerade m:
+    \draw [dashed] (m1) -- +(-1.5cm,0);
+    \draw (E) -- (A);
+    \draw [thick] (A) -- (m2);
+    % Bezeichnung der Geraden m:
+    \draw (m2) node[above] {$m$};
+
+    % Gerade l:
+    \draw [dashed] (l1) -- (A);
+    \draw [thick] (A) -- (l2);
+    % Bezeichnung der Geraden l:
+    \draw (l2) node[right] {$l$};
+
+    % Gerade n:
+    \draw [dashed] (n1) -- (A);
+    \draw [thick] (A) -- (n2);
+    % Bezeichnung der Geraden n:
+    \draw (n2) node[below] {$n$};
+
+    % Strecken zwischen den Punkten:
+    \draw [thick] (C) -- (B);
+    \draw (E) -- (B);
+
+    \coordinate (F) at (intersection of A--D and B--C);
+
+    % Punktbezeichnungen:
+    \fill [color=colPkt] (A) circle (1.5pt) node[below] {$A$};
+    \fill [color=colPkt] (B) circle (1.5pt) node[left] {$B$};
+    \fill [color=colPkt] (C) circle (1.5pt) node[below] {$C$};
+    \fill [color=colPkt] (D) circle (1.5pt) node[above] {$D$};
+    \fill [color=colPkt] (E) circle (1.5pt) node[above] {$E$};
+    \draw [thick] (F) circle (1mm);
+    \node [above=1mm, color=colPkt] at (F) {$F$};
+\end{tikzpicture}
