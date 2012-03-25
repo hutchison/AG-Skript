@@ -1,5 +1,5 @@
 % vim:tw=100:ts=4:sw=4:sts=4:et:
-\documentclass[11pt]{amsbook}
+\documentclass[11pt,a4paper,draft]{amsbook}
 %\documentclass[pdflatex]{amsbook}
 
 \usepackage[ngerman]{babel}
@@ -36,9 +36,9 @@
 \definecolor{myhighlightcolor}{gray}{0.92}
 \sethlcolor{myhighlightcolor}
 
-\usepackage[pdfauthor={Achill Schuermann},
+\usepackage[pdfauthor={Achill Schürmann},
             pdftitle={Axiomatische Geometrie},
-            pdfsubject={Notizen zur gleichnamigen Vorlesung an der Universitaet Rostock, SS 2011}]
+            pdfsubject={Notizen zur gleichnamigen Vorlesung an der Universität Rostock, SS 2011}]
             {hyperref}
 
 % Some general settings
@@ -59,7 +59,7 @@
 
 \input{GeometrieLatexMacros.tex}
 
-\newtheoremstyle{mythmstyle}% name
+\newtheoremstyle{mythmstyle}
     {8pt}       % Space above
     {8pt}       % Space below
     {\itshape}  % Body font
@@ -70,18 +70,18 @@
                 % \newline = linebreak
     {}          % Thm head spec (can be left empty, meaning `normal')
 
-\newtheoremstyle{andere}% name
+\newtheoremstyle{andere}
       {8pt}
       {8pt}
-      {\itshape}    % Schriftart des Satzes oder der Definition 
+      {\itshape}    % Schriftart des Satzes oder der Definition
       {\parindent}  % Einrückung von Satz, Definition, negativer Wert möglich
       {\bfseries}   % Schriftart für zb Satz, Definition
       {}            % ergibt zum Beispiel Satz 5.2:
       {0.5em}       % Abstand zwischen Nummerierung und neuem Text
-      { \thmnumber{#2 } \thmname{#1}: \normalfont\itshape\thmnote{ #3} \normalsize }
-                                            % #1 Theoremname normale Schriftart, fettgedruckt
-                                            % #2 Theoremnummer mit :
-                                            % #3 zusätzliche Angabe in normaler Schriftart, schräggedruckt
+      {\thmnumber{#2 } \thmname{#1}: \normalfont\itshape\thmnote{ #3} \normalsize}
+        % #1 Theoremname normale Schriftart, fettgedruckt
+        % #2 Theoremnummer mit :
+        % #3 zusätzliche Angabe in normaler Schriftart, schräggedruckt
 
 \theoremstyle{mythmstyle}
 \newtheorem{defi}{DEF}[section]
@@ -95,7 +95,7 @@
 \newtheorem{bsp}[defi]{Beispiel}
 
 %% Ohne Nummerierung
-\theoremstyle{definition}
+%\theoremstyle{definition}
 %\newtheorem*{beispiel}{BSP}
 
 % Ein paar Parameter um mit der Nummerierung und dem Inhaltsverzeichnis zu spielen:
