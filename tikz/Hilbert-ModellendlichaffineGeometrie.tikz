@@ -1,0 +1,21 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    % Koordinaten:
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (C) at (0,3);
+    \coordinate (D) at (3,3);
+
+    % Strecken zwischen den Punkten mit Bezeichnungen:
+    \draw [dashed] (A) -- (B) node [below,midway] {$g_3$};
+    \draw [dashed] (A) -- (C) node [left,midway] {$g_1$};
+    \draw [dashed] (A) -- (D) node [anchor=north west, near end] {$g_5$};
+    \draw [dashed] (B) -- (C) node [anchor=south west, near end] {$g_6$};
+    \draw [dashed] (B) -- (D) node [right, midway] {$g_2$};
+    \draw [dashed] (C) -- (D) node [above, midway] {$g_4$};
+
+    % Punktbezeichnungen:
+    \fill [color=colPkt] (A) circle (1.5pt) node[anchor=north east] {$(0,0)$};
+    \fill [color=colPkt] (B) circle (1.5pt) node[anchor=north west] {$(1,0)$};
+    \fill [color=colPkt] (C) circle (1.5pt) node[anchor=south east] {$(0,1)$};
+    \fill [color=colPkt] (D) circle (1.5pt) node[anchor=south west] {$(1,1)$};
+\end{tikzpicture}
