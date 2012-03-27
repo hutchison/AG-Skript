@@ -1,0 +1,26 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    % Koordinaten:
+    \coordinate (O) at (0,0);
+    \coordinate (1) at (1,0);
+    \coordinate (A) at (1.7,0);
+    \coordinate (B) at (2.5,0);
+    % a+b wird sogar richtig berechnet:
+    \coordinate (ApB) at ($ (A) + (B) $);
+
+    % Endpunkte für die Achsen:
+    \coordinate (y1) at (0,-0.75);
+    \coordinate (y2) at (0,0.75);
+    \coordinate (x1) at (-0.5,0);
+    \coordinate (x2) at ($ (ApB) + (0.5,0) $);
+
+    % Achsen:
+    \draw (y1) -- (y2);
+    \draw (x1) -- (x2);
+
+    % Punktbezeichnungen:
+    \fill (O) circle (1.5pt) node[anchor=north east] {$O$};
+    \fill (1) circle (1.5pt) node[below] {$1$};
+    \fill [color=colPkt] (A) circle (1.5pt) node[below] {$a$};
+    \fill [color=colPkt] (B) circle (1.5pt) node[below] {$b$};
+    \fill [color=colPkt] (ApB) circle (1.5pt) node[below] {$a+b$};
+\end{tikzpicture}

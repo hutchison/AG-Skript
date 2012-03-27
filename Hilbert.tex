@@ -600,26 +600,26 @@ erfüllen.
     Ein Körper $K$ heißt {\em geordnet}, wenn er eine Teilmenge $K_+\subset K$ (von {\em positiven
     Elementen}) besitzt, so dass gilt:
     \renewcommand{\labelenumi}{(\roman{enumi})} % ändert die Nummerierung von (1) auf (i)
-    \begin{enumerate}
+    \begin{itemize}
         \item $\forall\, a,\, b \in K_+$ ist $a + b \in K_+$ und $a \cdot b \in K_+$;
 
         \item $\forall\, a \in K$ gilt genau eine der Beziehungen $a \in K_+$, $a = 0$ oder $-a \in
         K_+$.
-    \end{enumerate}
+    \end{itemize}
 \end{defi}
 
-$\Q$ und $\R$ sind geordnet, $\C$ ist nicht geordnet.
+$\Q$ und $\R$ sind geordnet; $\C$ ist nicht geordnet.
 
 Wenn $\K$ geordnet ist, können wir eine Ordnungsrelaton "`$<$"' definieren.
 % Die Umkehrung gilt übrigens auch!! (Übung?!?)
 
 \begin{defi}
     Sei $K$ geordnet und $a,\, b \in K$. Dann definieren wir:
-    \begin{enumerate}
-        \item $a > b\;: \Longleftrightarrow\; a - b \in K_+$;
+    \begin{itemize}
+        \item $a > b\;: \Longleftrightarrow\; a - b \in K_+$
 
-        \item $a < b\;: \Longleftrightarrow\; b - a\in K_+$.
-    \end{enumerate}
+        \item $a < b\;: \Longleftrightarrow\; b - a\in K_+$
+    \end{itemize}
 \end{defi}
 
 Dies definiert eine {\em totale Ordnung} in $K$. Das heißt $\forall\, a,\, b \in K$ gilt genau eine
@@ -635,18 +635,15 @@ der Beziehungen: $a > b,\; a = b,\; a < b$.
 \begin{proof}
     \begin{itemize}
         \item["`$\Longrightarrow$"'] Wir betrachten die $x$-Achse $g$. Nach
-            Theorem~\ref{thm:satz.s1b} wird $g$ durch $O = (0,0) \in g$ in 2 Seiten geteilt; sei
-
+            Theorem~\ref{thm:satz.s1b} wird $g$ durch $O = (0,0) \in g$ in zwei Seiten geteilt; sei
             \begin{align*}
                 K_+ & := \{a \in \K:\; a \neq 0,\; (a,0) \mbox{ und } (1,0) \mbox{ liegen auf
                 derselben Seite von } O\}\\
                 -K_+ & := \{a \in \K:\; a \neq 0,\; (a,0) \mbox{ und } (1,0) \mbox{ liegen auf
                 verschiedenen Seiten von } O\}
             \end{align*}
-
             Dann ist $\K = K_+ \cup \{0\} \cup -K_+$ eine disjunkte Vereinigung. Bleibt zu zeigen,
             dass mit $a, b\in K_+$ auch $a + b$ und $a \cdot b$ in $K_+$ liegen.
-
             \begin{description}
                 \item[Addition] Die Addition $a + b$ in $\K$ entspricht dem nacheinander "`anlegen"'
                 von Strecken der Längen $a$ und $b$ auf der $x$-Achse $g$ %der Addition von Strecken
@@ -660,7 +657,9 @@ der Beziehungen: $a > b,\; a = b,\; a < b$.
 
                 $\Rightarrow\; a + b \in K_+$
 
-                \centerline{\includegraphics[width=6cm]{BILDER/1-1-16a-Satz.png}}
+                \begin{figure}[ht]
+                    \input{tikz/Hilbert-Streckenaddition.tikz}
+                \end{figure}
 
                 \item[Multiplikation] Parallele durch $B = (0,b)$ zur Geraden durch die beiden
                     Punkte $E = (0,1),\; A = (a,0)$ schneidet $x$-Achse $g$ in $X = (a \cdot b, 0)$
