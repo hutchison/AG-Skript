@@ -646,7 +646,8 @@ der Beziehungen: $a > b,\; a = b,\; a < b$.
             dass mit $a, b\in K_+$ auch $a + b$ und $a \cdot b$ in $K_+$ liegen.
             \begin{description}
                 \item[Addition] Die Addition $a + b$ in $\K$ entspricht dem nacheinander "`anlegen"'
-                von Strecken der Längen $a$ und $b$ auf der $x$-Achse $g$ %der Addition von Strecken
+                    von Strecken der Längen $a$ und $b$ auf der $x$-Achse $g$
+                    %der Addition von Strecken
 
                 % XXX: HIER MUSS DEFINITIV NOCHMAL ÜBERDACHT WERDEN!!!!!
                 % WAS SOLL UNS DAS SAGEN??? "entspricht Addition von Strecken?!?!
@@ -655,18 +656,20 @@ der Beziehungen: $a > b,\; a = b,\; a < b$.
                 % "segment arithmetic" dort schon vorher behandelt wurde!!!
                 % siehe Hartshorne, Proposition 15.3
 
-                $\Rightarrow\; a + b \in K_+$
+                    $\Rightarrow\; a + b \in K_+$
 
-                \begin{figure}[ht]
-                    \input{tikz/Hilbert-Streckenaddition.tikz}
-                \end{figure}
+                    \begin{figure}[ht]
+                        \input{tikz/Hilbert-Streckenaddition.tikz}
+                    \end{figure}
 
                 \item[Multiplikation] Parallele durch $B = (0,b)$ zur Geraden durch die beiden
                     Punkte $E = (0,1),\; A = (a,0)$ schneidet $x$-Achse $g$ in $X = (a \cdot b, 0)$
 
                     % Beh.:  $a\cdot b\in K_+$
 
-                    \centerline{\includegraphics[width=6cm]{BILDER/1-1-16b-Satz.png}}
+                    \begin{figure}[ht]
+                        \input{tikz/Hilbert-Streckenmultiplikation.tikz}
+                    \end{figure}
 
                     \renewcommand{\labelenumi}{\roman{enumi})} % Nummerierung: (1) -> 1)
                     \begin{enumerate}
@@ -698,9 +701,9 @@ der Beziehungen: $a > b,\; a = b,\; a < b$.
     \end{itemize}
 \end{proof}
 
-\subsection*{Poincarésches Kreisscheibenmodell}
+\subsection{Poincarésches Kreisscheibenmodell}
 
-Ein weiteres Modell, dass den Inzidenz- und Anordnungsaxiomen genügt, ist das Poincarésche
+Ein weiteres Modell, das den Inzidenz- und Anordnungsaxiomen genügt, ist das Poincarésche
 Kreisscheibenmodell. Hierbei wählen wir die Menge der Punkte in einer offenen Kreisscheibe des
 $\R^2$. (Anstelle des $\R^2$ ließe sich auch der $\K^2$ für einen anderen geordneten Köprper
 verwenden.) Der Einfachheit halber wählen wir einen Kreis mit Mittelpunkt im Ursprung:

@@ -1,0 +1,43 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+    % Koordinaten:
+    \coordinate (O) at (0,0);
+    \coordinate (1) at (0,1);
+    \coordinate (A) at (1.7,0);
+    \coordinate (B) at (0,2);
+    \coordinate (AmB) at (3.4,0);
+
+    % Endpunkte für die Achsen:
+    \coordinate (y1) at (0,-0.75);
+    \coordinate (y2) at (0,2.5);
+    \coordinate (x1) at (-0.5,0);
+    \coordinate (x2) at (4,0);
+
+    % Achsen:
+    \draw (y1) -- (y2);
+    \draw (x1) -- (x2);
+
+    % Punktbezeichnungen:
+    \fill (O) circle (1.5pt) node[anchor=north east] {$O$};
+    \fill (1) circle (1.5pt) node[anchor=north east] {$1$};
+    \fill [color=colPkt] (A) circle (1.5pt) node[below] {$a$};
+    \fill [color=colPkt] (B) circle (1.5pt) node[anchor=north east] {$b$};
+    % das funktioniert noch nicht:
+    %\fill let \p1 = (A), \p2 = (B), \n1 = {\x1 * \y2} in (\n1,0) circle (1.5pt);
+    \fill [color=colPkt] (AmB) circle (1.5pt) node[anchor=north east]
+        {$a \cdot b$};
+    \node at (1) [anchor=south west] {$E$};
+    \node at (A) [anchor=south west] {$A$};
+    \node at (B) [anchor=south west] {$B$};
+    \node at (AmB) [anchor=south west] {$X$};
+
+    % Punkte für Verbindungslinien:
+    \coordinate (g1) at (-0.5, 1.2941);
+    \coordinate (g2) at (2.5,-0.4705);
+    \coordinate (h1) at ($ (g1) + (B) - (1) $); % = (g1) + (0,1), aber das hier
+                                                % sieht cooler aus
+    \coordinate (h2) at ($ (g2) + (AmB) - (A) $);
+
+    % Verbindungslinien:
+    \draw (g1) -- (g2);
+    \draw (h1) -- (h2);
+\end{tikzpicture}
