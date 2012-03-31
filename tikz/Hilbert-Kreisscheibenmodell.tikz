@@ -1,0 +1,31 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=3.0cm,y=3.0cm]
+    % Koordinaten:
+    \coordinate (M) at (0,0);
+    \coordinate (E) at (1,0);
+    \coordinate (A) at (-0.5,-0.5);
+    \coordinate (B) at (0.25,0.25);
+    \coordinate (A') at (0.2,-0.6);
+    \coordinate (B') at (0.5,-0.2);
+    % Mittelpunkt des Kreises für die Strecke durch A' und B',
+    % berechnet nach
+    % [http://en.wikipedia.org/wiki/Poincar%C3%A9_disc_model#Analytic_geometry_constructions_in_the_hyperbolic_plane]
+    \coordinate (H1) at (0.95, -0.85);
+
+    % die Kreisscheibe (gleichzeitig 'clip', damit das Bild nur auf die Ebene
+    % beschränkt ist):
+    \clip [draw] (M) circle (1);
+
+    % Kreis durch A' und B':
+    \node [draw, circle through=(A'), label=left:$g'$] at (H1) {};
+
+    % Gerade durch A und B (clip sorgt dafür, dass nur der relevante Teil
+    % gezeichnet wird):
+    \draw (-1,-1) -- (1,1) node [pos=0.8, anchor=north] {$g$};
+
+    % Punktbezeichnungen:
+    \fill [color=colPkt] (M) circle (1.5pt) node[anchor=north west] {$M$};
+    \fill [color=colPkt] (A) circle (1.5pt) node[anchor=north west] {$A$};
+    \fill [color=colPkt] (B) circle (1.5pt) node[anchor=south east] {$B$};
+    \fill [color=colPkt] (A') circle (1.5pt) node[right] {$A'$};
+    \fill [color=colPkt] (B') circle (1.5pt) node[below] {$B'$};
+\end{tikzpicture}
