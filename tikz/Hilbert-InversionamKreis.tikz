@@ -1,0 +1,37 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+    % Koordinaten:
+    \coordinate (M) at (0,0);
+    % Punkte auf dem Kreis:
+    \path let
+        \n1 = {0.4},
+        \n2 = {0.6}
+      in
+        coordinate (P) at (\n1, {sqrt(1-\n1^2)})
+        coordinate (Q) at (\n2, {-sqrt(1-\n2^2)});
+    \coordinate (A) at ($ (P)!0.5!(Q) $);
+    % nach zwei Tagen Frickelei hab ich's einfach mit GeoGebra berechnet:
+    \coordinate (A') at (1.97, 0.23);
+    \coordinate (B1) at ($ (M)!5!(A) $);
+
+    % Kreis:
+    \draw (M) circle (1);
+    \node (Gamma) at (-1,0) [anchor=east] {$\Gamma$};
+
+    % Strecken PQ, MP, MA:
+    \draw (P) -- (Q);
+    \draw [dashed] (M) -- (P) node [midway, left] {$r$};
+    \draw (M) -- (B1) node [above] {$g$};
+    % Tangenten:
+    \draw (A') -- ($ (A')!1.2!(P) $);
+    \draw (A') -- ($ (A')!1.2!(Q) $);
+
+    % Streckenbezeichnungen:
+    \node (p) at ($ (M)!0.5!(A) $) [below] {$p$};
+
+    % Punktbezeichnungen:
+    \fill [color=colPkt] (M) circle (1.5pt) node [left] {$M$};
+    \fill [color=colPkt] (P) circle (1.5pt) node [above] {$P$};
+    \fill [color=colPkt] (Q) circle (1.5pt) node [below] {$Q$};
+    \fill [color=colPkt] (A) circle (1.5pt) node [anchor=north west] {$A$};
+    \fill [color=colPkt] (A') circle (1.5pt) node [anchor=north west] {$A'$};
+\end{tikzpicture}
