@@ -1,0 +1,143 @@
+% vim:tw=100:ts=4:sw=4:sts=4:et:
+\documentclass[11pt]{amsbook}
+%\documentclass[pdflatex]{amsbook}
+
+\usepackage[ngermanb]{babel}
+
+%\usepackage{ucs}
+\usepackage[ansinew]{inputenc}
+
+\usepackage{a4}
+%\usepackage{fullpage} % UM DEN REGENWALD ZU RETTEN...
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{color}
+\usepackage{graphicx}
+
+\usepackage{ifthen}
+\usepackage{ifpdf}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows, calc, through}
+\usepackage{tikz-3dplot}
+
+\usepackage{wrapfig}
+\usepackage{enumerate}
+
+\usepackage{blindtext}
+
+\usepackage{hyperref}
+
+\usepackage{color,soul} % to highlight text with the command \hl{...}
+\definecolor{myhighlightcolor}{gray}{0.92}
+\sethlcolor{myhighlightcolor}
+
+\usepackage[pdfauthor={Achill Schuermann},
+            pdftitle={Axiomatische Geometrie},
+            pdfsubject={Notizen zur gleichnamigen Vorlesung an der Universitaet Rostock, SS
+        2011}]{hyperref}
+
+% Some general settings
+\renewcommand{\baselinestretch}{1.3}
+\parindent0mm
+\parskip1.2ex
+
+\topmargin-2cm
+\textheight24cm
+\textwidth15.5cm
+\oddsidemargin1.0cm
+
+% EINEN INDEX KOENNTE MAN AUCH NOCH EINBAUEN
+% dazu werden im Text einfach die entsprechenden Begriffe mit ``\index{BlaBla}'' gesammelt
+%\usepackage{showidx}
+%\makeindex
+
+
+\input{GeometrieLatexMacros.tex}
+
+\newtheoremstyle{andere}% name
+    {8pt}
+    {8pt}
+    {\itshape}          % Schriftart des Satzes oder der Definition 
+    {\parindent}        % Einrückung von Satz, Definition, negativer Wert möglich
+    {\bfseries}         % Schriftart für zb Satz, Definition
+    {}                  % ergibt zum Beispiel Satz 5.2:
+    {0.5em}             % Abstand zwischen Nummerierung und neuem Text        
+    { \thmnumber{#2 } \thmname{#1}: \normalfont\itshape\thmnote{ #3} \normalsize }
+                        % #1 Theoremname normale Schriftart, fettgedruckt
+                        % #2 Theoremnummer mit :
+                        % #3 zusätzliche Angabe in normaler Schriftart, schräggedruckt
+\theoremstyle{andere}
+\newtheorem{defi}{DEF}[chapter]
+\newtheorem{thm}[defi]{THM}
+\newtheorem{bem}[defi]{BEM}
+\newtheorem{konst}[defi]{KONSTRUKTION}
+\newtheorem{bsp}[defi]{Beispiel}
+
+
+% Ein paar Parameter um mit der Nummerierung und dem Inhaltsverzeichnis zu spielen:
+\setcounter{tocdepth}{2}
+%\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+%\renewcommand{\thesection}{\arabic{section}}
+
+
+% ==========================
+% = Authors / Affiliations =
+% ==========================
+
+\author{Prof. Dr. Achill Sch\"urmann}
+%\address{Achill Sch\"urmann, Institute for Mathematics, University of Rostock, 18051 Rostock, Germany}
+%\email{Achill.Schuermann@uni-rostock.de}
+
+
+\title[Axiomatische Geometrie]{Axiomatische Geometrie}
+
+\begin{document}
+
+\selectlanguage{ngerman}
+\sloppy
+ 
+\input{AxiomatischeGeometrieFrontmatter.tex}
+
+\maketitle
+
+\tableofcontents
+
+%\chapter*{Was soll das alles?}
+%\input{WasSollDasAlles.tex}
+
+\chapter{Euklid}
+\input{Euklid.tex}
+
+\chapter{Hilbert}
+\input{Hilbert.tex}
+
+%\chapter{Descartes}
+%\input{Descartes.tex}
+
+\chapter{Desargues}
+\input{Desargues.tex}
+
+% BIBLIOGRAPHY
+%  --> Erzeugung durch Aufruf von ``bibtex AxiomatischeGeometrie''
+
+\cleardoublepage
+
+\phantomsection
+%\nocite{*}
+\bibliographystyle{plain}
+\bibliography{AxiomatischeGeometrieBiblio.bib}
+
+\end{document}
+
+% INDEX ???
+
+%\newpage % to get page for index right in table of contents?
+%\cleardoublepage
+%\phantomsection
+%\printindex
+
+\end{document}
